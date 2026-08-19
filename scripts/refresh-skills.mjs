@@ -7,10 +7,15 @@ const SNAPSHOT_PATH = path.join(DATA_DIR, "top100.json");
 const QUEUE_PATH = path.join(DATA_DIR, "audit-queue.json");
 const AUDITS_PATH = path.join(DATA_DIR, "power-audits.json");
 const includeSecurity = process.argv.includes("--security");
+const auditLimitArg = process.argv.find((argument) => argument.startsWith("--audit-limit="));
+const auditLimit = Number(auditLimitArg?.split("=")[1] ?? process.env.POWER_AUDIT_LIMIT ?? 10);
 const token = process.env.VERCEL_OIDC_TOKEN;
 
 if (!token) {
   throw new Error("VERCEL_OIDC_TOKEN is missing. Run `vercel env pull` first.");
+}
+if (!Number.isInteger(auditLimit) || auditLimit < 0 || auditLimit > 100) {
+  throw new Error("Power audit limit must be an integer from 0 to 100.");
 }
 
 const apiFetch = async (pathname) => {
@@ -91,8 +96,9 @@ const currentIds = new Set(skills.map((skill) => skill.id));
 const exited = previous.skills
   .filter((skill) => !currentIds.has(skill.id))
   .map(({ id, rank, installs }) => ({ id, previousRank: rank, installs }));
-const auditQueue = skills
-  .filter((skill) => auditById.get(skill.id)?.hash !== skill.hash)
+const needsAudit = skills.filter((skill) => auditById.get(skill.id)?.hash !== skill.hash);
+const auditQueue = needsAudit
+  .filter((skill) => auditById.has(skill.id) || skill.rank <= auditLimit)
   .map(({ id, rank, hash, sourceBytes, bundleSignal }) => ({
     id,
     rank,
@@ -104,9 +110,9 @@ const auditQueue = skills
 const generatedAt = new Date().toISOString();
 
 await writeFile(SNAPSHOT_PATH, `${JSON.stringify({ generatedAt, view: "all-time", total: leaderboard.pagination.total, skills, exited }, null, 2)}\n`);
-await writeFile(QUEUE_PATH, `${JSON.stringify({ generatedAt, count: auditQueue.length, skills: auditQueue }, null, 2)}\n`);
+await writeFile(QUEUE_PATH, `${JSON.stringify({ generatedAt, policy: { initialRankLimit: auditLimit, changedPreviouslyAuditedSkills: true }, count: auditQueue.length, deferred: needsAudit.length - auditQueue.length, skills: auditQueue }, null, 2)}\n`);
 
 const changed = skills.filter((skill) => skill.status === "changed").length;
 const added = skills.filter((skill) => skill.status === "new").length;
 console.log(`Refreshed ${skills.length} skills: ${added} new, ${changed} changed, ${exited.length} exited.`);
-console.log(`Queued ${auditQueue.length} source-level Power audits.`);
+console.log(`Queued ${auditQueue.length} source-level Power audits; deferred ${needsAudit.length - auditQueue.length}.`);

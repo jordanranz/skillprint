@@ -51,7 +51,7 @@ Live prototype: https://skillprint-vercel-delta.vercel.app
 
 - Refresh rank, recorded installs, stars, and source hashes daily without an LLM.
 - Rescout newly entered or source-changed skills immediately.
-- Run a token-budgeted audit of the Top 100 weekly.
+- Start with Power audits for the Top 10 and expand only when the MVP warrants it.
 - Reuse cached Skillprints when neither the source nor the scouting rubric changed.
 
 Run `npm run refresh:skills` after `vercel env pull` to rebuild the official
@@ -62,9 +62,11 @@ rank and installs, content hashes, source size, and bundle signals. It writes:
 - `data/skills/audit-queue.json` — skills whose current hash has not been assessed;
 - `data/skills/power-audits.json` — cached Power assessments keyed by skill ID and hash.
 
-Pass `-- --security` to include partner security-audit results. A normal refresh
-uses no LLM and only queues a new Power audit when a skill is unassessed or its
-source hash changed.
+Pass `-- --security` to include partner security-audit results. The conservative
+MVP policy queues unassessed skills only when they are in the Top 10, while any
+previously assessed skill is requeued immediately when its source hash changes.
+Override the initial boundary with `-- --audit-limit=25` (or any value from
+0–100). The refresh itself uses no LLM tokens.
 
 ## First visualization concepts
 
