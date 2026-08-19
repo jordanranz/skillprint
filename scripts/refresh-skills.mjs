@@ -8,7 +8,7 @@ const QUEUE_PATH = path.join(DATA_DIR, "audit-queue.json");
 const AUDITS_PATH = path.join(DATA_DIR, "power-audits.json");
 const includeSecurity = process.argv.includes("--security");
 const auditLimitArg = process.argv.find((argument) => argument.startsWith("--audit-limit="));
-const auditLimit = Number(auditLimitArg?.split("=")[1] ?? process.env.POWER_AUDIT_LIMIT ?? 10);
+const auditLimit = Number(auditLimitArg?.split("=")[1] ?? process.env.POWER_AUDIT_LIMIT ?? 100);
 const token = process.env.VERCEL_OIDC_TOKEN;
 
 if (!token) {

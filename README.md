@@ -50,8 +50,7 @@ Live prototype: https://skillprint-vercel-delta.vercel.app
 ## Refresh model
 
 - Refresh rank, recorded installs, stars, and source hashes daily without an LLM.
-- Rescout newly entered or source-changed skills immediately.
-- Start with Power audits for the Top 10 and expand only when the MVP warrants it.
+- Compile all current Top 100 skills once, then rebuild newly entered or source-changed skills immediately.
 - Reuse cached Skillprints when neither the source nor the scouting rubric changed.
 
 Run `npm run refresh:skills` after `vercel env pull` to rebuild the official
@@ -60,13 +59,15 @@ rank and installs, content hashes, source size, and bundle signals. It writes:
 
 - `data/skills/top100.json` — the reproducible leaderboard manifest;
 - `data/skills/audit-queue.json` — skills whose current hash has not been assessed;
-- `data/skills/power-audits.json` — cached Power assessments keyed by skill ID and hash.
+- `data/skills/power-audits.json` — cached Scouter assessments and source-traced Skillprints keyed by skill ID and hash.
 
-Pass `-- --security` to include partner security-audit results. The conservative
-MVP policy queues unassessed skills only when they are in the Top 10, while any
-previously assessed skill is requeued immediately when its source hash changes.
-Override the initial boundary with `-- --audit-limit=25` (or any value from
-0–100). The refresh itself uses no LLM tokens.
+Pass `-- --security` to include partner security-audit results. The default
+readiness boundary is the full Top 100, and any previously assessed skill is
+requeued immediately when its source hash changes. Override the boundary with
+`-- --audit-limit=25` (or any value from 0–100) for diagnostics. Run
+`npm run backfill:skills` to compile queued source into cached scores and
+diagrams, and `npm run verify:skills` to enforce that all 100 are ready. These
+steps are deterministic and use no LLM tokens.
 
 ## First visualization concepts
 
@@ -83,9 +84,9 @@ A fog-of-war map. The destination anchors the graph; unresolved decision tickets
 1. The first user is a skill consumer deciding what is worth loading.
 2. Popularity and assessed Power remain separate signals.
 3. The MVP is a public, read-only catalog with deterministic previews.
-4. Workflow data is currently reviewed and stored as typed static data.
+4. Workflow data is deterministically compiled from source and cached by source hash.
 5. The catalog can refresh cheaply each day; source-changed and newly entered
-   skills can be rescouted separately from the weekly Top 100 audit.
+   skills are rebuilt separately from the full cached Top 100 baseline.
 6. Video is deferred until the workflow explorer proves useful on its own.
 7. Every skill has one versioned primary category based on its principal user
    outcome. Controlled functional tags refine category browsing; source topics,

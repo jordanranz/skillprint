@@ -1,91 +1,10 @@
 {
-  "generatedAt": "2026-08-19T05:53:15.246Z",
+  "generatedAt": "2026-08-19T21:09:40.634Z",
   "policy": {
-    "initialRankLimit": 10,
+    "initialRankLimit": 100,
     "changedPreviouslyAuditedSkills": true
   },
-  "count": 10,
-  "deferred": 90,
-  "skills": [
-    {
-      "id": "vercel-labs/skills/find-skills",
-      "rank": 1,
-      "hash": "b146008599c31057cef1c145774cea5d5afb30e8f43fa802e47a4b461419aaaf",
-      "reason": "unassessed",
-      "sourceBytes": 5456,
-      "bundleSignal": false
-    },
-    {
-      "id": "mattpocock/skills/grill-me",
-      "rank": 2,
-      "hash": "5a13e157f85835632b132390a162d234822658b6a544f31cc2578280062bd044",
-      "reason": "unassessed",
-      "sourceBytes": 294,
-      "bundleSignal": true
-    },
-    {
-      "id": "anthropics/skills/frontend-design",
-      "rank": 3,
-      "hash": "665c585455decbcb02116bc928adf5148b9cd0f67b7eb4908c8c0d647c00f68a",
-      "reason": "unassessed",
-      "sourceBytes": 18424,
-      "bundleSignal": false
-    },
-    {
-      "id": "mattpocock/skills/grill-with-docs",
-      "rank": 4,
-      "hash": "6b1292031c4f38a11309b9dad9be1141c1921c6edf86d1ae6da8b048fa71a349",
-      "reason": "unassessed",
-      "sourceBytes": 392,
-      "bundleSignal": true
-    },
-    {
-      "id": "mattpocock/skills/improve-codebase-architecture",
-      "rank": 5,
-      "hash": "11adc1a323dfba786ed1af5a4210a0930deebb7ea4a7746c000e35ae587c9485",
-      "reason": "unassessed",
-      "sourceBytes": 12807,
-      "bundleSignal": true
-    },
-    {
-      "id": "mattpocock/skills/tdd",
-      "rank": 6,
-      "hash": "9bef7a4ced827acca9f2fbd318d32e8027f0f819c199fd447568786fbfc6cfd6",
-      "reason": "unassessed",
-      "sourceBytes": 7328,
-      "bundleSignal": true
-    },
-    {
-      "id": "vercel-labs/agent-browser/agent-browser",
-      "rank": 7,
-      "hash": "a674b7d81066e3cc471a7512ddb4ae724418cbfefa75cbb050b0dc430e4d57a0",
-      "reason": "unassessed",
-      "sourceBytes": 3362,
-      "bundleSignal": false
-    },
-    {
-      "id": "mattpocock/skills/setup-matt-pocock-skills",
-      "rank": 8,
-      "hash": "ceba22b05afed7055eabed7525378fbfa67366dbc39993d8726e61d8210efc8a",
-      "reason": "unassessed",
-      "sourceBytes": 19352,
-      "bundleSignal": true
-    },
-    {
-      "id": "vercel-labs/agent-skills/vercel-react-best-practices",
-      "rank": 9,
-      "hash": "ca7b0c0c6e5f2750043f7f0cd72d16ac4e2abc48f9b5500d047a4b77a2506212",
-      "reason": "unassessed",
-      "sourceBytes": 230301,
-      "bundleSignal": true
-    },
-    {
-      "id": "mattpocock/skills/handoff",
-      "rank": 10,
-      "hash": "e5a44fccc710f5402deee06beaf5178397885765773375f186aefd179565f23f",
-      "reason": "unassessed",
-      "sourceBytes": 1035,
-      "bundleSignal": true
-    }
-  ]
+  "count": 0,
+  "deferred": 0,
+  "skills": []
 }

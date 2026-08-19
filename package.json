@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run verify:skills && next build",
+    "backfill:skills": "node --env-file=.env.local scripts/backfill-skills.mjs",
+    "verify:skills": "node scripts/verify-skill-readiness.mjs",
     "start": "next start",
     "lint": "eslint .",
     "refresh:skills": "node --env-file=.env.local scripts/refresh-skills.mjs"

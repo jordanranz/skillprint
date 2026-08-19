@@ -1,8 +1,20 @@
 import snapshot from "@/data/skills/top100.json";
+import auditSnapshot from "@/data/skills/power-audits.json";
 import { genericNodes, skills, type Skill } from "./skills";
 import { categoryById, TAXONOMY_VERSION, type CategoryId, type Classification, type FunctionalTag } from "./taxonomy";
 
 type SnapshotSkill = (typeof snapshot.skills)[number];
+type AuditReport = {
+  id: string;
+  hash: string;
+  power: number;
+  purpose: string;
+  bestFor: string;
+  footprint: string;
+  qualities: Skill["qualities"];
+  nodes: Skill["nodes"];
+  edges: Skill["edges"];
+};
 
 export type CatalogEntry = {
   id: string;
@@ -28,6 +40,7 @@ export type CatalogEntry = {
 const aliases: Record<string,string> = {
   "vercel-react-best-practices": "react-best-practices",
 };
+const auditById = new Map((auditSnapshot.audits as unknown as AuditReport[]).map((audit) => [audit.id, audit]));
 
 const titleize = (slug:string) => slug.split("-").map(word => /^(ai|api|ui|ux|pdf|tdd|mcp|okr|vc|im|gpt)$/i.test(word) ? word.toUpperCase() : word.charAt(0).toUpperCase()+word.slice(1)).join(" ");
 
@@ -63,6 +76,8 @@ const blueprintSlug = (entry: SnapshotSkill, reviewed?: Skill) => reviewed?.slug
 export const catalogGeneratedAt = snapshot.generatedAt;
 export const catalogEntries: CatalogEntry[] = snapshot.skills.map((entry) => {
   const reviewed = reviewedSkill(entry);
+  const audit = auditById.get(entry.id);
+  const currentAudit = audit?.hash === entry.hash ? audit : undefined;
   const derived = classify(entry);
   const category = reviewed?.category ?? derived.category;
   return {
@@ -71,12 +86,12 @@ export const catalogEntries: CatalogEntry[] = snapshot.skills.map((entry) => {
     slug: entry.slug,
     name: reviewed?.name ?? titleize(entry.name),
     owner: entry.source.split("/")[0],
-    purpose: reviewed?.purpose ?? fallbackPurpose(entry,category),
+    purpose: currentAudit?.purpose ?? reviewed?.purpose ?? fallbackPurpose(entry,category),
     installs: entry.installs,
     rankDelta: null,
-    power: reviewed?.power ?? null,
+    power: currentAudit?.power ?? null,
     updatedDays: reviewed?.updatedDays ?? null,
-    scout: reviewed?.scout ?? "Not inspected",
+    scout: currentAudit ? "Static inspection" : "Not inspected",
     category,
     tags: reviewed?.tags ?? derived.tags,
     sourceTopics: reviewed?.sourceTopics ?? [],
@@ -93,10 +108,32 @@ export const catalogEntries: CatalogEntry[] = snapshot.skills.map((entry) => {
 });
 
 export function blueprintBySlug(slug: string): Skill | undefined {
-  const reviewed = skills.find(skill => skill.slug === slug);
-  if (reviewed) return reviewed;
   const entry = catalogEntries.find(skill => skill.detailSlug === slug);
-  if (!entry) return undefined;
+  if (!entry) return skills.find(skill => skill.slug === slug);
+  const report = auditById.get(entry.id);
+  const currentReport = report?.hash === snapshot.skills.find(skill => skill.id === entry.id)?.hash ? report : undefined;
+  if (currentReport) return {
+    slug: entry.detailSlug,
+    name: entry.name,
+    owner: entry.owner,
+    purpose: currentReport.purpose,
+    bestFor: currentReport.bestFor,
+    power: currentReport.power,
+    installs: entry.installs,
+    trend: 0,
+    updatedDays: 0,
+    category: entry.category,
+    tags: entry.tags,
+    sourceTopics: entry.sourceTopics,
+    classification: entry.classification,
+    color: entry.color,
+    scout: "Static inspection",
+    sourceUrl: entry.url,
+    footprint: currentReport.footprint,
+    qualities: currentReport.qualities,
+    nodes: currentReport.nodes,
+    edges: currentReport.edges,
+  };
   return {
     slug: entry.detailSlug,
     name: entry.name,
