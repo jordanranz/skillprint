@@ -75,3 +75,11 @@ html[data-theme="light"]{--bg:#f5f6f8;--panel:#fff;--raised:#edf0f4;--ink:#17191
 /* Repository evidence is quiet metadata, never a second capability score. */
 .ecosystem-facts{margin-top:4px;display:flex;align-items:center;gap:8px;color:var(--muted);font:750 7px ui-monospace,SFMono-Regular,monospace;white-space:nowrap}.ecosystem-facts span{display:inline-flex;align-items:center;gap:3px}.ecosystem-facts b{color:var(--ink);font-weight:850}.ecosystem-facts.detailed{margin-top:11px;padding:10px 11px;gap:12px;flex-wrap:wrap;border:1px solid var(--line);border-radius:8px;background:var(--raised);color:var(--muted);text-decoration:none}.ecosystem-facts.detailed:hover{border-color:color-mix(in srgb,var(--brand) 45%,var(--line))}.ecosystem-block{background:linear-gradient(90deg,color-mix(in srgb,var(--cyan) 4%,var(--panel)),var(--panel) 55%)}
 @media(max-width:700px){.ecosystem-facts{gap:6px;font-size:6px}.ecosystem-facts.detailed{font-size:7px}.ecosystem-facts span:nth-child(3){display:none}.ecosystem-facts.detailed span:nth-child(3){display:inline-flex}}
+
+/* Diagram copy is a label, not a source transcript. Full text stays in the inspector. */
+.detail-intro>p{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2}
+.workflow-node{height:68px;min-height:68px}
+.workflow-node b{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2}
+.workflow-node em{margin-top:3px;overflow:hidden;text-overflow:ellipsis;line-height:1.15;white-space:nowrap}
+.workflow-board{min-height:var(--board-min-height,500px)}
+@media(max-width:700px){.workflow-node{top:var(--mobile-top)!important}}
