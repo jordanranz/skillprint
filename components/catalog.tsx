@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { CatalogEntry } from "@/lib/catalog-data";
-import type { Skill } from "@/lib/skills";
 import { categories, categoryById, type CategoryId, type FunctionalTag } from "@/lib/taxonomy";
 import { Header } from "./header";
 import { ArrowIcon } from "./icons";
@@ -14,12 +13,12 @@ type CategoryFilter = "all" | CategoryId;
 const labels: Record<Sort,string> = { popular: "Ranked by recorded installs", power: "Ranked by score" };
 const formatInstalls = (value:number) => new Intl.NumberFormat("en-US", { notation:"compact", maximumFractionDigits:1 }).format(value);
 
-function CategoryChip({ skill }: { skill: Pick<Skill,"category"> }) {
+function CategoryChip({ skill }: { skill: Pick<CatalogEntry,"category"> }) {
   const category = categoryById[skill.category];
   return <span className="category-chip" style={{"--category":category.color} as React.CSSProperties}><i/>{category.label}</span>;
 }
 
-export function Catalog({ skills, ranking, generatedAt }: { skills: Skill[]; ranking: CatalogEntry[]; generatedAt: string }) {
+export function Catalog({ ranking, generatedAt }: { ranking: CatalogEntry[]; generatedAt: string }) {
   const [sort,setSort] = useState<Sort>("popular");
   const [category,setCategory] = useState<CategoryFilter>("all");
   const [tags,setTags] = useState<FunctionalTag[]>([]);
@@ -29,13 +28,13 @@ export function Catalog({ skills, ranking, generatedAt }: { skills: Skill[]; ran
   const filtered = useMemo(() => [...categorySkills]
     .filter(skill => !tags.length || tags.some(tag => skill.tags.includes(tag)))
     .sort((a,b) => sort === "power" ? (b.power ?? -1)-(a.power ?? -1) || a.rank-b.rank : a.rank-b.rank), [categorySkills,tags,sort]);
-  const featured = useMemo(() => [...skills].sort((a,b)=>b.power-a.power).slice(0,5),[skills]);
+  const featured = useMemo(() => [...ranking].filter(skill=>skill.power!==null).sort((a,b)=>(b.power??0)-(a.power??0)||a.rank-b.rank).slice(0,5),[ranking]);
   const chooseCategory = (next: CategoryFilter) => { setCategory(next); setTags([]); };
   const toggleTag = (tag: FunctionalTag) => setTags(current => current.includes(tag) ? current.filter(value => value !== tag) : [...current,tag]);
 
   return <><Header/><main>
     <section className="hero shell"><div><p className="eyebrow">The inspected skill catalog</p><h1>Find skills<br/>worth loading.</h1><p className="hero-copy">Compare what the ecosystem installs with what each skill appears capable of after inspection.</p><nav className="built-with" aria-label="Skills used to build Skillprint"><span>Built with</span><a href="https://github.com/jordanranz/skills/tree/main/skills/engineering/skillprint" target="_blank" rel="noreferrer">Skillprint ↗</a><a href="https://github.com/jordanranz/skills/tree/main/skills/engineering/skill-scouter" target="_blank" rel="noreferrer">Skill Scouter ↗</a></nav></div></section>
-    <section className="shell featured"><div className="section-heading"><div><p className="eyebrow">Highest score</p><h2>Five exceptional Skillprints</h2></div><div className="scoring-context"><span>Scores update when source changes</span><details><summary>How scoring works</summary><p>The Scouter Score evaluates guidance, efficiency, coverage, and practical value. Recorded installs do not affect it.</p></details></div></div><div className="power-deck">{featured.map((skill,index)=><Link className="power-card" href={`/skill/${skill.slug}`} key={skill.slug} style={{"--skill":skill.color,"--power":`${skill.power/100}%`} as React.CSSProperties}><div className="card-meta"><span>Score {index+1}</span><span className="card-tags">{skill.tags.slice(0,2).map(tag=><b key={tag}>{tag}</b>)}</span></div><CategoryChip skill={skill}/><h3>{skill.name}</h3><p>{skill.purpose}</p><div className="card-power"><strong>{skill.power.toLocaleString()}</strong><span>/ 10,000</span></div><div className="power-track" aria-label={`${skill.power.toLocaleString()} out of 10,000 Scouter Score`}><i/></div></Link>)}</div><p className="deck-hint" aria-hidden="true">Swipe to compare <span>→</span></p></section>
+    <section className="shell featured"><div className="section-heading"><div><p className="eyebrow">Highest score</p><h2>Five exceptional Skillprints</h2></div><div className="scoring-context"><span>Scores update when source changes</span><details><summary>How scoring works</summary><p>The Scouter Score evaluates guidance, efficiency, coverage, and practical value. Recorded installs do not affect it.</p></details></div></div><div className="power-deck">{featured.map((skill,index)=><Link className="power-card" href={`/skill/${skill.detailSlug}`} key={skill.id} style={{"--skill":skill.color,"--power":`${(skill.power??0)/100}%`} as React.CSSProperties}><div className="card-meta"><span>Score {index+1}</span><span className="card-tags">{skill.tags.slice(0,2).map(tag=><b key={tag}>{tag}</b>)}</span></div><CategoryChip skill={skill}/><h3>{skill.name}</h3><p>{skill.purpose}</p><div className="card-power"><strong>{skill.power?.toLocaleString()}</strong><span>/ 10,000</span></div><div className="power-track" aria-label={`${skill.power?.toLocaleString()} out of 10,000 Scouter Score`}><i/></div></Link>)}</div><p className="deck-hint" aria-hidden="true">Swipe to compare <span>→</span></p></section>
     <section className="shell ranking"><div className="section-heading rank-heading"><div><p className="eyebrow">Current top 100</p><h2>{labels[sort]}</h2></div><div className="sort-control" role="group" aria-label="Sort skills">{(["popular","power"] as Sort[]).map(value=><button key={value} className={sort===value?"active":""} onClick={()=>setSort(value)}>{value === "popular" ? "Popular" : "Score"}</button>)}</div></div>
       <div className="taxonomy-filter"><div className="category-filter" role="group" aria-label="Filter by category"><button className={category==="all"?"active":""} onClick={()=>chooseCategory("all")}><i/>All skills</button>{categories.map(item=><button key={item.id} className={category===item.id?"active":""} style={{"--category":item.color} as React.CSSProperties} onClick={()=>chooseCategory(item.id)}><i/>{item.label}</button>)}</div>{availableTags.length > 0 && <div className="tag-filter" role="group" aria-label="Refine by capability"><span>Refine</span>{availableTags.map(tag=><button key={tag} className={tags.includes(tag)?"active":""} aria-pressed={tags.includes(tag)} onClick={()=>toggleTag(tag)}>{tag}</button>)}</div>}</div>
       <div className="result-count"><span>{filtered.length} {filtered.length === 1 ? "skill" : "skills"}</span>{(category!=="all" || tags.length>0) && <button onClick={()=>{chooseCategory("all");setTags([]);}}>Clear filters</button>}</div>

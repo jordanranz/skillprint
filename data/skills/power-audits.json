@@ -1,13 +1,13 @@
 {
   "version": 2,
   "rubric": "skill-scouter-static-v1",
-  "generatedAt": "2026-08-19T21:12:16.240Z",
+  "generatedAt": "2026-08-19T21:26:20.061Z",
   "audits": [
     {
       "id": "vercel-labs/skills/find-skills",
       "hash": "b146008599c31057cef1c145774cea5d5afb30e8f43fa802e47a4b461419aaaf",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.365Z",
+      "inspectedAt": "2026-08-19T21:26:15.575Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 8045,
@@ -78,7 +78,7 @@
         {
           "id": "step-1-understand-what-they-need-step-1-un",
           "kind": "agent",
-          "label": "Step 1: Understand What They Need",
+          "label": "Step 1: Understand What They…",
           "note": "Step 1: Understand What T…",
           "summary": "Step 1: Understand What They Need",
           "actor": "Agent",
@@ -88,7 +88,7 @@
         {
           "id": "step-2-check-the-leaderboard-first-step-2-",
           "kind": "agent",
-          "label": "Step 2: Check the Leaderboard First",
+          "label": "Step 2: Check the Leaderboard…",
           "note": "Step 2: Check the Leaderb…",
           "summary": "Step 2: Check the Leaderboard First",
           "actor": "Agent",
@@ -108,7 +108,7 @@
         {
           "id": "step-4-verify-quality-before-recommending-",
           "kind": "agent",
-          "label": "Step 4: Verify Quality Before Recomme…",
+          "label": "Step 4: Verify Quality Before…",
           "note": "Step 4: Verify Quality Be…",
           "summary": "Step 4: Verify Quality Before Recommending",
           "actor": "Agent",
@@ -118,7 +118,7 @@
         {
           "id": "step-5-present-options-to-the-user-step-5-",
           "kind": "agent",
-          "label": "Step 5: Present Options to the User",
+          "label": "Step 5: Present Options to th…",
           "note": "Step 5: Present Options t…",
           "summary": "Step 5: Present Options to the User",
           "actor": "Agent",
@@ -167,7 +167,7 @@
       "id": "mattpocock/skills/grill-me",
       "hash": "5a13e157f85835632b132390a162d234822658b6a544f31cc2578280062bd044",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.529Z",
+      "inspectedAt": "2026-08-19T21:26:15.106Z",
       "evidence": "deterministic static inspection",
       "dependency": {
         "id": "mattpocock/skills/grilling",
@@ -229,9 +229,9 @@
       ],
       "nodes": [
         {
-          "id": "workflow-interview-the-user-relentlessly-u",
+          "id": "workflow-interview-the-user-relentless",
           "kind": "human",
-          "label": "Interview the user relentlessly until…",
+          "label": "Interview the user relentless…",
           "note": "Workflow",
           "summary": "Interview the user relentlessly until you reach a shared understanding. Map this as a design tree: every decision branches into the decisions that ha…",
           "actor": "Human + agent",
@@ -239,9 +239,9 @@
           "source": "Interview the user relentlessly until you reach a shared understanding. Map this as a design tree: every decision branches into the decisions that hang off it."
         },
         {
-          "id": "workflow-work-the-tree-in-rounds-the-front",
+          "id": "workflow-work-the-tree-in-rounds-the",
           "kind": "human",
-          "label": "Work the tree in rounds. The frontier…",
+          "label": "Work the tree in rounds. The…",
           "note": "Workflow",
           "summary": "Work the tree in rounds. The frontier is every decision whose prerequisites are already settled: the questions you can ask now without guessing at an…",
           "actor": "Human + agent",
@@ -249,9 +249,9 @@
           "source": "Work the tree in rounds. The frontier is every decision whose prerequisites are already settled: the questions you can ask now without guessing at answers you haven't heard yet. Ask the whole frontier in one round: numb…"
         },
         {
-          "id": "workflow-each-question-should-be-formatted",
+          "id": "workflow-each-question-should-be-forma",
           "kind": "agent",
-          "label": "Each question should be formatted lik…",
+          "label": "Each question should be forma…",
           "note": "Workflow",
           "summary": "Each question should be formatted like so:",
           "actor": "Agent",
@@ -259,9 +259,9 @@
           "source": "Each question should be formatted like so:"
         },
         {
-          "id": "workflow-each-round-the-user-answers-resha",
+          "id": "workflow-each-round-the-user-answers-r",
           "kind": "human",
-          "label": "Each round the user answers reshapes…",
+          "label": "Each round the user answers r…",
           "note": "Workflow",
           "summary": "Each round the user answers reshapes the tree: settled decisions push the frontier outward and unblock questions that depended on them. Recompute the…",
           "actor": "Human + agent",
@@ -269,9 +269,9 @@
           "source": "Each round the user answers reshapes the tree: settled decisions push the frontier outward and unblock questions that depended on them. Recompute the frontier and ask the next round. A question whose answer depends on a…"
         },
         {
-          "id": "workflow-finding-facts-is-your-job-never-t",
+          "id": "workflow-finding-facts-is-your-job-ne",
           "kind": "human",
-          "label": "Finding facts is your job, never the…",
+          "label": "Finding facts is your job, ne…",
           "note": "Workflow",
           "summary": "Finding facts is your job, never the user's. When a frontier question needs a fact from the environment (filesystem, tools, etc.), dispatch a sub-age…",
           "actor": "Human + agent",
@@ -279,9 +279,9 @@
           "source": "Finding facts is your job, never the user's. When a frontier question needs a fact from the environment (filesystem, tools, etc.), dispatch a sub-agent to find it; don't ask the user for anything you could look up yours…"
         },
         {
-          "id": "workflow-the-session-is-done-when-the-fron",
+          "id": "workflow-the-session-is-done-when-the",
           "kind": "human",
-          "label": "The session is done when the frontier…",
+          "label": "The session is done when the…",
           "note": "Workflow",
           "summary": "The session is done when the frontier is empty: every branch of the design tree visited, nothing left silently assumed. Do not act on it until the us…",
           "actor": "Human + agent",
@@ -291,24 +291,24 @@
       ],
       "edges": [
         [
-          "workflow-interview-the-user-relentlessly-u",
-          "workflow-work-the-tree-in-rounds-the-front"
+          "workflow-interview-the-user-relentless",
+          "workflow-work-the-tree-in-rounds-the"
         ],
         [
-          "workflow-work-the-tree-in-rounds-the-front",
-          "workflow-each-question-should-be-formatted"
+          "workflow-work-the-tree-in-rounds-the",
+          "workflow-each-question-should-be-forma"
         ],
         [
-          "workflow-each-question-should-be-formatted",
-          "workflow-each-round-the-user-answers-resha"
+          "workflow-each-question-should-be-forma",
+          "workflow-each-round-the-user-answers-r"
         ],
         [
-          "workflow-each-round-the-user-answers-resha",
-          "workflow-finding-facts-is-your-job-never-t"
+          "workflow-each-round-the-user-answers-r",
+          "workflow-finding-facts-is-your-job-ne"
         ],
         [
-          "workflow-finding-facts-is-your-job-never-t",
-          "workflow-the-session-is-done-when-the-fron"
+          "workflow-finding-facts-is-your-job-ne",
+          "workflow-the-session-is-done-when-the"
         ]
       ]
     },
@@ -316,7 +316,7 @@
       "id": "anthropics/skills/frontend-design",
       "hash": "665c585455decbcb02116bc928adf5148b9cd0f67b7eb4908c8c0d647c00f68a",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.326Z",
+      "inspectedAt": "2026-08-19T21:26:15.030Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6760,
@@ -397,7 +397,7 @@
         {
           "id": "process-brainstorm-explore-plan-critique-b",
           "kind": "loop",
-          "label": "Process: brainstorm, explore, plan, c…",
+          "label": "Process: brainstorm, explore,…",
           "note": "Process: brainstorm, expl…",
           "summary": "Process: brainstorm, explore, plan, critique, build, critique again",
           "actor": "Agent",
@@ -452,7 +452,7 @@
       "id": "mattpocock/skills/grill-with-docs",
       "hash": "6b1292031c4f38a11309b9dad9be1141c1921c6edf86d1ae6da8b048fa71a349",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.359Z",
+      "inspectedAt": "2026-08-19T21:26:14.824Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 5900,
@@ -511,9 +511,9 @@
       ],
       "nodes": [
         {
-          "id": "trigger-a-relentless-interview-to-sharpen-",
+          "id": "trigger-a-relentless-interview-to-sha",
           "kind": "agent",
-          "label": "A relentless interview to sharpen a p…",
+          "label": "A relentless interview to sha…",
           "note": "Trigger",
           "summary": "A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.",
           "actor": "Agent",
@@ -521,9 +521,9 @@
           "source": "A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go."
         },
         {
-          "id": "workflow-call-the-skill-tool-twice-for-gri",
+          "id": "workflow-call-the-skill-tool-twice-fo",
           "kind": "agent",
-          "label": "Call the Skill tool twice, for \"grill…",
+          "label": "Call the Skill tool twice, fo…",
           "note": "Workflow",
           "summary": "Call the Skill tool twice, for \"grilling\" and \"domain-modeling\".",
           "actor": "Agent",
@@ -531,9 +531,9 @@
           "source": "Call the Skill tool twice, for \"grilling\" and \"domain-modeling\"."
         },
         {
-          "id": "result-call-the-skill-tool-twice-for-grill",
+          "id": "result-call-the-skill-tool-twice-fo",
           "kind": "agent",
-          "label": "Call the Skill tool twice, for \"grill…",
+          "label": "Call the Skill tool twice, fo…",
           "note": "Result",
           "summary": "Call the Skill tool twice, for \"grilling\" and \"domain-modeling\".",
           "actor": "Agent",
@@ -543,12 +543,12 @@
       ],
       "edges": [
         [
-          "trigger-a-relentless-interview-to-sharpen-",
-          "workflow-call-the-skill-tool-twice-for-gri"
+          "trigger-a-relentless-interview-to-sha",
+          "workflow-call-the-skill-tool-twice-fo"
         ],
         [
-          "workflow-call-the-skill-tool-twice-for-gri",
-          "result-call-the-skill-tool-twice-for-grill"
+          "workflow-call-the-skill-tool-twice-fo",
+          "result-call-the-skill-tool-twice-fo"
         ]
       ]
     },
@@ -556,7 +556,7 @@
       "id": "mattpocock/skills/improve-codebase-architecture",
       "hash": "11adc1a323dfba786ed1af5a4210a0930deebb7ea4a7746c000e35ae587c9485",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.704Z",
+      "inspectedAt": "2026-08-19T21:26:14.863Z",
       "evidence": "deterministic static inspection",
       "dependency": {
         "id": "mattpocock/skills/codebase-design",
@@ -640,7 +640,7 @@
         {
           "id": "present-candidates-as-an-html-report-prese",
           "kind": "agent",
-          "label": "Present candidates as an HTML report",
+          "label": "Present candidates as an HTML…",
           "note": "Present candidates as an…",
           "summary": "Present candidates as an HTML report",
           "actor": "Agent",
@@ -723,7 +723,7 @@
       "id": "mattpocock/skills/tdd",
       "hash": "9bef7a4ced827acca9f2fbd318d32e8027f0f819c199fd447568786fbfc6cfd6",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.645Z",
+      "inspectedAt": "2026-08-19T21:26:14.940Z",
       "evidence": "deterministic static inspection",
       "dependency": {
         "id": "mattpocock/skills/codebase-design",
@@ -890,7 +890,7 @@
       "id": "vercel-labs/agent-browser/agent-browser",
       "hash": "a674b7d81066e3cc471a7512ddb4ae724418cbfefa75cbb050b0dc430e4d57a0",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.354Z",
+      "inspectedAt": "2026-08-19T21:26:14.719Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7425,
@@ -1008,7 +1008,7 @@
       "id": "mattpocock/skills/setup-matt-pocock-skills",
       "hash": "ceba22b05afed7055eabed7525378fbfa67366dbc39993d8726e61d8210efc8a",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.670Z",
+      "inspectedAt": "2026-08-19T21:26:14.834Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7205,
@@ -1154,7 +1154,7 @@
       "id": "vercel-labs/agent-skills/vercel-react-best-practices",
       "hash": "ca7b0c0c6e5f2750043f7f0cd72d16ac4e2abc48f9b5500d047a4b77a2506212",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.978Z",
+      "inspectedAt": "2026-08-19T21:26:15.012Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 8125,
@@ -1215,7 +1215,7 @@
         {
           "id": "eliminating-waterfalls-critical-eliminatin",
           "kind": "agent",
-          "label": "Eliminating Waterfalls (CRITICAL)",
+          "label": "Eliminating Waterfalls (CRITI…",
           "note": "Eliminating Waterfalls (C…",
           "summary": "Eliminating Waterfalls (CRITICAL)",
           "actor": "Agent",
@@ -1225,7 +1225,7 @@
         {
           "id": "bundle-size-optimization-critical-bundle-s",
           "kind": "agent",
-          "label": "Bundle Size Optimization (CRITICAL)",
+          "label": "Bundle Size Optimization (CRI…",
           "note": "Bundle Size Optimization…",
           "summary": "Bundle Size Optimization (CRITICAL)",
           "actor": "Agent",
@@ -1245,7 +1245,7 @@
         {
           "id": "client-side-data-fetching-medium-high-clie",
           "kind": "agent",
-          "label": "Client-Side Data Fetching (MEDIUM-HIG…",
+          "label": "Client-Side Data Fetching (ME…",
           "note": "Client-Side Data Fetching…",
           "summary": "Client-Side Data Fetching (MEDIUM-HIGH)",
           "actor": "Agent",
@@ -1255,7 +1255,7 @@
         {
           "id": "re-render-optimization-medium-re-render-op",
           "kind": "agent",
-          "label": "Re-render Optimization (MEDIUM)",
+          "label": "Re-render Optimization (MEDIU…",
           "note": "Re-render Optimization (M…",
           "summary": "Re-render Optimization (MEDIUM)",
           "actor": "Agent",
@@ -1275,7 +1275,7 @@
         {
           "id": "javascript-performance-low-medium-javascri",
           "kind": "agent",
-          "label": "JavaScript Performance (LOW-MEDIUM)",
+          "label": "JavaScript Performance (LOW-M…",
           "note": "JavaScript Performance (L…",
           "summary": "JavaScript Performance (LOW-MEDIUM)",
           "actor": "Agent",
@@ -1314,7 +1314,7 @@
       "id": "mattpocock/skills/handoff",
       "hash": "e5a44fccc710f5402deee06beaf5178397885765773375f186aefd179565f23f",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.809Z",
+      "inspectedAt": "2026-08-19T21:26:15.074Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6295,
@@ -1373,9 +1373,9 @@
       ],
       "nodes": [
         {
-          "id": "workflow-write-a-handoff-document-summaris",
+          "id": "workflow-write-a-handoff-document-summ",
           "kind": "agent",
-          "label": "Write a handoff document summarising…",
+          "label": "Write a handoff document summ…",
           "note": "Workflow",
           "summary": "Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save to the temporary directory of the user's O…",
           "actor": "Agent",
@@ -1383,9 +1383,9 @@
           "source": "Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save to the temporary directory of the user's OS - not the current workspace."
         },
         {
-          "id": "workflow-do-not-duplicate-content-already-",
+          "id": "workflow-do-not-duplicate-content-alre",
           "kind": "agent",
-          "label": "Do not duplicate content already capt…",
+          "label": "Do not duplicate content alre…",
           "note": "Workflow",
           "summary": "Do not duplicate content already captured in other artifacts (specs, plans, ADRs, issues, commits, diffs). Reference them by path or URL instead.",
           "actor": "Agent",
@@ -1393,9 +1393,9 @@
           "source": "Do not duplicate content already captured in other artifacts (specs, plans, ADRs, issues, commits, diffs). Reference them by path or URL instead."
         },
         {
-          "id": "workflow-redact-any-sensitive-information-",
+          "id": "workflow-redact-any-sensitive-informat",
           "kind": "agent",
-          "label": "Redact any sensitive information, suc…",
+          "label": "Redact any sensitive informat…",
           "note": "Workflow",
           "summary": "Redact any sensitive information, such as API keys, passwords, or personally identifiable information.",
           "actor": "Agent",
@@ -1403,9 +1403,9 @@
           "source": "Redact any sensitive information, such as API keys, passwords, or personally identifiable information."
         },
         {
-          "id": "workflow-if-the-user-passed-arguments-trea",
+          "id": "workflow-if-the-user-passed-arguments",
           "kind": "agent",
-          "label": "If the user passed arguments, treat t…",
+          "label": "If the user passed arguments,…",
           "note": "Workflow",
           "summary": "If the user passed arguments, treat them as a description of what the next session will focus on and tailor the doc accordingly.",
           "actor": "Agent",
@@ -1415,16 +1415,16 @@
       ],
       "edges": [
         [
-          "workflow-write-a-handoff-document-summaris",
-          "workflow-do-not-duplicate-content-already-"
+          "workflow-write-a-handoff-document-summ",
+          "workflow-do-not-duplicate-content-alre"
         ],
         [
-          "workflow-do-not-duplicate-content-already-",
-          "workflow-redact-any-sensitive-information-"
+          "workflow-do-not-duplicate-content-alre",
+          "workflow-redact-any-sensitive-informat"
         ],
         [
-          "workflow-redact-any-sensitive-information-",
-          "workflow-if-the-user-passed-arguments-trea"
+          "workflow-redact-any-sensitive-informat",
+          "workflow-if-the-user-passed-arguments"
         ]
       ]
     },
@@ -1432,7 +1432,7 @@
       "id": "mattpocock/skills/triage",
       "hash": "3755360dcb472a501668975290e31b0cc27f4d973247d2e1f9662af756d2c05c",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.647Z",
+      "inspectedAt": "2026-08-19T21:26:15.118Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7855,
@@ -1592,7 +1592,7 @@
       "id": "mattpocock/skills/prototype",
       "hash": "492e4433fcd9cf88c0854aba063829ee248b208849e5827a45da8424199fd10f",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.887Z",
+      "inspectedAt": "2026-08-19T21:26:15.171Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7385,
@@ -1651,9 +1651,9 @@
       ],
       "nodes": [
         {
-          "id": "workflow-a-prototype-is-throwaway-code-tha",
+          "id": "workflow-a-prototype-is-throwaway-code",
           "kind": "agent",
-          "label": "A prototype is throwaway code that an…",
+          "label": "A prototype is throwaway code…",
           "note": "Workflow",
           "summary": "A prototype is throwaway code that answers a question. The question decides the shape.",
           "actor": "Agent",
@@ -1661,9 +1661,9 @@
           "source": "A prototype is throwaway code that answers a question. The question decides the shape."
         },
         {
-          "id": "workflow-identify-which-question-is-being-",
+          "id": "workflow-identify-which-question-is-be",
           "kind": "agent",
-          "label": "Identify which question is being answ…",
+          "label": "Identify which question is be…",
           "note": "Workflow",
           "summary": "Identify which question is being answered, using the user's prompt, the surrounding code, or by asking if the user is around:",
           "actor": "Agent",
@@ -1671,9 +1671,9 @@
           "source": "Identify which question is being answered, using the user's prompt, the surrounding code, or by asking if the user is around:"
         },
         {
-          "id": "workflow-does-this-logic-state-model-feel-",
+          "id": "workflow-does-this-logic-state-mode",
           "kind": "agent",
-          "label": "\"Does this logic / state model feel r…",
+          "label": "\"Does this logic / state mode…",
           "note": "Workflow",
           "summary": "\"Does this logic / state model feel right?\" → LOGIC.md(LOGIC.md). Build a single shareable HTML file (free-play buttons plus tabbed guided walkthroug…",
           "actor": "Agent",
@@ -1681,9 +1681,9 @@
           "source": "\"Does this logic / state model feel right?\" → LOGIC.md(LOGIC.md). Build a single shareable HTML file (free-play buttons plus tabbed guided walkthroughs) that pushes the state machine through cases that are hard to reaso…"
         },
         {
-          "id": "workflow-the-two-branches-produce-very-dif",
+          "id": "workflow-the-two-branches-produce-very",
           "kind": "artifact",
-          "label": "The two branches produce very differe…",
+          "label": "The two branches produce very…",
           "note": "Workflow",
           "summary": "The two branches produce very different artifacts, so getting this wrong wastes the whole prototype. If the question is genuinely ambiguous and the u…",
           "actor": "Agent",
@@ -1693,16 +1693,16 @@
       ],
       "edges": [
         [
-          "workflow-a-prototype-is-throwaway-code-tha",
-          "workflow-identify-which-question-is-being-"
+          "workflow-a-prototype-is-throwaway-code",
+          "workflow-identify-which-question-is-be"
         ],
         [
-          "workflow-identify-which-question-is-being-",
-          "workflow-does-this-logic-state-model-feel-"
+          "workflow-identify-which-question-is-be",
+          "workflow-does-this-logic-state-mode"
         ],
         [
-          "workflow-does-this-logic-state-model-feel-",
-          "workflow-the-two-branches-produce-very-dif"
+          "workflow-does-this-logic-state-mode",
+          "workflow-the-two-branches-produce-very"
         ]
       ]
     },
@@ -1710,7 +1710,7 @@
       "id": "open.feishu.cn/lark-doc",
       "hash": "1b36c807220d89d1fcb079e7d47dca8fcabac5bdcc7199b5fff982cf3098acda",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.722Z",
+      "inspectedAt": "2026-08-19T21:26:15.254Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7105,
@@ -1856,7 +1856,7 @@
       "id": "open.feishu.cn/lark-base",
       "hash": "24e84323593f89c0a803ebc0f1fb0bd0ce42372d57880ca0156f6187c8cd6109",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.822Z",
+      "inspectedAt": "2026-08-19T21:26:15.591Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6630,
@@ -2016,7 +2016,7 @@
       "id": "open.feishu.cn/lark-approval",
       "hash": "5cfd448c82e073915b5f363a2df8fbc2a739f823e3858f50d174e1a9794c4ec2",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.074Z",
+      "inspectedAt": "2026-08-19T21:26:15.194Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6700,
@@ -2176,7 +2176,7 @@
       "id": "open.feishu.cn/lark-drive",
       "hash": "027b6f53113a713a771afe15fbeac8fd05f3ee648dc8189f60b60a8b4a06d74e",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.824Z",
+      "inspectedAt": "2026-08-19T21:26:15.356Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7185,
@@ -2336,7 +2336,7 @@
       "id": "open.feishu.cn/lark-shared",
       "hash": "f0845165db5125529d6e1c409141d6d03339815a7713f1c21f943d6192e3d93a",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.863Z",
+      "inspectedAt": "2026-08-19T21:26:15.416Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7145,
@@ -2440,7 +2440,7 @@
       "id": "open.feishu.cn/lark-calendar",
       "hash": "6fabefa80e953e14ec31430b621acf6445724d2db87a8d046d65f188d5588c1c",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:12.902Z",
+      "inspectedAt": "2026-08-19T21:26:15.381Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7015,
@@ -2531,7 +2531,7 @@
         {
           "id": "search-event-search-event",
           "kind": "agent",
-          "label": "+search-event — 按关键词、时间范围和参会人搜索日程",
+          "label": "+search-event — 按关键词、时间范围和参会人…",
           "note": "+search-event — 按关键词、时间范围…",
           "summary": "+search-event — 按关键词、时间范围和参会人搜索日程",
           "actor": "Agent",
@@ -2600,7 +2600,7 @@
       "id": "open.feishu.cn/lark-im",
       "hash": "e0cc85f395d6dd54b9c098b9708e0a97948e16be220c8ef3af6c03873883c00c",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.036Z",
+      "inspectedAt": "2026-08-19T21:26:15.370Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7105,
@@ -2711,7 +2711,7 @@
         {
           "id": "default-message-enrichment-reactions-updat",
           "kind": "agent",
-          "label": "Default message enrichment (reactions…",
+          "label": "Default message enrichment (r…",
           "note": "Default message enrichmen…",
           "summary": "Default message enrichment (reactions / updatetime)",
           "actor": "Agent",
@@ -2721,7 +2721,7 @@
         {
           "id": "opt-in-resource-auto-download-download-res",
           "kind": "agent",
-          "label": "Opt-in resource auto-download (--down…",
+          "label": "Opt-in resource auto-download…",
           "note": "Opt-in resource auto-down…",
           "summary": "Opt-in resource auto-download (--download-resources)",
           "actor": "Agent",
@@ -2760,7 +2760,7 @@
       "id": "open.feishu.cn/lark-contact",
       "hash": "2ad799e96b61d1c73fd04754d0e8998b0503637afe7ecb2041001958a0493cf7",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.032Z",
+      "inspectedAt": "2026-08-19T21:26:15.386Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7005,
@@ -2906,7 +2906,7 @@
       "id": "open.feishu.cn/lark-sheets",
       "hash": "f79e55e006302c0eadd6865c0d411a4f9687a44bacee4d997ba7768077addc5a",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.152Z",
+      "inspectedAt": "2026-08-19T21:26:15.474Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7320,
@@ -3005,9 +3005,9 @@
           "source": "执行要点（读取 / 原生工具 / 陷阱）"
         },
         {
-          "id": "lark-sheets-read-data-lark-sheets-read-dat",
+          "id": "lark-sheets-read-data-lark-sheets-rea",
           "kind": "agent",
-          "label": "读取：按需求选路径（细则见 lark-sheets-read-data）",
+          "label": "读取：按需求选路径（细则见 lark-sheets-rea…",
           "note": "读取：按需求选路径（细则见 lark-sheets…",
           "summary": "读取：按需求选路径（细则见 lark-sheets-read-data）",
           "actor": "Agent",
@@ -3050,10 +3050,10 @@
         ],
         [
           "step-4",
-          "lark-sheets-read-data-lark-sheets-read-dat"
+          "lark-sheets-read-data-lark-sheets-rea"
         ],
         [
-          "lark-sheets-read-data-lark-sheets-read-dat",
+          "lark-sheets-read-data-lark-sheets-rea",
           "7-7"
         ],
         [
@@ -3066,7 +3066,7 @@
       "id": "open.feishu.cn/lark-wiki",
       "hash": "297931df5d90f0662aec5694660b93e7b26f31e38ec609871a0c7435de016c7c",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.120Z",
+      "inspectedAt": "2026-08-19T21:26:15.533Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7070,
@@ -3226,7 +3226,7 @@
       "id": "open.feishu.cn/lark-event",
       "hash": "cdf4d623065353483e483bb8f7f14d03e7dc0d60e418e0303fd3c8bb0834ddea",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.047Z",
+      "inspectedAt": "2026-08-19T21:26:15.580Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7855,
@@ -3386,7 +3386,7 @@
       "id": "open.feishu.cn/lark-minutes",
       "hash": "50a6d1fd9e90e8af98c167391d1293d0870002d7d998a04c085680bbe70a7b23",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.073Z",
+      "inspectedAt": "2026-08-19T21:26:15.606Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7105,
@@ -3546,7 +3546,7 @@
       "id": "open.feishu.cn/lark-attendance",
       "hash": "8598636d79a5168da87160c065bcde5729e21cd7e676a35d094a3fa9fc9bf585",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.150Z",
+      "inspectedAt": "2026-08-19T21:26:15.569Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6165,
@@ -3678,7 +3678,7 @@
       "id": "open.feishu.cn/lark-whiteboard",
       "hash": "9f24589ed7b7d994a329fbd7a9be77c6b0748e299406c7d9fbe2a084dada12ff",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.220Z",
+      "inspectedAt": "2026-08-19T21:26:15.658Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6230,
@@ -3810,7 +3810,7 @@
       "id": "open.feishu.cn/lark-openapi-explorer",
       "hash": "5de085243fc6742efd2d4d9339aaf9dc850ef64633c9243413abf76a1f397298",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.309Z",
+      "inspectedAt": "2026-08-19T21:26:15.635Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7145,
@@ -3970,7 +3970,7 @@
       "id": "open.feishu.cn/lark-task",
       "hash": "67d7c10f6839fc05c495cb02025887c4671679c467706559b54cb807f2454a0a",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.267Z",
+      "inspectedAt": "2026-08-19T21:26:15.702Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6535,
@@ -4130,7 +4130,7 @@
       "id": "open.feishu.cn/lark-mail",
       "hash": "39e3363827e741f579d692502b1b73d0ca3b13d959c768f8ac0e14f1c4a999a0",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.693Z",
+      "inspectedAt": "2026-08-19T21:26:15.917Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7455,
@@ -4290,7 +4290,7 @@
       "id": "open.feishu.cn/lark-slides",
       "hash": "c84312b87572c8fc28546dda6070598efe3fee37fcd659fcf7ee3bf69c680415",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.339Z",
+      "inspectedAt": "2026-08-19T21:26:16.001Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7210,
@@ -4450,7 +4450,7 @@
       "id": "open.feishu.cn/lark-skill-maker",
       "hash": "91a7361b24e8e7ab6bb098e393e8981c254e4ecd5ba25e95fd7243a412326e28",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.301Z",
+      "inspectedAt": "2026-08-19T21:26:15.748Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6650,
@@ -4568,7 +4568,7 @@
       "id": "open.feishu.cn/lark-vc",
       "hash": "f6673ad7564fb19ccc9de64416aa9d32bf30c5c57226c6e98092c254ae1c9881",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.445Z",
+      "inspectedAt": "2026-08-19T21:26:15.803Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6735,
@@ -4728,7 +4728,7 @@
       "id": "open.feishu.cn/lark-workflow-meeting-summary",
       "hash": "8ca13cdeeaf0ec4bc1e83aefdf787a135ef47fdedcddec4050310583596512c5",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.328Z",
+      "inspectedAt": "2026-08-19T21:26:16.048Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6970,
@@ -4888,7 +4888,7 @@
       "id": "open.feishu.cn/lark-workflow-standup-report",
       "hash": "6c57515d206e60486c46613a4fd10630808d70aadeebabab763b436d44eeb944",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.774Z",
+      "inspectedAt": "2026-08-19T21:26:15.796Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7020,
@@ -5048,7 +5048,7 @@
       "id": "open.feishu.cn/lark-okr",
       "hash": "4646519b63a58baa6aa185d1999420e7a2ebe2822f78745bcb6d8b01660efc1f",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.541Z",
+      "inspectedAt": "2026-08-19T21:26:16.243Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7090,
@@ -5208,7 +5208,7 @@
       "id": "open.feishu.cn/lark-markdown",
       "hash": "441b69e7b3aaecd4cee6c2f5e4d55dfa43152a589da3251eb99767228fe0a6d5",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.460Z",
+      "inspectedAt": "2026-08-19T21:26:15.936Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7050,
@@ -5326,7 +5326,7 @@
       "id": "vercel-labs/agent-skills/web-design-guidelines",
       "hash": "f3bc47f890f42a44db1007ab390709ec368e4b8c089baee6b0007182236ac474",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.773Z",
+      "inspectedAt": "2026-08-19T21:26:15.923Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7145,
@@ -5430,7 +5430,7 @@
       "id": "microsoft/azure-skills/microsoft-foundry",
       "hash": "82682f02be0ae851d457bc1ee5055e1458ea8ad3240471cee3051c557eaa4c25",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.883Z",
+      "inspectedAt": "2026-08-19T21:26:16.208Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 8100,
@@ -5590,7 +5590,7 @@
       "id": "open.feishu.cn/lark-vc-agent",
       "hash": "860f8e2b6dc58056707cc98bb9dfeef5a9bf990f83f479c3b2a77ef4d3c6078c",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.593Z",
+      "inspectedAt": "2026-08-19T21:26:15.951Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6835,
@@ -5750,7 +5750,7 @@
       "id": "microsoft/azure-skills/azure-diagnostics",
       "hash": "200976151ed40af09763472601cf403e41c8d877fd00d2ea8c829678d37e992e",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.932Z",
+      "inspectedAt": "2026-08-19T21:26:16.200Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 8705,
@@ -5841,7 +5841,7 @@
         {
           "id": "troubleshooting-guides-by-service-troubles",
           "kind": "agent",
-          "label": "Troubleshooting Guides by Service",
+          "label": "Troubleshooting Guides by Ser…",
           "note": "Troubleshooting Guides by…",
           "summary": "Troubleshooting Guides by Service",
           "actor": "Agent",
@@ -5910,7 +5910,7 @@
       "id": "microsoft/azure-skills/azure-ai",
       "hash": "e97156ba97a3c873fdfcf24ce9c504012a5e1dad502631bb48904ae536aab421",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.706Z",
+      "inspectedAt": "2026-08-19T21:26:16.164Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7080,
@@ -6070,7 +6070,7 @@
       "id": "microsoft/azure-skills/azure-deploy",
       "hash": "7544f9468d8813b67dd8982d25687b1d2d2becc23cb3c5212b474fc7a72a6e6a",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.778Z",
+      "inspectedAt": "2026-08-19T21:26:16.379Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 8025,
@@ -6202,7 +6202,7 @@
       "id": "microsoft/azure-skills/azure-prepare",
       "hash": "37348d9e4b71b0eeb9ca16986b8e5c50daa3e89c55fae688f17d505f89760ade",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.877Z",
+      "inspectedAt": "2026-08-19T21:26:16.406Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 8445,
@@ -6283,7 +6283,7 @@
         {
           "id": "plan-first-workflow-mandatory-plan-first-w",
           "kind": "agent",
-          "label": "❌ PLAN-FIRST WORKFLOW — MANDATORY",
+          "label": "❌ PLAN-FIRST WORKFLOW — MANDA…",
           "note": "❌ PLAN-FIRST WORKFLOW — M…",
           "summary": "❌ PLAN-FIRST WORKFLOW — MANDATORY",
           "actor": "Agent",
@@ -6293,7 +6293,7 @@
         {
           "id": "step-0-specialized-technology-check-mandat",
           "kind": "agent",
-          "label": "❌ STEP 0: Specialized Technology Chec…",
+          "label": "❌ STEP 0: Specialized Technol…",
           "note": "❌ STEP 0: Specialized Tec…",
           "summary": "❌ STEP 0: Specialized Technology Check — MANDATORY FIRST ACTION",
           "actor": "Agent",
@@ -6313,7 +6313,7 @@
         {
           "id": "phase-1-planning-blocking-complete-before-",
           "kind": "agent",
-          "label": "Phase 1: Planning (BLOCKING — Complet…",
+          "label": "Phase 1: Planning (BLOCKING —…",
           "note": "Phase 1: Planning (BLOCKI…",
           "summary": "Phase 1: Planning (BLOCKING — Complete Before Any Execution)",
           "actor": "Agent",
@@ -6323,7 +6323,7 @@
         {
           "id": "phase-2-execution-only-after-plan-approval",
           "kind": "agent",
-          "label": "Phase 2: Execution (Only After Plan A…",
+          "label": "Phase 2: Execution (Only Afte…",
           "note": "Phase 2: Execution (Only…",
           "summary": "Phase 2: Execution (Only After Plan Approval)",
           "actor": "Agent",
@@ -6362,7 +6362,7 @@
       "id": "microsoft/azure-skills/azure-validate",
       "hash": "f6b2038e5a20a7c8f821e8ddbf12226af538a379371b3689e7b42a02733aab1d",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.989Z",
+      "inspectedAt": "2026-08-19T21:26:16.286Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7680,
@@ -6466,7 +6466,7 @@
       "id": "microsoft/azure-skills/azure-storage",
       "hash": "51df59e7bbb856f537cbdb14db57f563d08f4a63cddd3637a054e42d47d17f29",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.879Z",
+      "inspectedAt": "2026-08-19T21:26:16.262Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 8065,
@@ -6626,7 +6626,7 @@
       "id": "microsoft/azure-skills/entra-app-registration",
       "hash": "95eb2acd2794438baba6578e726478a497ac8caf8f2e06bb43b74b5d08c7b227",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.997Z",
+      "inspectedAt": "2026-08-19T21:26:16.370Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7855,
@@ -6717,7 +6717,7 @@
         {
           "id": "step-1-register-the-application-step-1-reg",
           "kind": "agent",
-          "label": "Step 1: Register the Application",
+          "label": "Step 1: Register the Applicat…",
           "note": "Step 1: Register the Appl…",
           "summary": "Step 1: Register the Application",
           "actor": "Agent",
@@ -6727,7 +6727,7 @@
         {
           "id": "step-2-configure-authentication-step-2-con",
           "kind": "agent",
-          "label": "Step 2: Configure Authentication",
+          "label": "Step 2: Configure Authenticat…",
           "note": "Step 2: Configure Authent…",
           "summary": "Step 2: Configure Authentication",
           "actor": "Agent",
@@ -6737,7 +6737,7 @@
         {
           "id": "step-3-configure-api-permissions-step-3-co",
           "kind": "agent",
-          "label": "Step 3: Configure API Permissions",
+          "label": "Step 3: Configure API Permiss…",
           "note": "Step 3: Configure API Per…",
           "summary": "Step 3: Configure API Permissions",
           "actor": "Agent",
@@ -6747,7 +6747,7 @@
         {
           "id": "step-4-create-client-credentials-if-needed",
           "kind": "artifact",
-          "label": "Step 4: Create Client Credentials (if…",
+          "label": "Step 4: Create Client Credent…",
           "note": "Step 4: Create Client Cre…",
           "summary": "Step 4: Create Client Credentials (if needed)",
           "actor": "Agent",
@@ -6786,7 +6786,7 @@
       "id": "microsoft/azure-skills/appinsights-instrumentation",
       "hash": "1c0174a5940ac9f9395037448deaec32a4aeea76eae3e9218620c192295db615",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:13.981Z",
+      "inspectedAt": "2026-08-19T21:26:16.486Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7800,
@@ -6877,7 +6877,7 @@
         {
           "id": "prefer-auto-instrument-if-possible-prefer-",
           "kind": "agent",
-          "label": "Prefer auto-instrument if possible",
+          "label": "Prefer auto-instrument if pos…",
           "note": "Prefer auto-instrument if…",
           "summary": "Prefer auto-instrument if possible",
           "actor": "Agent",
@@ -6946,7 +6946,7 @@
       "id": "microsoft/azure-skills/azure-resource-lookup",
       "hash": "2a37d4bf258ba7a75df84686ce310d633a9bccf4a6b5a66226595f74384111f6",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.347Z",
+      "inspectedAt": "2026-08-19T21:26:16.524Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7755,
@@ -7027,7 +7027,7 @@
         {
           "id": "step-1-check-for-a-dedicated-mcp-tool-step",
           "kind": "agent",
-          "label": "Step 1: Check for a Dedicated MCP Tool",
+          "label": "Step 1: Check for a Dedicated…",
           "note": "Step 1: Check for a Dedic…",
           "summary": "Step 1: Check for a Dedicated MCP Tool",
           "actor": "Agent",
@@ -7047,7 +7047,7 @@
         {
           "id": "step-3-execute-and-format-results-step-3-e",
           "kind": "agent",
-          "label": "Step 3: Execute and Format Results",
+          "label": "Step 3: Execute and Format Re…",
           "note": "Step 3: Execute and Forma…",
           "summary": "Step 3: Execute and Format Results",
           "actor": "Agent",
@@ -7106,7 +7106,7 @@
       "id": "microsoft/azure-skills/azure-compliance",
       "hash": "885429e1b1bfa60e77df05ad8e1a780aa4fcd9fc190d00531800637cc20a1e4c",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.223Z",
+      "inspectedAt": "2026-08-19T21:26:16.414Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7710,
@@ -7266,7 +7266,7 @@
       "id": "microsoft/azure-skills/azure-aigateway",
       "hash": "71989ad28fb1d0087f5eed1c1bb67aedb19ac92d879d43770b0124e7d32ea397",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.027Z",
+      "inspectedAt": "2026-08-19T21:26:16.456Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 8170,
@@ -7426,7 +7426,7 @@
       "id": "microsoft/azure-skills/azure-kusto",
       "hash": "d87bfeff59a2b142b5523246a1061c180cd249d5246c07f1caf95ac316d2645f",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.073Z",
+      "inspectedAt": "2026-08-19T21:26:16.483Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7985,
@@ -7517,7 +7517,7 @@
         {
           "id": "pattern-1-basic-data-retrieval-pattern-1-b",
           "kind": "agent",
-          "label": "Pattern 1: Basic Data Retrieval",
+          "label": "Pattern 1: Basic Data Retriev…",
           "note": "Pattern 1: Basic Data Ret…",
           "summary": "Pattern 1: Basic Data Retrieval",
           "actor": "Agent",
@@ -7527,7 +7527,7 @@
         {
           "id": "pattern-2-aggregation-analysis-pattern-2-a",
           "kind": "agent",
-          "label": "Pattern 2: Aggregation Analysis",
+          "label": "Pattern 2: Aggregation Analys…",
           "note": "Pattern 2: Aggregation An…",
           "summary": "Pattern 2: Aggregation Analysis",
           "actor": "Agent",
@@ -7537,7 +7537,7 @@
         {
           "id": "pattern-3-time-series-analytics-pattern-3-",
           "kind": "agent",
-          "label": "Pattern 3: Time Series Analytics",
+          "label": "Pattern 3: Time Series Analyt…",
           "note": "Pattern 3: Time Series An…",
           "summary": "Pattern 3: Time Series Analytics",
           "actor": "Agent",
@@ -7547,7 +7547,7 @@
         {
           "id": "pattern-4-join-and-correlation-pattern-4-j",
           "kind": "agent",
-          "label": "Pattern 4: Join and Correlation",
+          "label": "Pattern 4: Join and Correlati…",
           "note": "Pattern 4: Join and Corre…",
           "summary": "Pattern 4: Join and Correlation",
           "actor": "Agent",
@@ -7586,7 +7586,7 @@
       "id": "microsoft/azure-skills/azure-resource-visualizer",
       "hash": "cc55fd4e1e6be8c680fcd2978ec93db7feaddab267e1f2b00a30b31ef616726b",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.353Z",
+      "inspectedAt": "2026-08-19T21:26:16.629Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7780,
@@ -7667,7 +7667,7 @@
         {
           "id": "step-1-resource-group-selection-step-1-res",
           "kind": "human",
-          "label": "Step 1: Resource Group Selection",
+          "label": "Step 1: Resource Group Select…",
           "note": "Step 1: Resource Group Se…",
           "summary": "Step 1: Resource Group Selection",
           "actor": "Human + agent",
@@ -7677,7 +7677,7 @@
         {
           "id": "step-2-resource-discovery-analysis-step-2-",
           "kind": "agent",
-          "label": "Step 2: Resource Discovery & Analysis",
+          "label": "Step 2: Resource Discovery &…",
           "note": "Step 2: Resource Discover…",
           "summary": "Step 2: Resource Discovery & Analysis",
           "actor": "Agent",
@@ -7746,7 +7746,7 @@
       "id": "microsoft/azure-skills/azure-messaging",
       "hash": "b2cd16a1022b62abc488f07df228bfdae32edf94c3ebd89b74b87e49cdb4c500",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.333Z",
+      "inspectedAt": "2026-08-19T21:26:16.626Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7525,
@@ -7850,7 +7850,7 @@
       "id": "open.feishu.cn/lark-apps",
       "hash": "378435dd5022572e5e0b13a7ce40455eae84ea8907cdaed66996cb091e3609e9",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.276Z",
+      "inspectedAt": "2026-08-19T21:26:16.689Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7345,
@@ -8010,7 +8010,7 @@
       "id": "mattpocock/skills/teach",
       "hash": "7e67f13dc27781aad061d1eee61676c39c51d4d7ad6d7dc07ef943653c6e01ff",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.267Z",
+      "inspectedAt": "2026-08-19T21:26:16.870Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7210,
@@ -8170,7 +8170,7 @@
       "id": "remotion-dev/skills/remotion-best-practices",
       "hash": "740300e2483a62d0483a619ec0fcbfa8870cbb1aa9dedacb02fa83e12cb8435e",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.356Z",
+      "inspectedAt": "2026-08-19T21:26:16.843Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6630,
@@ -8330,7 +8330,7 @@
       "id": "mattpocock/skills/grilling",
       "hash": "dae226933247301e1947768ca27c09d351348f6e3f6692df72998dd990212eb3",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.621Z",
+      "inspectedAt": "2026-08-19T21:26:16.699Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6480,
@@ -8389,9 +8389,9 @@
       ],
       "nodes": [
         {
-          "id": "workflow-interview-the-user-relentlessly-u",
+          "id": "workflow-interview-the-user-relentless",
           "kind": "human",
-          "label": "Interview the user relentlessly until…",
+          "label": "Interview the user relentless…",
           "note": "Workflow",
           "summary": "Interview the user relentlessly until you reach a shared understanding. Map this as a design tree: every decision branches into the decisions that ha…",
           "actor": "Human + agent",
@@ -8399,9 +8399,9 @@
           "source": "Interview the user relentlessly until you reach a shared understanding. Map this as a design tree: every decision branches into the decisions that hang off it."
         },
         {
-          "id": "workflow-work-the-tree-in-rounds-the-front",
+          "id": "workflow-work-the-tree-in-rounds-the",
           "kind": "human",
-          "label": "Work the tree in rounds. The frontier…",
+          "label": "Work the tree in rounds. The…",
           "note": "Workflow",
           "summary": "Work the tree in rounds. The frontier is every decision whose prerequisites are already settled: the questions you can ask now without guessing at an…",
           "actor": "Human + agent",
@@ -8409,9 +8409,9 @@
           "source": "Work the tree in rounds. The frontier is every decision whose prerequisites are already settled: the questions you can ask now without guessing at answers you haven't heard yet. Ask the whole frontier in one round: numb…"
         },
         {
-          "id": "workflow-each-question-should-be-formatted",
+          "id": "workflow-each-question-should-be-forma",
           "kind": "agent",
-          "label": "Each question should be formatted lik…",
+          "label": "Each question should be forma…",
           "note": "Workflow",
           "summary": "Each question should be formatted like so:",
           "actor": "Agent",
@@ -8419,9 +8419,9 @@
           "source": "Each question should be formatted like so:"
         },
         {
-          "id": "workflow-each-round-the-user-answers-resha",
+          "id": "workflow-each-round-the-user-answers-r",
           "kind": "human",
-          "label": "Each round the user answers reshapes…",
+          "label": "Each round the user answers r…",
           "note": "Workflow",
           "summary": "Each round the user answers reshapes the tree: settled decisions push the frontier outward and unblock questions that depended on them. Recompute the…",
           "actor": "Human + agent",
@@ -8429,9 +8429,9 @@
           "source": "Each round the user answers reshapes the tree: settled decisions push the frontier outward and unblock questions that depended on them. Recompute the frontier and ask the next round. A question whose answer depends on a…"
         },
         {
-          "id": "workflow-finding-facts-is-your-job-never-t",
+          "id": "workflow-finding-facts-is-your-job-ne",
           "kind": "human",
-          "label": "Finding facts is your job, never the…",
+          "label": "Finding facts is your job, ne…",
           "note": "Workflow",
           "summary": "Finding facts is your job, never the user's. When a frontier question needs a fact from the environment (filesystem, tools, etc.), dispatch a sub-age…",
           "actor": "Human + agent",
@@ -8439,9 +8439,9 @@
           "source": "Finding facts is your job, never the user's. When a frontier question needs a fact from the environment (filesystem, tools, etc.), dispatch a sub-agent to find it; don't ask the user for anything you could look up yours…"
         },
         {
-          "id": "workflow-the-session-is-done-when-the-fron",
+          "id": "workflow-the-session-is-done-when-the",
           "kind": "human",
-          "label": "The session is done when the frontier…",
+          "label": "The session is done when the…",
           "note": "Workflow",
           "summary": "The session is done when the frontier is empty: every branch of the design tree visited, nothing left silently assumed. Do not act on it until the us…",
           "actor": "Human + agent",
@@ -8451,24 +8451,24 @@
       ],
       "edges": [
         [
-          "workflow-interview-the-user-relentlessly-u",
-          "workflow-work-the-tree-in-rounds-the-front"
+          "workflow-interview-the-user-relentless",
+          "workflow-work-the-tree-in-rounds-the"
         ],
         [
-          "workflow-work-the-tree-in-rounds-the-front",
-          "workflow-each-question-should-be-formatted"
+          "workflow-work-the-tree-in-rounds-the",
+          "workflow-each-question-should-be-forma"
         ],
         [
-          "workflow-each-question-should-be-formatted",
-          "workflow-each-round-the-user-answers-resha"
+          "workflow-each-question-should-be-forma",
+          "workflow-each-round-the-user-answers-r"
         ],
         [
-          "workflow-each-round-the-user-answers-resha",
-          "workflow-finding-facts-is-your-job-never-t"
+          "workflow-each-round-the-user-answers-r",
+          "workflow-finding-facts-is-your-job-ne"
         ],
         [
-          "workflow-finding-facts-is-your-job-never-t",
-          "workflow-the-session-is-done-when-the-fron"
+          "workflow-finding-facts-is-your-job-ne",
+          "workflow-the-session-is-done-when-the"
         ]
       ]
     },
@@ -8476,7 +8476,7 @@
       "id": "microsoft/azure-skills/azure-rbac",
       "hash": "4d9a271de2b49ccf48c83184557391fb4124e7f92e557eeb9fd5f61b41535a9a",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.395Z",
+      "inspectedAt": "2026-08-19T21:26:16.745Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6425,
@@ -8535,9 +8535,9 @@
       ],
       "nodes": [
         {
-          "id": "workflow-prerequisites-for-granting-roles",
+          "id": "workflow-prerequisites-for-granting-ro",
           "kind": "agent",
-          "label": "Prerequisites for Granting Roles",
+          "label": "Prerequisites for Granting Ro…",
           "note": "Workflow",
           "summary": "Prerequisites for Granting Roles",
           "actor": "Agent",
@@ -8545,9 +8545,9 @@
           "source": "Prerequisites for Granting Roles"
         },
         {
-          "id": "workflow-to-assign-rbac-roles-to-identitie",
+          "id": "workflow-to-assign-rbac-roles-to-ident",
           "kind": "agent",
-          "label": "To assign RBAC roles to identities, y…",
+          "label": "To assign RBAC roles to ident…",
           "note": "Workflow",
           "summary": "To assign RBAC roles to identities, you need a role that includes the Microsoft.Authorization/roleAssignments/write permission. The most common roles…",
           "actor": "Agent",
@@ -8555,9 +8555,9 @@
           "source": "To assign RBAC roles to identities, you need a role that includes the Microsoft.Authorization/roleAssignments/write permission. The most common roles with this permission are:"
         },
         {
-          "id": "workflow-user-access-administrator-least-p",
+          "id": "workflow-user-access-administrator-le",
           "kind": "artifact",
-          "label": "User Access Administrator (least priv…",
+          "label": "User Access Administrator (le…",
           "note": "Workflow",
           "summary": "User Access Administrator (least privilege - recommended for role assignment only) - Owner (full access including role assignment) - Custom Role with…",
           "actor": "Agent",
@@ -8567,12 +8567,12 @@
       ],
       "edges": [
         [
-          "workflow-prerequisites-for-granting-roles",
-          "workflow-to-assign-rbac-roles-to-identitie"
+          "workflow-prerequisites-for-granting-ro",
+          "workflow-to-assign-rbac-roles-to-ident"
         ],
         [
-          "workflow-to-assign-rbac-roles-to-identitie",
-          "workflow-user-access-administrator-least-p"
+          "workflow-to-assign-rbac-roles-to-ident",
+          "workflow-user-access-administrator-le"
         ]
       ]
     },
@@ -8580,7 +8580,7 @@
       "id": "microsoft/azure-skills/azure-compute",
       "hash": "37ddc8f23015d381f9a09dfd2b34c4686a96b33146d37020244cdded03a86bda",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.792Z",
+      "inspectedAt": "2026-08-19T21:26:16.783Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7300,
@@ -8639,9 +8639,9 @@
       ],
       "nodes": [
         {
-          "id": "workflow-routes-azure-vm-and-virtual-machi",
+          "id": "workflow-routes-azure-vm-and-virtual-m",
           "kind": "agent",
-          "label": "Routes Azure VM and Virtual Machine S…",
+          "label": "Routes Azure VM and Virtual M…",
           "note": "Workflow",
           "summary": "Routes Azure VM and Virtual Machine Scale Set (VMSS) requests to the right workflow.",
           "actor": "Agent",
@@ -8649,9 +8649,9 @@
           "source": "Routes Azure VM and Virtual Machine Scale Set (VMSS) requests to the right workflow."
         },
         {
-          "id": "workflow-user-wants-to-recommend-compare-o",
+          "id": "workflow-user-wants-to-recommend-comp",
           "kind": "agent",
-          "label": "User wants to recommend, compare, or…",
+          "label": "User wants to recommend, comp…",
           "note": "Workflow",
           "summary": "User wants to recommend, compare, or price a VM or VMSS - User wants to create, provision, or deploy a VM or VMSS - User asks about Capacity Reservat…",
           "actor": "Agent",
@@ -8659,9 +8659,9 @@
           "source": "User wants to recommend, compare, or price a VM or VMSS - User wants to create, provision, or deploy a VM or VMSS - User asks about Capacity Reservation Groups (CRG) — reserve, guarantee capacity, pre-provision - User a…"
         },
         {
-          "id": "workflow-disambiguate-with-azure-prepare-i",
+          "id": "workflow-disambiguate-with-azure-prepa",
           "kind": "agent",
-          "label": "Disambiguate with azure-prepare: if t…",
+          "label": "Disambiguate with azure-prepa…",
           "note": "Workflow",
           "summary": "Disambiguate with azure-prepare: if the user wants to deploy an application (Docker service, web app, API, serverless workload), route to azure-prepa…",
           "actor": "Agent",
@@ -8669,9 +8669,9 @@
           "source": "Disambiguate with azure-prepare: if the user wants to deploy an application (Docker service, web app, API, serverless workload), route to azure-prepare. vm-creator is for bare VM/VMSS infrastructure only."
         },
         {
-          "id": "workflow-mandatory-workflow-first-routing-",
+          "id": "workflow-mandatory-workflow-first-rout",
           "kind": "agent",
-          "label": "Mandatory workflow-first routing: nev…",
+          "label": "Mandatory workflow-first rout…",
           "note": "Workflow",
           "summary": "Mandatory workflow-first routing: never route directly to references/ files. First classify the user intent below, open the matched workflow file, th…",
           "actor": "Agent",
@@ -8681,16 +8681,16 @@
       ],
       "edges": [
         [
-          "workflow-routes-azure-vm-and-virtual-machi",
-          "workflow-user-wants-to-recommend-compare-o"
+          "workflow-routes-azure-vm-and-virtual-m",
+          "workflow-user-wants-to-recommend-comp"
         ],
         [
-          "workflow-user-wants-to-recommend-compare-o",
-          "workflow-disambiguate-with-azure-prepare-i"
+          "workflow-user-wants-to-recommend-comp",
+          "workflow-disambiguate-with-azure-prepa"
         ],
         [
-          "workflow-disambiguate-with-azure-prepare-i",
-          "workflow-mandatory-workflow-first-routing-"
+          "workflow-disambiguate-with-azure-prepa",
+          "workflow-mandatory-workflow-first-rout"
         ]
       ]
     },
@@ -8698,7 +8698,7 @@
       "id": "microsoft/azure-skills/azure-cloud-migrate",
       "hash": "32f2aa70f3a65df5b8e323363f7680e8ebcd8c1cf5b2433d725acbb381d6ade1",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.576Z",
+      "inspectedAt": "2026-08-19T21:26:16.932Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7920,
@@ -8816,7 +8816,7 @@
       "id": "juliusbrussee/caveman/caveman",
       "hash": "784110d6c3dc6d7e8d094ac998ebf811e19462ad40a9f0f2f47cbbae9c7e8753",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.801Z",
+      "inspectedAt": "2026-08-19T21:26:16.824Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7465,
@@ -8948,7 +8948,7 @@
       "id": "mattpocock/skills/domain-modeling",
       "hash": "e670c36709c31c0801c0635397d2d9662d74bb777825b16d707f2902dd6fad0e",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.521Z",
+      "inspectedAt": "2026-08-19T21:26:16.860Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7605,
@@ -9112,7 +9112,7 @@
       "id": "microsoft/azure-skills/azure-hosted-copilot-sdk",
       "hash": "2ffc86e419474b85424303ef45de3bedf1f56c3ca761f8d9ccfbf78f6f019c32",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.817Z",
+      "inspectedAt": "2026-08-19T21:26:16.871Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7855,
@@ -9173,7 +9173,7 @@
         {
           "id": "codebase-detection-mandatory-first-check-c",
           "kind": "agent",
-          "label": "Codebase Detection — MANDATORY FIRST…",
+          "label": "Codebase Detection — MANDATOR…",
           "note": "Codebase Detection — MAND…",
           "summary": "Codebase Detection — MANDATORY FIRST CHECK",
           "actor": "Agent",
@@ -9183,7 +9183,7 @@
         {
           "id": "detection-procedure-run-immediately-for-an",
           "kind": "agent",
-          "label": "Detection procedure (run IMMEDIATELY…",
+          "label": "Detection procedure (run IMME…",
           "note": "Detection procedure (run…",
           "summary": "Detection procedure (run IMMEDIATELY for any build/modify/add-feature/prepare prompt):",
           "actor": "Agent",
@@ -9193,7 +9193,7 @@
         {
           "id": "generic-prompts-that-must-trigger-this-ski",
           "kind": "agent",
-          "label": "Generic prompts that MUST trigger thi…",
+          "label": "Generic prompts that MUST tri…",
           "note": "Generic prompts that MUST…",
           "summary": "Generic prompts that MUST trigger this skill when markers are detected:",
           "actor": "Agent",
@@ -9213,7 +9213,7 @@
         {
           "id": "step-2a-scaffold-new-greenfield-step-2a-sc",
           "kind": "agent",
-          "label": "Step 2A: Scaffold New (Greenfield)",
+          "label": "Step 2A: Scaffold New (Greenf…",
           "note": "Step 2A: Scaffold New (Gr…",
           "summary": "Step 2A: Scaffold New (Greenfield)",
           "actor": "Agent",
@@ -9223,7 +9223,7 @@
         {
           "id": "step-2b-add-sdk-service-to-existing-repo-s",
           "kind": "agent",
-          "label": "Step 2B: Add SDK Service to Existing…",
+          "label": "Step 2B: Add SDK Service to E…",
           "note": "Step 2B: Add SDK Service…",
           "summary": "Step 2B: Add SDK Service to Existing Repo",
           "actor": "Agent",
@@ -9233,7 +9233,7 @@
         {
           "id": "step-2c-deploy-existing-sdk-app-step-2c-de",
           "kind": "agent",
-          "label": "Step 2C: Deploy Existing SDK App",
+          "label": "Step 2C: Deploy Existing SDK…",
           "note": "Step 2C: Deploy Existing…",
           "summary": "Step 2C: Deploy Existing SDK App",
           "actor": "Agent",
@@ -9272,7 +9272,7 @@
       "id": "lllllllama/rigorpilot-skills/paper-context-resolver",
       "hash": "66cfe5cbe0fdeaa0d6df7f83eef91779fa2ff5f744390393621407e2d228faac",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.972Z",
+      "inspectedAt": "2026-08-19T21:26:17.088Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7300,
@@ -9404,7 +9404,7 @@
       "id": "lllllllama/rigorpilot-skills/repo-intake-and-plan",
       "hash": "2fc763f9cf72d561fd78c4593a29ddd452088b58481c1585208441be6daaac74",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.560Z",
+      "inspectedAt": "2026-08-19T21:26:16.959Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7400,
@@ -9536,7 +9536,7 @@
       "id": "lllllllama/rigorpilot-skills/minimal-run-and-audit",
       "hash": "5e167f0fd455e8c5b87c842e84d53711d7cacff83684e5be95dbfa6fe60aeccc",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.763Z",
+      "inspectedAt": "2026-08-19T21:26:16.991Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7720,
@@ -9668,7 +9668,7 @@
       "id": "lllllllama/rigorpilot-skills/env-and-assets-bootstrap",
       "hash": "8729e8f31de677542cf9d3a0c011740d8a1fc894f81046955bcd7fa4361ea2bf",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.269Z",
+      "inspectedAt": "2026-08-19T21:26:17.157Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7740,
@@ -9800,7 +9800,7 @@
       "id": "mattpocock/skills/codebase-design",
       "hash": "42f405c9a796a59fbca9e07f43225d42ce1c9f3541463099bc62eda59d6f550f",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.973Z",
+      "inspectedAt": "2026-08-19T21:26:17.157Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7695,
@@ -9960,7 +9960,7 @@
       "id": "mattpocock/skills/diagnosing-bugs",
       "hash": "03653ab32369818ec20095e0867f849a9860a4f3b1ea930e70787eaec1e322ef",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.789Z",
+      "inspectedAt": "2026-08-19T21:26:17.134Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 8055,
@@ -10031,7 +10031,7 @@
         {
           "id": "phase-1-build-a-feedback-loop-phase-1-buil",
           "kind": "loop",
-          "label": "Phase 1 — Build a feedback loop",
+          "label": "Phase 1 — Build a feedback lo…",
           "note": "Phase 1 — Build a feedbac…",
           "summary": "Phase 1 — Build a feedback loop",
           "actor": "Agent",
@@ -10041,7 +10041,7 @@
         {
           "id": "ways-to-construct-one-try-them-in-roughly-",
           "kind": "agent",
-          "label": "Ways to construct one — try them in r…",
+          "label": "Ways to construct one — try t…",
           "note": "Ways to construct one — t…",
           "summary": "Ways to construct one — try them in roughly this order",
           "actor": "Agent",
@@ -10071,7 +10071,7 @@
         {
           "id": "when-you-genuinely-cannot-build-a-loop-whe",
           "kind": "loop",
-          "label": "When you genuinely cannot build a loop",
+          "label": "When you genuinely cannot bui…",
           "note": "When you genuinely cannot…",
           "summary": "When you genuinely cannot build a loop",
           "actor": "Agent",
@@ -10081,7 +10081,7 @@
         {
           "id": "completion-criterion-a-tight-loop-that-goe",
           "kind": "loop",
-          "label": "Completion criterion — a tight loop t…",
+          "label": "Completion criterion — a tigh…",
           "note": "Completion criterion — a…",
           "summary": "Completion criterion — a tight loop that goes red",
           "actor": "Agent",
@@ -10120,7 +10120,7 @@
       "id": "larksuite/cli/lark-doc",
       "hash": "cfab51bbb275b7290dd2d42190ed260108515f2b945f367efde7cac70f081c8c",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.086Z",
+      "inspectedAt": "2026-08-19T21:26:17.439Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7580,
@@ -10266,7 +10266,7 @@
       "id": "larksuite/cli/lark-base",
       "hash": "0945faf3fd0ba9e495929fb48e4bbb7077a67204e4607d40a83039df3e8f093f",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.187Z",
+      "inspectedAt": "2026-08-19T21:26:17.325Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6785,
@@ -10426,7 +10426,7 @@
       "id": "larksuite/cli/lark-shared",
       "hash": "0334d3d4607adde95bca546e206ac6557eb5cb76a86ed4d2c84498214c4cf568",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:14.975Z",
+      "inspectedAt": "2026-08-19T21:26:17.144Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7300,
@@ -10530,7 +10530,7 @@
       "id": "larksuite/cli/lark-drive",
       "hash": "ddc349c696702328056d95c722a3d73d7f0bf595037ca17d57b936352436b307",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.261Z",
+      "inspectedAt": "2026-08-19T21:26:17.961Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7660,
@@ -10690,7 +10690,7 @@
       "id": "larksuite/cli/lark-im",
       "hash": "b4ba16bc0ec18cbf7dbba7d13e09ee3d10f8a27d95687c80c2f3a20eedefad00",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.168Z",
+      "inspectedAt": "2026-08-19T21:26:17.486Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7260,
@@ -10801,7 +10801,7 @@
         {
           "id": "default-message-enrichment-reactions-updat",
           "kind": "agent",
-          "label": "Default message enrichment (reactions…",
+          "label": "Default message enrichment (r…",
           "note": "Default message enrichmen…",
           "summary": "Default message enrichment (reactions / updatetime)",
           "actor": "Agent",
@@ -10811,7 +10811,7 @@
         {
           "id": "opt-in-resource-auto-download-download-res",
           "kind": "agent",
-          "label": "Opt-in resource auto-download (--down…",
+          "label": "Opt-in resource auto-download…",
           "note": "Opt-in resource auto-down…",
           "summary": "Opt-in resource auto-download (--download-resources)",
           "actor": "Agent",
@@ -10850,7 +10850,7 @@
       "id": "larksuite/cli/lark-wiki",
       "hash": "74de7f79e5c4d7b79010a68b71eddb4551d4e20aef77cd14d3fdb97efdebc2a2",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.210Z",
+      "inspectedAt": "2026-08-19T21:26:17.452Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7225,
@@ -11010,7 +11010,7 @@
       "id": "larksuite/cli/lark-sheets",
       "hash": "7e56c2fdaab09f1aefd18d2baac695f9ae82a4be6eb0ca367a93204a7c6f5688",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.402Z",
+      "inspectedAt": "2026-08-19T21:26:17.931Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 8215,
@@ -11109,9 +11109,9 @@
           "source": "执行要点（读取 / 原生工具 / 陷阱）"
         },
         {
-          "id": "lark-sheets-read-data-lark-sheets-read-dat",
+          "id": "lark-sheets-read-data-lark-sheets-rea",
           "kind": "agent",
-          "label": "读取：按需求选路径（细则见 lark-sheets-read-data）",
+          "label": "读取：按需求选路径（细则见 lark-sheets-rea…",
           "note": "读取：按需求选路径（细则见 lark-sheets…",
           "summary": "读取：按需求选路径（细则见 lark-sheets-read-data）",
           "actor": "Agent",
@@ -11154,10 +11154,10 @@
         ],
         [
           "step-4",
-          "lark-sheets-read-data-lark-sheets-read-dat"
+          "lark-sheets-read-data-lark-sheets-rea"
         ],
         [
-          "lark-sheets-read-data-lark-sheets-read-dat",
+          "lark-sheets-read-data-lark-sheets-rea",
           "7-7"
         ],
         [
@@ -11170,7 +11170,7 @@
       "id": "larksuite/cli/lark-whiteboard",
       "hash": "b3d3f91a13fd161253bb973dd656f81bf8c3c3a1ef3cec0a589139e6351c8bc9",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.311Z",
+      "inspectedAt": "2026-08-19T21:26:17.547Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6365,
@@ -11302,7 +11302,7 @@
       "id": "larksuite/cli/lark-task",
       "hash": "7ded9e58e243b52c13732b93552703baab5e898f59292c8d95af46a15bdee456",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.366Z",
+      "inspectedAt": "2026-08-19T21:26:17.612Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6690,
@@ -11462,7 +11462,7 @@
       "id": "larksuite/cli/lark-calendar",
       "hash": "3f6c7bb52481a965268d4937144da05b964b8001df862c2f9df7ffcb710b12ab",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.601Z",
+      "inspectedAt": "2026-08-19T21:26:17.577Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7015,
@@ -11553,7 +11553,7 @@
         {
           "id": "search-event-search-event",
           "kind": "agent",
-          "label": "+search-event — 按关键词、时间范围和参会人搜索日程",
+          "label": "+search-event — 按关键词、时间范围和参会人…",
           "note": "+search-event — 按关键词、时间范围…",
           "summary": "+search-event — 按关键词、时间范围和参会人搜索日程",
           "actor": "Agent",
@@ -11622,7 +11622,7 @@
       "id": "larksuite/cli/lark-mail",
       "hash": "e762df49e87d7afcdfe1c3a6a9a6ac1b9508f35aae1530b9dca3a27c05fac3f3",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.476Z",
+      "inspectedAt": "2026-08-19T21:26:17.749Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7455,
@@ -11782,7 +11782,7 @@
       "id": "larksuite/cli/lark-minutes",
       "hash": "031bab711c23668724cbfc97b5fec07015c2a3ded7dab954e067e6e2c0ae519d",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.684Z",
+      "inspectedAt": "2026-08-19T21:26:17.649Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7260,
@@ -11942,7 +11942,7 @@
       "id": "larksuite/cli/lark-vc",
       "hash": "2393af94f7b237532a7860ed18642e3656d814bca097eedf98a0974ad163e5cf",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.599Z",
+      "inspectedAt": "2026-08-19T21:26:17.946Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6890,
@@ -12102,7 +12102,7 @@
       "id": "larksuite/cli/lark-event",
       "hash": "c762c7373661285fd698b9f4ec50c07769560eeb7adb2ad062e6ed6520e620e9",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:16.240Z",
+      "inspectedAt": "2026-08-19T21:26:17.893Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7855,
@@ -12262,7 +12262,7 @@
       "id": "larksuite/cli/lark-contact",
       "hash": "a3b8de4cf767ecf74a4bae4a1aaeccf724856661719c9354f8dbfd897c686476",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.478Z",
+      "inspectedAt": "2026-08-19T21:26:18.429Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7140,
@@ -12408,7 +12408,7 @@
       "id": "larksuite/cli/lark-workflow-meeting-summary",
       "hash": "8ca13cdeeaf0ec4bc1e83aefdf787a135ef47fdedcddec4050310583596512c5",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.535Z",
+      "inspectedAt": "2026-08-19T21:26:17.772Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6970,
@@ -12568,7 +12568,7 @@
       "id": "larksuite/cli/lark-workflow-standup-report",
       "hash": "6f0c8cfb9e45f8c9ebc89946d4d02f816ced1d53fb0de4a08ecd8efd4f1cdefa",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.750Z",
+      "inspectedAt": "2026-08-19T21:26:18.056Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7020,
@@ -12728,7 +12728,7 @@
       "id": "larksuite/cli/lark-openapi-explorer",
       "hash": "7a7e3382f75dd66b9fb0fe443c1dfcf7858d818b2076cab21b1133878cdb34bd",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.697Z",
+      "inspectedAt": "2026-08-19T21:26:17.953Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7145,
@@ -12888,7 +12888,7 @@
       "id": "larksuite/cli/lark-skill-maker",
       "hash": "472abd5fc153f15dc8f4c31da3d4b38022564f114d9442e3022f7bbfbc0fd470",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.706Z",
+      "inspectedAt": "2026-08-19T21:26:20.061Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6650,
@@ -13006,7 +13006,7 @@
       "id": "heygen-com/hyperframes/hyperframes-cli",
       "hash": "0ad0d6f4fb40860a493a495eba4d66cf29038e6b6d3b19a573b26a7a5f8147dc",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.940Z",
+      "inspectedAt": "2026-08-19T21:26:18.250Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7810,
@@ -13077,7 +13077,7 @@
         {
           "id": "mandatory-creator-edit-cross-references-ma",
           "kind": "agent",
-          "label": "Mandatory creator-edit cross-referenc…",
+          "label": "Mandatory creator-edit cross-…",
           "note": "Mandatory creator-edit cr…",
           "summary": "Mandatory creator-edit cross-references",
           "actor": "Agent",
@@ -13166,7 +13166,7 @@
       "id": "prime-skills/runcomfy-agent-skills/video-edit",
       "hash": "5d10803cf6b49f1b1a55e832eeb5181c825bdcd10c9d31ec72031d6b6f0f334c",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.756Z",
+      "inspectedAt": "2026-08-19T21:26:18.100Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7035,
@@ -13227,7 +13227,7 @@
         {
           "id": "pick-the-right-model-for-the-user-s-intent",
           "kind": "agent",
-          "label": "Pick the right model for the user's i…",
+          "label": "Pick the right model for the…",
           "note": "Pick the right model for…",
           "summary": "Pick the right model for the user's intent",
           "actor": "Agent",
@@ -13247,7 +13247,7 @@
         {
           "id": "route-1-wan-2-7-edit-video-default-for-res",
           "kind": "agent",
-          "label": "Route 1: Wan 2.7 Edit-Video — default…",
+          "label": "Route 1: Wan 2.7 Edit-Video —…",
           "note": "Route 1: Wan 2.7 Edit-Vid…",
           "summary": "Route 1: Wan 2.7 Edit-Video — default for restyle / background / packaging",
           "actor": "Agent",
@@ -13287,7 +13287,7 @@
         {
           "id": "route-2-kling-2-6-pro-motion-control-when-",
           "kind": "agent",
-          "label": "Route 2: Kling 2.6 Pro Motion Control…",
+          "label": "Route 2: Kling 2.6 Pro Motion…",
           "note": "Route 2: Kling 2.6 Pro Mo…",
           "summary": "Route 2: Kling 2.6 Pro Motion Control — when motion FROM a reference clip is the point",
           "actor": "Agent",
@@ -13326,7 +13326,7 @@
       "id": "prime-skills/runcomfy-agent-skills/image-to-video",
       "hash": "cfb10dff9204f8e631a74ec8414cfcaa60ae8ffe01f83e70850b66f079ee40cc",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:16.101Z",
+      "inspectedAt": "2026-08-19T21:26:18.102Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6945,
@@ -13387,7 +13387,7 @@
         {
           "id": "pick-the-right-model-for-the-user-s-intent",
           "kind": "agent",
-          "label": "Pick the right model for the user's i…",
+          "label": "Pick the right model for the…",
           "note": "Pick the right model for…",
           "summary": "Pick the right model for the user's intent",
           "actor": "Agent",
@@ -13407,7 +13407,7 @@
         {
           "id": "route-1-happyhorse-1-0-i2v-default-for-por",
           "kind": "agent",
-          "label": "Route 1: HappyHorse 1.0 I2V — default…",
+          "label": "Route 1: HappyHorse 1.0 I2V —…",
           "note": "Route 1: HappyHorse 1.0 I…",
           "summary": "Route 1: HappyHorse 1.0 I2V — default for portrait / product / general animation",
           "actor": "Agent",
@@ -13447,7 +13447,7 @@
         {
           "id": "route-2-wan-2-7-audiourl-when-the-user-has",
           "kind": "agent",
-          "label": "Route 2: Wan 2.7 + audiourl — when th…",
+          "label": "Route 2: Wan 2.7 + audiourl —…",
           "note": "Route 2: Wan 2.7 + audiou…",
           "summary": "Route 2: Wan 2.7 + audiourl — when the user has a custom voiceover",
           "actor": "Agent",
@@ -13486,7 +13486,7 @@
       "id": "prime-skills/runcomfy-agent-skills/nano-banana-2",
       "hash": "0add237a4dfa0b01faeda401d4e9821f5173d244c1c1c18529c949b476f659f9",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.962Z",
+      "inspectedAt": "2026-08-19T21:26:18.187Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7695,
@@ -13567,7 +13567,7 @@
         {
           "id": "google-nano-banana-2-text-to-image-google-",
           "kind": "agent",
-          "label": "Google/nano-banana-2/text-to-image",
+          "label": "Google/nano-banana-2/text-to-…",
           "note": "google/nano-banana-2/text…",
           "summary": "google/nano-banana-2/text-to-image",
           "actor": "Agent",
@@ -13587,7 +13587,7 @@
         {
           "id": "prompting-what-actually-works-prompting-wh",
           "kind": "agent",
-          "label": "Prompting — what actually works",
+          "label": "Prompting — what actually wor…",
           "note": "Prompting — what actually…",
           "summary": "Prompting — what actually works",
           "actor": "Agent",
@@ -13607,7 +13607,7 @@
         {
           "id": "sample-prompts-verified-to-produce-strong-",
           "kind": "artifact",
-          "label": "Sample prompts (verified to produce s…",
+          "label": "Sample prompts (verified to p…",
           "note": "Sample prompts (verified…",
           "summary": "Sample prompts (verified to produce strong results)",
           "actor": "Agent",
@@ -13646,7 +13646,7 @@
       "id": "prime-skills/runcomfy-agent-skills/nano-banana-edit",
       "hash": "793a4d448a36528b9b1ee2f7c1d50960280507e5bd7cee1026d34c1250625b98",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.874Z",
+      "inspectedAt": "2026-08-19T21:26:18.131Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7710,
@@ -13747,7 +13747,7 @@
         {
           "id": "prompting-what-actually-works-prompting-wh",
           "kind": "agent",
-          "label": "Prompting — what actually works",
+          "label": "Prompting — what actually wor…",
           "note": "Prompting — what actually…",
           "summary": "Prompting — what actually works",
           "actor": "Agent",
@@ -13767,7 +13767,7 @@
         {
           "id": "sample-prompts-verified-to-produce-strong-",
           "kind": "artifact",
-          "label": "Sample prompts (verified to produce s…",
+          "label": "Sample prompts (verified to p…",
           "note": "Sample prompts (verified…",
           "summary": "Sample prompts (verified to produce strong results)",
           "actor": "Agent",
@@ -13806,7 +13806,7 @@
       "id": "prime-skills/runcomfy-agent-skills/image-edit",
       "hash": "835f8b7b17d26304da6e0d5f27b3cca9b24396e9c5a6165eaba7eb643065cde4",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.997Z",
+      "inspectedAt": "2026-08-19T21:26:18.429Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 6945,
@@ -13867,7 +13867,7 @@
         {
           "id": "pick-the-right-model-for-the-user-s-intent",
           "kind": "agent",
-          "label": "Pick the right model for the user's i…",
+          "label": "Pick the right model for the…",
           "note": "Pick the right model for…",
           "summary": "Pick the right model for the user's intent",
           "actor": "Agent",
@@ -13887,7 +13887,7 @@
         {
           "id": "route-1-nano-banana-edit-default-for-gener",
           "kind": "agent",
-          "label": "Route 1: Nano Banana Edit — default f…",
+          "label": "Route 1: Nano Banana Edit — d…",
           "note": "Route 1: Nano Banana Edit…",
           "summary": "Route 1: Nano Banana Edit — default for general edit + batch",
           "actor": "Agent",
@@ -13927,7 +13927,7 @@
         {
           "id": "route-2-gpt-image-2-edit-multilingual-text",
           "kind": "agent",
-          "label": "Route 2: GPT Image 2 Edit — multiling…",
+          "label": "Route 2: GPT Image 2 Edit — m…",
           "note": "Route 2: GPT Image 2 Edit…",
           "summary": "Route 2: GPT Image 2 Edit — multilingual text + multi-ref composition",
           "actor": "Agent",
@@ -13966,7 +13966,7 @@
       "id": "prime-skills/runcomfy-agent-skills/flux-kontext",
       "hash": "1e32995629f618e6d5d7b40060eefaf9ba7548976d9122be10ddf8ccb318b7a8",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.911Z",
+      "inspectedAt": "2026-08-19T21:26:18.331Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7755,
@@ -14047,7 +14047,7 @@
         {
           "id": "blackforestlabs-flux-1-kontext-pro-edit-bl",
           "kind": "agent",
-          "label": "Blackforestlabs/flux-1-kontext/pro/ed…",
+          "label": "Blackforestlabs/flux-1-kontex…",
           "note": "blackforestlabs/flux-1-ko…",
           "summary": "blackforestlabs/flux-1-kontext/pro/edit",
           "actor": "Agent",
@@ -14067,7 +14067,7 @@
         {
           "id": "prompting-what-actually-works-prompting-wh",
           "kind": "agent",
-          "label": "Prompting — what actually works",
+          "label": "Prompting — what actually wor…",
           "note": "Prompting — what actually…",
           "summary": "Prompting — what actually works",
           "actor": "Agent",
@@ -14087,7 +14087,7 @@
         {
           "id": "sample-prompts-verified-to-produce-strong-",
           "kind": "artifact",
-          "label": "Sample prompts (verified to produce s…",
+          "label": "Sample prompts (verified to p…",
           "note": "Sample prompts (verified…",
           "summary": "Sample prompts (verified to produce strong results)",
           "actor": "Agent",
@@ -14126,7 +14126,7 @@
       "id": "prime-skills/runcomfy-agent-skills/wan-2-7",
       "hash": "269df68889c3f09de4efc4cbfdc7ee9f364d3ca85f6aaa81722c63fc3508b95f",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:15.939Z",
+      "inspectedAt": "2026-08-19T21:26:18.311Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7405,
@@ -14227,7 +14227,7 @@
         {
           "id": "prompting-what-actually-works-prompting-wh",
           "kind": "agent",
-          "label": "Prompting — what actually works",
+          "label": "Prompting — what actually wor…",
           "note": "Prompting — what actually…",
           "summary": "Prompting — what actually works",
           "actor": "Agent",
@@ -14247,7 +14247,7 @@
         {
           "id": "sample-prompts-verified-to-produce-strong-",
           "kind": "artifact",
-          "label": "Sample prompts (verified to produce s…",
+          "label": "Sample prompts (verified to p…",
           "note": "Sample prompts (verified…",
           "summary": "Sample prompts (verified to produce strong results)",
           "actor": "Agent",
@@ -14286,7 +14286,7 @@
       "id": "prime-skills/runcomfy-agent-skills/gpt-image-edit",
       "hash": "4b4491779039c6ea59411060b5d29314f177c12c5517a88c673d0794ec4d9bf7",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:16.034Z",
+      "inspectedAt": "2026-08-19T21:26:18.367Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7375,
@@ -14387,7 +14387,7 @@
         {
           "id": "prompting-what-actually-works-prompting-wh",
           "kind": "agent",
-          "label": "Prompting — what actually works",
+          "label": "Prompting — what actually wor…",
           "note": "Prompting — what actually…",
           "summary": "Prompting — what actually works",
           "actor": "Agent",
@@ -14407,7 +14407,7 @@
         {
           "id": "sample-prompts-verified-to-produce-strong-",
           "kind": "artifact",
-          "label": "Sample prompts (verified to produce s…",
+          "label": "Sample prompts (verified to p…",
           "note": "Sample prompts (verified…",
           "summary": "Sample prompts (verified to produce strong results)",
           "actor": "Agent",
@@ -14446,7 +14446,7 @@
       "id": "prime-skills/runcomfy-agent-skills/seedance-v2",
       "hash": "e958561fa2317845fb1d0471a7ba4530426e341e5724bb193a17dcdcc59857d3",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:16.065Z",
+      "inspectedAt": "2026-08-19T21:26:18.344Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7710,
@@ -14547,7 +14547,7 @@
         {
           "id": "prompting-what-actually-works-prompting-wh",
           "kind": "agent",
-          "label": "Prompting — what actually works",
+          "label": "Prompting — what actually wor…",
           "note": "Prompting — what actually…",
           "summary": "Prompting — what actually works",
           "actor": "Agent",
@@ -14567,7 +14567,7 @@
         {
           "id": "sample-prompts-verified-to-produce-strong-",
           "kind": "artifact",
-          "label": "Sample prompts (verified to produce s…",
+          "label": "Sample prompts (verified to p…",
           "note": "Sample prompts (verified…",
           "summary": "Sample prompts (verified to produce strong results)",
           "actor": "Agent",
@@ -14606,7 +14606,7 @@
       "id": "prime-skills/runcomfy-agent-skills/happyhorse-1-0",
       "hash": "d9ebe48282ceea8a4d54ed22d6b3b1756d458a7a72f8b6d247542f3aa68c629e",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:16.152Z",
+      "inspectedAt": "2026-08-19T21:26:18.427Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7680,
@@ -14687,7 +14687,7 @@
         {
           "id": "happyhorse-happyhorse-1-0-text-to-video-ha",
           "kind": "agent",
-          "label": "Happyhorse/happyhorse-1-0/text-to-vid…",
+          "label": "Happyhorse/happyhorse-1-0/tex…",
           "note": "happyhorse/happyhorse-1-0…",
           "summary": "happyhorse/happyhorse-1-0/text-to-video",
           "actor": "Agent",
@@ -14707,7 +14707,7 @@
         {
           "id": "prompting-what-actually-works-prompting-wh",
           "kind": "agent",
-          "label": "Prompting — what actually works",
+          "label": "Prompting — what actually wor…",
           "note": "Prompting — what actually…",
           "summary": "Prompting — what actually works",
           "actor": "Agent",
@@ -14727,7 +14727,7 @@
         {
           "id": "sample-prompts-verified-to-produce-strong-",
           "kind": "artifact",
-          "label": "Sample prompts (verified to produce s…",
+          "label": "Sample prompts (verified to p…",
           "note": "Sample prompts (verified…",
           "summary": "Sample prompts (verified to produce strong results)",
           "actor": "Agent",
@@ -14766,7 +14766,7 @@
       "id": "prime-skills/runcomfy-agent-skills/flux-2-klein",
       "hash": "33baaf804ad9a55e334f8732d6e67a0c9d03a6dfec2914453124bd1e579743b3",
       "rubric": "skill-scouter-static-v1",
-      "inspectedAt": "2026-08-19T21:12:16.117Z",
+      "inspectedAt": "2026-08-19T21:26:18.860Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
       "power": 7300,
@@ -14847,7 +14847,7 @@
         {
           "id": "blackforestlabs-flux-2-klein-9b-text-to-im",
           "kind": "agent",
-          "label": "Blackforestlabs/flux-2-klein/9b/text-…",
+          "label": "Blackforestlabs/flux-2-klein/…",
           "note": "blackforestlabs/flux-2-kl…",
           "summary": "blackforestlabs/flux-2-klein/9b/text-to-image",
           "actor": "Agent",
@@ -14857,7 +14857,7 @@
         {
           "id": "blackforestlabs-flux-2-klein-4b-text-to-im",
           "kind": "agent",
-          "label": "Blackforestlabs/flux-2-klein/4b/text-…",
+          "label": "Blackforestlabs/flux-2-klein/…",
           "note": "blackforestlabs/flux-2-kl…",
           "summary": "blackforestlabs/flux-2-klein/4b/text-to-image",
           "actor": "Agent",
@@ -14867,7 +14867,7 @@
         {
           "id": "reference-images-both-variants-reference-i",
           "kind": "agent",
-          "label": "Reference images (both variants)",
+          "label": "Reference images (both varian…",
           "note": "Reference images (both va…",
           "summary": "Reference images (both variants)",
           "actor": "Agent",
@@ -14887,7 +14887,7 @@
         {
           "id": "prompting-what-actually-works-prompting-wh",
           "kind": "agent",
-          "label": "Prompting — what actually works",
+          "label": "Prompting — what actually wor…",
           "note": "Prompting — what actually…",
           "summary": "Prompting — what actually works",
           "actor": "Agent",

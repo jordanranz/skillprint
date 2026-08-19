@@ -106,7 +106,7 @@ function compileGraph(markdown, description) {
     : fallback.map((text, index) => ({ heading: ["Trigger", "Workflow", "Result"][index], text }));
   const nodes = selected.map((action, index) => {
     const kind = nodeKind(action.text, index, selected.length);
-    const label = short(sentence(action.text).replace(/^(?:use|run|read|create|write|return|validate|verify)\s+/i, (match) => match), 38);
+    const label = short(sentence(action.text).replace(/^(?:use|run|read|create|write|return|validate|verify)\s+/i, (match) => match), 30);
     return {
       id: slugify(`${action.heading}-${label}`, `step-${index + 1}`),
       kind,

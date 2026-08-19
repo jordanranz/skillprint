@@ -110,6 +110,7 @@ export const catalogEntries: CatalogEntry[] = snapshot.skills.map((entry) => {
 export function blueprintBySlug(slug: string): Skill | undefined {
   const entry = catalogEntries.find(skill => skill.detailSlug === slug);
   if (!entry) return skills.find(skill => skill.slug === slug);
+  const reviewed = reviewedSkill(snapshot.skills.find(skill => skill.id === entry.id)!);
   const report = auditById.get(entry.id);
   const currentReport = report?.hash === snapshot.skills.find(skill => skill.id === entry.id)?.hash ? report : undefined;
   if (currentReport) return {
@@ -117,7 +118,7 @@ export function blueprintBySlug(slug: string): Skill | undefined {
     name: entry.name,
     owner: entry.owner,
     purpose: currentReport.purpose,
-    bestFor: currentReport.bestFor,
+    bestFor: reviewed?.bestFor ?? currentReport.bestFor,
     power: currentReport.power,
     installs: entry.installs,
     trend: 0,
@@ -131,8 +132,8 @@ export function blueprintBySlug(slug: string): Skill | undefined {
     sourceUrl: entry.url,
     footprint: currentReport.footprint,
     qualities: currentReport.qualities,
-    nodes: currentReport.nodes,
-    edges: currentReport.edges,
+    nodes: reviewed?.nodes ?? currentReport.nodes,
+    edges: reviewed?.edges ?? currentReport.edges,
   };
   return {
     slug: entry.detailSlug,
