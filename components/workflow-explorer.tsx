@@ -6,6 +6,7 @@ import type { PointerEvent as ReactPointerEvent } from "react";
 import type { Skill } from "@/lib/skills";
 import { categoryById } from "@/lib/taxonomy";
 import { NodeIcon, SunIcon } from "./icons";
+import { CommandPalette } from "./command-palette";
 
 type Point = { x:number; y:number };
 const positions: Record<number, Point[]> = {
@@ -31,7 +32,7 @@ export function WorkflowExplorer({ skill }: { skill: Skill }) {
   const up=(event:ReactPointerEvent)=>{if(drag.current?.id===event.pointerId)drag.current=null};
   const line=(from:string,to:string)=>{const a=skill.nodes.findIndex(n=>n.id===from),b=skill.nodes.findIndex(n=>n.id===to),A=coords[a],B=coords[b];return {x1:A.x,y1:A.y,x2:B.x,y2:B.y};};
   return <div className="detail-app">
-    <header className="detail-top"><Link href="/" className="brand"><span className="brand-mark">S</span><span>Skillprint</span></Link><span className="detail-skill-name">{skill.name}</span><div className="detail-tools"><Link href="/" className="catalog-link">Browse skills</Link><button className="icon-button" onClick={()=>setTheme(theme==="dark"?"light":"dark")} aria-label="Toggle color theme"><SunIcon/></button></div></header>
+    <header className="detail-top"><Link href="/" className="brand"><span className="brand-mark">S</span><span>Skillprint</span></Link><span className="detail-skill-name">{skill.name}</span><div className="detail-tools"><CommandPalette compact/><button className="icon-button" onClick={()=>setTheme(theme==="dark"?"light":"dark")} aria-label="Toggle color theme"><SunIcon/></button></div></header>
     <main className="detail-main">
       <section className="detail-intro"><div><p className="eyebrow">{inspected?"Workflow inspection":"Skill blueprint"}</p><h1>{skill.name}</h1><div className="detail-taxonomy"><span className="category-chip detail-category" style={{"--category":skill.color} as React.CSSProperties}><i/>{categoryById[skill.category].label}</span><span className="detail-tags">{skill.tags.map(tag=><b key={tag}>{tag}</b>)}</span></div></div><p>{skill.purpose}</p><div className={`intro-rank ${inspected?"":"pending"}`}><span>Scouter Score</span><strong>{inspected?skill.power.toLocaleString():"—"}</strong><small>{scoutLabel}</small></div></section>
       <div className="detail-grid">
