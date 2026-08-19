@@ -26,7 +26,8 @@ export type Skill = {
   sourceTopics: string[];
   classification: Classification;
   color: string;
-  scout: "Static inspection" | "Behavioral evaluation";
+  scout: "Static inspection" | "Behavioral evaluation" | "Not inspected";
+  sourceUrl?: string;
   footprint: string;
   qualities: { label: string; score: number; word: string }[];
   nodes: SkillNode[];
@@ -62,7 +63,7 @@ const grillNodes: SkillNode[] = [
   { id: "loop", kind: "loop", label: "Continue grilling", note: "Stop when durable.", summary: "Repeat until the plan survives pressure or is revised.", actor: "Human + agent", output: "Tested plan", source: "Continue relentlessly until the important uncertainty is resolved." },
 ];
 
-const genericNodes: SkillNode[] = [
+export const genericNodes: SkillNode[] = [
   { id: "trigger", kind: "human", label: "Match request", note: "Detect intent.", summary: "Identify when the skill is the right tool for the request.", actor: "Human + agent", output: "Matched trigger", source: "The skill description governs when this workflow should load." },
   { id: "inspect", kind: "agent", label: "Inspect context", note: "Gather inputs.", summary: "Read only the sources required for the current task.", actor: "Agent", output: "Working context", source: "Load references progressively and keep the context focused." },
   { id: "execute", kind: "agent", label: "Run workflow", note: "Apply guidance.", summary: "Follow the skill's procedure with the appropriate degree of freedom.", actor: "Agent", output: "Task result", source: "Use bundled scripts when consistency and determinism matter." },

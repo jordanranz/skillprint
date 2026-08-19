@@ -1,5 +1,5 @@
 import snapshot from "@/data/skills/top100.json";
-import { skills, type Skill } from "./skills";
+import { genericNodes, skills, type Skill } from "./skills";
 import { categoryById, TAXONOMY_VERSION, type CategoryId, type Classification, type FunctionalTag } from "./taxonomy";
 
 type SnapshotSkill = (typeof snapshot.skills)[number];
@@ -20,7 +20,7 @@ export type CatalogEntry = {
   tags: FunctionalTag[];
   sourceTopics: string[];
   color: string;
-  detailSlug: string | null;
+  detailSlug: string;
   url: string;
   classification: Classification;
 };
@@ -58,6 +58,8 @@ function reviewedSkill(entry: SnapshotSkill): Skill | undefined {
   return skills.find(skill => skill.slug === detailSlug);
 }
 
+const blueprintSlug = (entry: SnapshotSkill, reviewed?: Skill) => reviewed?.slug ?? entry.id.replaceAll("/", "--");
+
 export const catalogGeneratedAt = snapshot.generatedAt;
 export const catalogEntries: CatalogEntry[] = snapshot.skills.map((entry) => {
   const reviewed = reviewedSkill(entry);
@@ -79,7 +81,7 @@ export const catalogEntries: CatalogEntry[] = snapshot.skills.map((entry) => {
     tags: reviewed?.tags ?? derived.tags,
     sourceTopics: reviewed?.sourceTopics ?? [],
     color: categoryById[category].color,
-    detailSlug: reviewed?.slug ?? null,
+    detailSlug: blueprintSlug(entry,reviewed),
     url: entry.url,
     classification: reviewed?.classification ?? {
       taxonomyVersion: TAXONOMY_VERSION,
@@ -89,3 +91,32 @@ export const catalogEntries: CatalogEntry[] = snapshot.skills.map((entry) => {
     },
   };
 });
+
+export function blueprintBySlug(slug: string): Skill | undefined {
+  const reviewed = skills.find(skill => skill.slug === slug);
+  if (reviewed) return reviewed;
+  const entry = catalogEntries.find(skill => skill.detailSlug === slug);
+  if (!entry) return undefined;
+  return {
+    slug: entry.detailSlug,
+    name: entry.name,
+    owner: entry.owner,
+    purpose: entry.purpose,
+    bestFor: `Understanding how this ${categoryById[entry.category].label.toLowerCase()} skill is likely to move from a request to a verified result.`,
+    power: 0,
+    installs: entry.installs,
+    trend: 0,
+    updatedDays: 0,
+    category: entry.category,
+    tags: entry.tags,
+    sourceTopics: entry.sourceTopics,
+    classification: entry.classification,
+    color: entry.color,
+    scout: "Not inspected",
+    sourceUrl: entry.url,
+    footprint: "Not measured",
+    qualities: [],
+    nodes: genericNodes,
+    edges: [["trigger","inspect"],["inspect","execute"],["execute","verify"]],
+  };
+}
