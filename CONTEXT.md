@@ -40,6 +40,26 @@ _Avoid_: Ranked entry, listing
 A timestamped capture of eligible skills and their all-time recorded install counts used to render a deterministic ranking.
 _Avoid_: Live ranking, leaderboard cache
 
+**Scouter Score**:
+Skillprint's 0–10,000 assessment of an agent skill's guidance, efficiency, coverage, and practical value.
+_Avoid_: Power, Power level, Skill score
+
+**score**:
+The compact interface label for a Scouter Score when space is constrained.
+_Avoid_: Power
+
+**scouted**:
+An agent skill whose source has been inspected and assigned an evidence-backed Scouter Score.
+_Avoid_: Audited, reviewed
+
+**not scouted**:
+An agent skill with a metadata-derived skillprint but no evidence-backed Scouter Score.
+_Avoid_: Not inspected, unscouted
+
+**scout report**:
+The evidence and assessment breakdown supporting a Scouter Score.
+_Avoid_: Power profile, scorecard
+
 **primary category**:
 The single stable domain assigned to an agent skill according to its principal user outcome.
 _Avoid_: Type, vertical, multiple categories
