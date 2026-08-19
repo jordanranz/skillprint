@@ -17,7 +17,7 @@
 </style>
 </head>
 <body>
-<header class="topbar"><div class="shell"><div class="brand"><span class="brand-mark">S</span>Skillprint</div><span class="beta">Discovery prototype</span><label class="search">⌕<input id="search" placeholder="Find a skill" aria-label="Find a skill"><kbd>⌘ P</kbd></label><button class="theme" id="theme" aria-label="Toggle theme">◐</button></div></header>
+<header class="topbar"><div class="shell"><div class="brand"><span class="brand-mark">S</span>Skillprint</div><span class="beta">Discovery prototype</span><label class="search">⌕<input id="search" placeholder="Find a skill" aria-label="Find a skill"><kbd>⌘ K</kbd></label><button class="theme" id="theme" aria-label="Toggle theme">◐</button></div></header>
 <main>
 <section class="hero"><div class="shell hero-row"><div><span class="eyebrow">The inspected skill catalog</span><h1>Find skills worth loading.</h1><p>Popularity shows what the ecosystem installs. Power shows what a skill appears capable of after static inspection.</p></div><div class="method"><div><b>Popularity is observed</b><span>Installs, rank, and recent movement.</span></div><div><b>Power is assessed</b><span>Guidance, efficiency, coverage, and task value.</span></div></div></div></section>
 <section class="shell"><div class="featured-head"><div><span class="eyebrow">Highest power</span><h2>Five exceptional Skillprints</h2></div><p>Static inspection · refreshed weekly</p></div><div class="power-deck" id="powerDeck"></div></section>
@@ -46,7 +46,7 @@ powerDeck.innerHTML=featuredSkills.map((s,i)=>`<a class="power-card" style="--ac
 let sort='popular',query='';
 function render(){const filtered=skills.filter(s=>(s.name+' '+s.purpose).toLowerCase().includes(query));const sorted=[...filtered].sort((a,b)=>sort==='power'?b.power-a.power:sort==='trending'?b.trend-a.trend:sort==='updated'?a.updated-b.updated:b.installs-a.installs);rankTitle.textContent={popular:'Ranked by popularity',power:'Ranked by assessed power',trending:'Trending this week',updated:'Recently updated'}[sort];rows.innerHTML=sorted.map((s,i)=>`<a class="skill-row" href="${detail+s.slug}"><span class="rank">${String(i+1).padStart(2,'0')}</span><span class="skill-name"><b>${s.name}</b><small>${sort==='updated'?`Scouted ${s.updated} days ago`:'Static inspection'}</small></span><span class="purpose">${s.purpose}</span><span class="power-cell"><strong>${s.power.toLocaleString()}</strong><small>Power</small></span><span class="installs">${format(s.installs)}</span><span class="delta ${s.trend>=0?'up':'down'}">${s.trend>=0?'↑':'↓'}${Math.abs(s.trend)}</span><span class="go">›</span></a>`).join('')}
 sorts.onclick=e=>{const b=e.target.closest('button');if(!b)return;sort=b.dataset.sort;sorts.querySelector('.active').classList.remove('active');b.classList.add('active');render()};search.oninput=e=>{query=e.target.value.toLowerCase();render()};
-document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='p'){e.preventDefault();search.focus()}});
+document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();search.focus()}});
 theme.onclick=()=>{document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'light':'dark'};
 const variant=new URLSearchParams(location.search).get('variant')||'A';document.body.classList.add('variant-'+variant.toLowerCase());document.querySelector(`[data-v="${variant}"]`)?.classList.add('active');render();
 </script>
