@@ -69,6 +69,12 @@ requeued immediately when its source hash changes. Override the boundary with
 diagrams, and `npm run verify:skills` to enforce that all 100 are ready. These
 steps are deterministic and use no LLM tokens.
 
+Static rubric v2 treats structured lists and well-formed prose equally. It
+recognizes imperative guidance, adaptive loops, stopping conditions,
+constraints, self-critique, examples, validation, and executable evidence.
+Popularity never contributes to the score, and missing observed-run evidence
+still limits effectiveness and reliability claims.
+
 ## First visualization concepts
 
 ### grill-me

@@ -136,29 +136,36 @@ function scoreSkill(markdown, files, description) {
   const headings = (body.match(/^#{2,3}\s+/gm) ?? []).length;
   const steps = (body.match(/^\s*(?:\d+[.)]|[-*])\s+/gm) ?? []).length;
   const codeBlocks = Math.floor((body.match(/```/g) ?? []).length / 2);
-  const hasValidation = /validate|verify|test|check|assert|acceptance|completion/i.test(body);
+  const prose = body.replace(/```[\s\S]*?```/g, "").replace(/^#{1,6}\s+/gm, "");
+  const proseSentences = prose.split(/(?<=[.!?])\s+|\n+/).map(sentence).filter((value) => value.length >= 12);
+  const imperativePattern = /^(?:approach|ask|be|begin|build|choose|consider|continue|create|define|design|do|ensure|follow|ground|identify|inspect|interview|keep|leverage|make|map|match|prefer|record|repeat|resolve|return|review|run|separate|spend|start|stop|stress-test|summarize|target|test|think|treat|use|validate|verify|work|write)\b/i;
+  const imperativeCount = proseSentences.filter((value) => imperativePattern.test(value)).length;
+  const hasValidation = /validate|verify|test|check|assert|acceptance|completion|critique|self-critique|review the (?:result|plan|output)|pressure-test|stress-test/i.test(body);
+  const hasCompletion = /stop(?:ping)? (?:when|once)|continue until|repeat until|session is done|definition of done|completion condition|before hand(?:ing)? (?:it )?back|until (?:the )?.{0,35}(?:resolved|complete|clear|durable|understood)/i.test(body);
+  const hasIteration = /repeat|retry|iterate|iteration|loop|each round|feedback|follow the answer|critique again|self-critique|reshapes the frontier/i.test(body);
+  const hasConstraints = /\bmust\b|\bnever\b|do not|avoid|only when|limit|constraint|trade-?off|restraint|boundary/i.test(body);
   const hasFailure = /error|failure|fallback|missing|invalid|do not|never|avoid|limit/i.test(body);
   const hasExamples = /example|fixture|sample|scenario/i.test(body);
-  const hasWorkflow = /workflow|steps|procedure|process|quick start/i.test(body) || steps >= 3;
+  const hasWorkflow = /workflow|steps|procedure|process|quick start/i.test(body) || steps >= 3 || imperativeCount >= 3 || hasIteration;
   const hasScripts = files.some((file) => /(?:^|\/)scripts?\//i.test(file.path));
   const hasTests = files.some((file) => /test|spec|fixture/i.test(file.path));
   const references = files.filter((file) => /(?:^|\/)references?\//i.test(file.path)).length;
   const descriptionWords = words(description ?? frontmatter(markdown).description ?? "").length;
   const taskValue = clamp(66 + Math.min(12, descriptionWords / 2) + (hasWorkflow ? 5 : 0));
-  const effectiveness = clamp(48 + Math.min(18, steps * 2) + Math.min(10, codeBlocks * 2) + (hasScripts ? 10 : 0) + (hasExamples ? 6 : 0));
-  const reliability = clamp(44 + (hasValidation ? 16 : 0) + (hasFailure ? 10 : 0) + (hasTests ? 16 : 0) + (hasScripts ? 6 : 0));
+  const effectiveness = clamp(48 + Math.min(20, (steps + imperativeCount) * 3) + Math.min(8, codeBlocks * 2) + (hasScripts ? 8 : 0) + (hasExamples ? 6 : 0) + (hasIteration ? 8 : 0));
+  const reliability = clamp(44 + (hasValidation ? 14 : 0) + (hasFailure ? 8 : 0) + (hasCompletion ? 12 : 0) + (hasIteration ? 6 : 0) + (hasTests ? 14 : 0) + (hasScripts ? 4 : 0));
   const efficiency = clamp(94 - Math.max(0, bodyTokens - 900) / 95 + (references ? 5 : 0) - (bodyTokens < 120 ? 10 : 0));
-  const coverage = clamp(42 + Math.min(18, headings * 2) + (hasFailure ? 12 : 0) + (hasExamples ? 10 : 0) + Math.min(8, references * 2));
-  const guidance = clamp(48 + Math.min(20, steps * 2) + (hasWorkflow ? 10 : 0) + (hasValidation ? 8 : 0) + Math.min(8, headings));
+  const coverage = clamp(42 + Math.min(16, headings * 2) + Math.min(10, proseSentences.length) + (hasFailure ? 8 : 0) + (hasExamples ? 8 : 0) + (hasConstraints ? 6 : 0) + (hasIteration ? 6 : 0) + Math.min(6, references * 2));
+  const guidance = clamp(48 + Math.min(24, (steps + imperativeCount) * 2) + (hasWorkflow ? 8 : 0) + (hasValidation ? 6 : 0) + (hasCompletion ? 6 : 0) + Math.min(8, headings));
   const discoverability = clamp(58 + Math.min(24, descriptionWords));
   const power = Math.round(100 * (taskValue * .25 + effectiveness * .30 + reliability * .20 + efficiency * .15 + coverage * .10));
   const inputs = { taskValue, effectiveness, reliability, efficiency, coverage };
   const reasons = {
     taskValue: `Trigger description contains ${descriptionWords} words; workflow signal ${hasWorkflow ? "present" : "absent"}.`,
-    effectiveness: `${steps} actionable list items, ${codeBlocks} code blocks, scripts ${hasScripts ? "present" : "absent"}.`,
-    reliability: `Validation ${hasValidation ? "present" : "absent"}; failure guidance ${hasFailure ? "present" : "absent"}; tests ${hasTests ? "present" : "absent"}.`,
+    effectiveness: `${steps} actionable list items and ${imperativeCount} imperative prose instructions; iterative guidance ${hasIteration ? "present" : "absent"}.`,
+    reliability: `Validation or self-review ${hasValidation ? "present" : "absent"}; completion boundary ${hasCompletion ? "present" : "absent"}; failure guidance ${hasFailure ? "present" : "absent"}.`,
     efficiency: `Estimated activation body is ${bodyTokens.toLocaleString()} tokens across ${files.length} files with ${references} references.`,
-    coverage: `${headings} sections; examples ${hasExamples ? "present" : "absent"}; boundary guidance ${hasFailure ? "present" : "absent"}.`,
+    coverage: `${headings} sections and ${proseSentences.length} substantive statements; examples ${hasExamples ? "present" : "absent"}; constraints ${hasConstraints ? "present" : "absent"}.`,
   };
   return { power, bodyTokens, inputs, reasons, diagnostics: { guidance, discoverability } };
 }
@@ -193,7 +200,7 @@ const audits = await mapLimit(snapshot.skills, 8, async (entry) => {
   return {
     id: entry.id,
     hash: detail.hash,
-    rubric: "skill-scouter-static-v1",
+    rubric: "skill-scouter-static-v2",
     inspectedAt: new Date().toISOString(),
     evidence: "deterministic static inspection",
     dependency: detail.dependency ?? null,
@@ -216,6 +223,6 @@ const audits = await mapLimit(snapshot.skills, 8, async (entry) => {
   };
 });
 
-const output = { version: 2, rubric: "skill-scouter-static-v1", generatedAt: new Date().toISOString(), audits };
+const output = { version: 3, rubric: "skill-scouter-static-v2", generatedAt: new Date().toISOString(), audits };
 await writeFile(AUDITS_PATH, `${JSON.stringify(output, null, 2)}\n`);
 console.log(`Wrote ${audits.length} source-hashed Scouter reports and Skillprints.`);
