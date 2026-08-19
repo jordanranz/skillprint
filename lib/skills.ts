@@ -21,6 +21,16 @@ export type Skill = {
   installs: number;
   trend: number;
   updatedDays: number;
+  ecosystem?: {
+    url: string;
+    stars: number;
+    forks: number;
+    openIssues: number;
+    pushedAt: string;
+    updatedAt: string;
+    commits30d: number;
+    commits30dCapped: boolean;
+  };
   category: CategoryId;
   tags: FunctionalTag[];
   sourceTopics: string[];

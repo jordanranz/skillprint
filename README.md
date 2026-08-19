@@ -52,6 +52,7 @@ Live prototype: https://skillprint-vercel-delta.vercel.app
 - Refresh rank, recorded installs, stars, and source hashes daily without an LLM.
 - Compile all current Top 100 skills once, then rebuild newly entered or source-changed skills immediately.
 - Reuse cached Skillprints when neither the source nor the scouting rubric changed.
+- Refresh repository-level stars, forks, freshness, and 30-day activity for the Top 10 popular skills.
 
 Run `npm run refresh:skills` after `vercel env pull` to rebuild the official
 skills.sh all-time Top 100 snapshot. The refresh fetches stable IDs, current
@@ -68,6 +69,10 @@ requeued immediately when its source hash changes. Override the boundary with
 `npm run backfill:skills` to compile queued source into cached scores and
 diagrams, and `npm run verify:skills` to enforce that all 100 are ready. These
 steps are deterministic and use no LLM tokens.
+
+Run `npm run refresh:ecosystem` with an authenticated GitHub CLI to update
+`data/skills/ecosystem-top10.json`. These repository-level adoption and
+maintenance signals are displayed separately and never alter Scouter Score.
 
 Static rubric v2 treats structured lists and well-formed prose equally. It
 recognizes imperative guidance, adaptive loops, stopping conditions,

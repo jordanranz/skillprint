@@ -1,5 +1,6 @@
 import snapshot from "@/data/skills/top100.json";
 import auditSnapshot from "@/data/skills/power-audits.json";
+import ecosystemSnapshot from "@/data/skills/ecosystem-top10.json";
 import { genericNodes, skills, type Skill } from "./skills";
 import { categoryById, TAXONOMY_VERSION, type CategoryId, type Classification, type FunctionalTag } from "./taxonomy";
 
@@ -35,12 +36,14 @@ export type CatalogEntry = {
   detailSlug: string;
   url: string;
   classification: Classification;
+  ecosystem: Skill["ecosystem"];
 };
 
 const aliases: Record<string,string> = {
   "vercel-react-best-practices": "react-best-practices",
 };
 const auditById = new Map((auditSnapshot.audits as unknown as AuditReport[]).map((audit) => [audit.id, audit]));
+const ecosystemBySource = ecosystemSnapshot.repositories as Record<string, NonNullable<Skill["ecosystem"]>>;
 
 const titleize = (slug:string) => slug.split("-").map(word => /^(ai|api|ui|ux|pdf|tdd|mcp|okr|vc|im|gpt)$/i.test(word) ? word.toUpperCase() : word.charAt(0).toUpperCase()+word.slice(1)).join(" ");
 
@@ -104,6 +107,7 @@ export const catalogEntries: CatalogEntry[] = snapshot.skills.map((entry) => {
       confidence: .72,
       reason: derived.reason,
     },
+    ecosystem: entry.rank <= ecosystemSnapshot.rankLimit ? ecosystemBySource[entry.source] : undefined,
   };
 });
 
@@ -123,6 +127,7 @@ export function blueprintBySlug(slug: string): Skill | undefined {
     installs: entry.installs,
     trend: 0,
     updatedDays: 0,
+    ecosystem: entry.ecosystem,
     category: entry.category,
     tags: entry.tags,
     sourceTopics: entry.sourceTopics,
@@ -145,6 +150,7 @@ export function blueprintBySlug(slug: string): Skill | undefined {
     installs: entry.installs,
     trend: 0,
     updatedDays: 0,
+    ecosystem: entry.ecosystem,
     category: entry.category,
     tags: entry.tags,
     sourceTopics: entry.sourceTopics,

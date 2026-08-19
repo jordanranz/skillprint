@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-08-19T21:45:25.756Z",
+  "rankLimit": 10,
+  "repositories": {
+    "vercel-labs/skills": {
+      "source": "vercel-labs/skills",
+      "url": "https://github.com/vercel-labs/skills",
+      "stars": 29257,
+      "forks": 2492,
+      "openIssues": 1079,
+      "pushedAt": "2026-08-18T20:28:34Z",
+      "updatedAt": "2026-08-19T21:38:43Z",
+      "commits30d": 64,
+      "commits30dCapped": false
+    },
+    "mattpocock/skills": {
+      "source": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 223638,
+      "forks": 19243,
+      "openIssues": 371,
+      "pushedAt": "2026-08-19T13:09:36Z",
+      "updatedAt": "2026-08-19T21:43:26Z",
+      "commits30d": 100,
+      "commits30dCapped": true
+    },
+    "anthropics/skills": {
+      "source": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "stars": 170473,
+      "forks": 20279,
+      "openIssues": 1123,
+      "pushedAt": "2026-08-18T16:02:06Z",
+      "updatedAt": "2026-08-19T21:15:21Z",
+      "commits30d": 7,
+      "commits30dCapped": false
+    },
+    "vercel-labs/agent-browser": {
+      "source": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "stars": 40955,
+      "forks": 2723,
+      "openIssues": 661,
+      "pushedAt": "2026-08-19T15:33:45Z",
+      "updatedAt": "2026-08-19T21:23:41Z",
+      "commits30d": 19,
+      "commits30dCapped": false
+    },
+    "vercel-labs/agent-skills": {
+      "source": "vercel-labs/agent-skills",
+      "url": "https://github.com/vercel-labs/agent-skills",
+      "stars": 30218,
+      "forks": 2693,
+      "openIssues": 172,
+      "pushedAt": "2026-08-18T14:36:59Z",
+      "updatedAt": "2026-08-19T21:17:14Z",
+      "commits30d": 17,
+      "commits30dCapped": false
+    }
+  }
+}
