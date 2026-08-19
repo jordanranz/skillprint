@@ -24,6 +24,7 @@ export type CatalogEntry = {
   name: string;
   owner: string;
   purpose: string;
+  catalogPurpose: string;
   installs: number;
   rankDelta: number | null;
   power: number | null;
@@ -46,6 +47,13 @@ const auditById = new Map((auditSnapshot.audits as unknown as AuditReport[]).map
 const ecosystemBySource = ecosystemSnapshot.repositories as Record<string, NonNullable<Skill["ecosystem"]>>;
 
 const titleize = (slug:string) => slug.split("-").map(word => /^(ai|api|ui|ux|pdf|tdd|mcp|okr|vc|im|gpt)$/i.test(word) ? word.toUpperCase() : word.charAt(0).toUpperCase()+word.slice(1)).join(" ");
+const containsCjk = (value: string) => /[\u3400-\u9fff\uf900-\ufaff]/u.test(value);
+
+function catalogSynopsis(entry: SnapshotSkill, purpose: string) {
+  if (!containsCjk(purpose)) return purpose;
+  const feature = titleize(entry.slug.replace(/^lark-/, ""));
+  return `Operate ${feature} workflows in Lark/Feishu.`;
+}
 
 function classify(entry: SnapshotSkill): { category: CategoryId; tags: FunctionalTag[]; reason: string } {
   const value = `${entry.slug} ${entry.source}`.toLowerCase();
@@ -83,13 +91,15 @@ export const catalogEntries: CatalogEntry[] = snapshot.skills.map((entry) => {
   const currentAudit = audit?.hash === entry.hash ? audit : undefined;
   const derived = classify(entry);
   const category = reviewed?.category ?? derived.category;
+  const purpose = currentAudit?.purpose ?? reviewed?.purpose ?? fallbackPurpose(entry,category);
   return {
     id: entry.id,
     rank: entry.rank,
     slug: entry.slug,
     name: reviewed?.name ?? titleize(entry.name),
     owner: entry.source.split("/")[0],
-    purpose: currentAudit?.purpose ?? reviewed?.purpose ?? fallbackPurpose(entry,category),
+    purpose,
+    catalogPurpose: catalogSynopsis(entry, purpose),
     installs: entry.installs,
     rankDelta: null,
     power: currentAudit?.power ?? null,

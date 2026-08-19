@@ -14,9 +14,20 @@ type CategoryFilter = "all" | CategoryId;
 const labels: Record<Sort,string> = { popular: "Ranked by recorded installs", power: "Ranked by score" };
 const formatInstalls = (value:number) => new Intl.NumberFormat("en-US", { notation:"compact", maximumFractionDigits:1 }).format(value);
 
-function CategoryChip({ skill }: { skill: Pick<CatalogEntry,"category"> }) {
+const compactCategoryLabels: Record<CategoryId,string> = {
+  "agent-skill-tools": "Agent tools",
+  "communication-collaboration": "Communication",
+  "design-ux": "Design & UX",
+  development: "Development",
+  "documents-data": "Documents & data",
+  infrastructure: "Infrastructure",
+  "media-creation": "Media creation",
+  "planning-reasoning": "Planning",
+};
+
+function CategoryChip({ skill, compact = false }: { skill: Pick<CatalogEntry,"category">; compact?: boolean }) {
   const category = categoryById[skill.category];
-  return <span className="category-chip" style={{"--category":category.color} as React.CSSProperties}><i/>{category.label}</span>;
+  return <span className="category-chip" title={category.label} style={{"--category":category.color} as React.CSSProperties}><i/>{compact ? compactCategoryLabels[skill.category] : category.label}</span>;
 }
 
 export function Catalog({ ranking, generatedAt }: { ranking: CatalogEntry[]; generatedAt: string }) {
@@ -39,7 +50,7 @@ export function Catalog({ ranking, generatedAt }: { ranking: CatalogEntry[]; gen
     <section className="shell ranking"><div className="section-heading rank-heading"><div><p className="eyebrow">Current top 100</p><h2>{labels[sort]}</h2></div><div className="sort-control" role="group" aria-label="Sort skills">{(["popular","power"] as Sort[]).map(value=><button key={value} className={sort===value?"active":""} onClick={()=>setSort(value)}>{value === "popular" ? "Popular" : "Score"}</button>)}</div></div>
       <div className="taxonomy-filter"><div className="category-filter" role="group" aria-label="Filter by category"><button className={category==="all"?"active":""} onClick={()=>chooseCategory("all")}><i/>All skills</button>{categories.map(item=><button key={item.id} className={category===item.id?"active":""} style={{"--category":item.color} as React.CSSProperties} onClick={()=>chooseCategory(item.id)}><i/>{item.label}</button>)}</div>{availableTags.length > 0 && <div className="tag-filter" role="group" aria-label="Refine by capability"><span>Refine</span>{availableTags.map(tag=><button key={tag} className={tags.includes(tag)?"active":""} aria-pressed={tags.includes(tag)} onClick={()=>toggleTag(tag)}>{tag}</button>)}</div>}</div>
       <div className="result-count"><span>{filtered.length} {filtered.length === 1 ? "skill" : "skills"}</span>{(category!=="all" || tags.length>0) && <button onClick={()=>{chooseCategory("all");setTags([]);}}>Clear filters</button>}</div>
-      <div className={`skill-ledger sort-${sort}`}><div className="ledger-head"><span>All-time rank</span><span>Skill</span><span>Category</span><span>Purpose</span><span>Recorded installs</span><span>Score</span><span/></div>{filtered.length ? filtered.map((skill)=><Link className="skill-row" href={`/skill/${skill.detailSlug}`} key={skill.id} style={{"--category":skill.color} as React.CSSProperties}><span className="rank-number">{String(skill.rank).padStart(2,"0")}</span><span className="ledger-name"><b>{skill.name}</b><small>{skill.owner}</small>{skill.ecosystem && <EcosystemFacts ecosystem={skill.ecosystem}/>}</span><CategoryChip skill={skill}/><span className="ledger-purpose">{skill.purpose}</span><span className="ledger-installs"><b>{formatInstalls(skill.installs)}</b></span><span className={`ledger-power ${skill.power===null?"pending":""}`}><b>{skill.power?.toLocaleString() ?? "—"}</b><small>{skill.scout === "Not inspected" ? "Not scouted" : skill.scout}</small></span><ArrowIcon className="row-arrow"/></Link>) : <div className="empty-state"><strong>No matching skills</strong><span>Clear a filter or try another search.</span></div>}</div>
+      <div className={`skill-ledger sort-${sort}`}><div className="ledger-head"><span>All-time rank</span><span>Skill</span><span>Category</span><span>Purpose</span><span>Recorded installs</span><span>Score</span><span/></div>{filtered.length ? filtered.map((skill)=><Link className="skill-row" href={`/skill/${skill.detailSlug}`} key={skill.id} style={{"--category":skill.color} as React.CSSProperties}><span className="rank-number">{String(skill.rank).padStart(2,"0")}</span><span className="ledger-name"><b>{skill.name}</b><small>{skill.owner}</small>{skill.ecosystem && <EcosystemFacts ecosystem={skill.ecosystem}/>}</span><CategoryChip skill={skill} compact/><span className="ledger-purpose">{skill.catalogPurpose}</span><span className="ledger-installs"><b>{formatInstalls(skill.installs)}</b></span><span className={`ledger-power ${skill.power===null?"pending":""}`}><b>{skill.power?.toLocaleString() ?? "—"}</b><small>{skill.scout === "Not inspected" ? "Not scouted" : skill.scout}</small></span><ArrowIcon className="row-arrow"/></Link>) : <div className="empty-state"><strong>No matching skills</strong><span>Clear a filter or try another search.</span></div>}</div>
       <p className="data-note">skills.sh all-time recorded-install snapshot · all {ranking.length} eligible skills · updated {new Date(generatedAt).toLocaleString()} · rank movement is unavailable until a comparable historical snapshot exists.</p>
     </section>
   </main></>;
