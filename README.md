@@ -6,7 +6,7 @@ A minimal web app for discovering popular agent skills and understanding how eac
 
 Skill directories are easy to browse but hard to understand. Skillprint should make a skill legible in under a minute by combining a ranked catalog with an interactive workflow view, concise usage guidance, and an optional short demo.
 
-## Current prototype
+## MVP
 
 - Browse a Top 100-style catalog ranked by recorded installs, assessed Power, trend, or freshness.
 - Feature five high-Power skills above the ranked catalog.
@@ -23,6 +23,21 @@ Skill directories are easy to browse but hard to understand. Skillprint should m
 - Label ranking provenance clearly; do not imply that popularity equals usage unless the data source measures actual usage.
 - Render the catalog shell and lightweight metadata immediately; lazy-load interactive diagrams and videos when they enter the viewport or their detail view opens.
 - Deploy as a public, read-only site with no login.
+
+The current implementation is a Next.js App Router application with a typed,
+static skill catalog. It includes eight sample skills, the five-skill Power
+leaderboard, search and sorting, responsive light/dark themes, and interactive
+workflow explorers for every skill.
+
+### Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`. Use `npm run build` and `npm run lint` before
+publishing.
 
 ## Prototype links
 
@@ -49,14 +64,15 @@ A branching interview tree. The active question is highlighted, answered branche
 
 A fog-of-war map. The destination anchors the graph; unresolved decision tickets form the frontier; resolved tickets reveal the route. Ticket types such as research, prototype, grilling, and task use distinct node treatments.
 
-## Decisions to resolve before implementation
+## Current product decisions
 
-1. Who is the first user: skill consumers, skill authors, or teams evaluating skills?
-2. Which skills.sh install-count window should rank the three non-reserved positions?
-3. Is this a read-only catalog or should users be able to run/sample skills?
-4. Which skill formats and hosts are supported in v1?
-5. Should workflow diagrams be hand-authored, parsed from `SKILL.md`, AI-generated with review, or hybrid?
-6. Are videos embedded from authors, recorded in-house, or deferred until after the interactive diagrams?
+1. The first user is a skill consumer deciding what is worth loading.
+2. Popularity and assessed Power remain separate signals.
+3. The MVP is a public, read-only catalog with deterministic previews.
+4. Workflow data is currently reviewed and stored as typed static data.
+5. The catalog can refresh cheaply each day; source-changed and newly entered
+   skills can be rescouted separately from the weekly Top 100 audit.
+6. Video is deferred until the workflow explorer proves useful on its own.
 
 ## Suggested implementation shape
 
