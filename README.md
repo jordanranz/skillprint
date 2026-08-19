@@ -87,6 +87,21 @@ A fog-of-war map. The destination anchors the graph; unresolved decision tickets
 5. The catalog can refresh cheaply each day; source-changed and newly entered
    skills can be rescouted separately from the weekly Top 100 audit.
 6. Video is deferred until the workflow explorer proves useful on its own.
+7. Every skill has one versioned primary category based on its principal user
+   outcome. Controlled functional tags refine category browsing; source topics,
+   provenance, and audit status remain separate metadata.
+
+## Catalog taxonomy (v1)
+
+The eight primary categories are Agent & Skill Tools, Communication &
+Collaboration, Design & UX, Development, Documents & Data, Infrastructure,
+Media Creation, and Planning & Reasoning. Category colors are stable catalog
+accents and never encode Power or audit state.
+
+Classification prefers declared metadata, then deterministic rules, then an
+LLM fallback. It is recalculated only when the source hash or taxonomy version
+changes. The controlled functional tags are `create`, `review`, `plan`,
+`research`, `diagnose`, `automate`, `teach`, and `deploy`.
 
 ## Suggested implementation shape
 

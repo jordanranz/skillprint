@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { PointerEvent as ReactPointerEvent } from "react";
 import type { Skill } from "@/lib/skills";
+import { categoryById } from "@/lib/taxonomy";
 import { NodeIcon, SunIcon } from "./icons";
 
 type Point = { x:number; y:number };
@@ -30,7 +31,7 @@ export function WorkflowExplorer({ skill }: { skill: Skill }) {
   return <div className="detail-app">
     <header className="detail-top"><Link href="/" className="brand"><span className="brand-mark">S</span><span>Skillprint</span></Link><span className="detail-skill-name">{skill.name}</span><div className="detail-tools"><Link href="/" className="catalog-link">Browse skills</Link><button className="icon-button" onClick={()=>setTheme(theme==="dark"?"light":"dark")} aria-label="Toggle color theme"><SunIcon/></button></div></header>
     <main className="detail-main">
-      <section className="detail-intro"><div><p className="eyebrow">Workflow inspection</p><h1>{skill.name}</h1></div><p>{skill.purpose}</p><div className="intro-rank"><span>Power</span><strong>{skill.power.toLocaleString()}</strong><small>{skill.scout}</small></div></section>
+      <section className="detail-intro"><div><p className="eyebrow">Workflow inspection</p><h1>{skill.name}</h1><span className="category-chip detail-category" style={{"--category":skill.color} as React.CSSProperties}><i/>{categoryById[skill.category].label}</span></div><p>{skill.purpose}</p><div className="intro-rank"><span>Power</span><strong>{skill.power.toLocaleString()}</strong><small>{skill.scout}</small></div></section>
       <div className="detail-grid">
         <section className="workflow-viewport" ref={viewportRef} onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up} aria-label={`${skill.name} workflow`}>
           <div className="board-label label-a">Start</div><div className="board-label label-b">Work</div><div className="board-label label-c">Result</div>
@@ -45,7 +46,7 @@ export function WorkflowExplorer({ skill }: { skill: Skill }) {
           <section className="inspector-block scout-block"><div className="block-heading"><p className="eyebrow">Scout reading</p><span>{skill.scout}</span></div><div className="scout-line"><div><small>Power level</small><strong style={{color:skill.color}}>{skill.power.toLocaleString()}</strong></div><dl><dt>Footprint</dt><dd>{skill.footprint}</dd><dt>Recorded installs</dt><dd>{skill.installs.toLocaleString()}</dd></dl></div><div className="quality-list">{skill.qualities.map(q=><div key={q.label}><span>{q.label}</span><i>{Array.from({length:10},(_,i)=><b key={i} className={i<q.score?"on":""} style={{"--skill":skill.color} as React.CSSProperties}/>)}</i><em>{q.word}</em></div>)}</div><p className="method-note">Power is our assessment. Rank is ecosystem behavior.</p></section>
           <section className="inspector-block"><p className="eyebrow">Selected step</p><div className="selected-title"><h2>{node.label}</h2><span>{node.kind}</span></div><p className="selected-summary">{node.summary}</p><dl className="fact-list"><dt>Actor</dt><dd>{node.actor}</dd><dt>Output</dt><dd>{node.output}</dd></dl></section>
           <section className="inspector-block source-block"><div className="block-heading"><p className="eyebrow">Source trace</p><span>Direct source</span></div><strong>SKILL.md · {node.label}</strong><blockquote>{node.source}</blockquote></section>
-          <section className="inspector-block"><p className="eyebrow">Best for</p><p className="best-for">{skill.bestFor}</p></section>
+          <section className="inspector-block"><p className="eyebrow">Best for</p><p className="best-for">{skill.bestFor}</p><a className="correction-link" href={`https://github.com/jordanranz/skillprint/issues/new?title=${encodeURIComponent(`Category correction: ${skill.name}`)}`} target="_blank" rel="noreferrer">Suggest a classification correction</a></section>
         </aside>
       </div>
     </main>

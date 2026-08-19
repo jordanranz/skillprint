@@ -39,3 +39,19 @@ _Avoid_: Ranked entry, listing
 **ranking snapshot**:
 A timestamped capture of eligible skills and their all-time recorded install counts used to render a deterministic ranking.
 _Avoid_: Live ranking, leaderboard cache
+
+**primary category**:
+The single stable domain assigned to an agent skill according to its principal user outcome.
+_Avoid_: Type, vertical, multiple categories
+
+**functional tag**:
+A controlled verb describing a capability an agent skill performs, such as create, review, or deploy.
+_Avoid_: Category, status, source topic
+
+**source topic**:
+A descriptive topic declared by a skill source and preserved separately from Skillprint's controlled functional tags.
+_Avoid_: Functional tag, primary category
+
+**classification provenance**:
+The recorded origin of a primary-category assignment: declared, rule-derived, LLM-assessed, or reviewed.
+_Avoid_: Audit status, source
