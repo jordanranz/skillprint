@@ -1,29 +1,31 @@
 {
-  "version": 3,
-  "rubric": "skill-scouter-static-v2",
-  "generatedAt": "2026-08-19T21:34:26.613Z",
+  "version": 4,
+  "rubric": "skill-scouter-static-v3",
+  "generatedAt": "2026-08-19T22:03:47.712Z",
   "audits": [
     {
       "id": "vercel-labs/skills/find-skills",
       "hash": "b146008599c31057cef1c145774cea5d5afb30e8f43fa802e47a4b461419aaaf",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:22.982Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:37.965Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8105,
+      "power": 7004,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 82,
         "reliability": 66,
         "efficiency": 90,
-        "coverage": 90
+        "coverage": 90,
+        "generality": 28
       },
       "reasons": {
         "taskValue": "Trigger description contains 53 words; workflow signal present.",
         "effectiveness": "30 actionable list items and 4 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,278 tokens across 1 files with 0 references.",
-        "coverage": "12 sections and 72 substantive statements; examples present; constraints present."
+        "coverage": "12 sections and 72 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: github, react, vercel, next.js, nextjs, kubernetes; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -52,6 +54,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 3,
+          "word": "Weak"
         },
         {
           "label": "Guidance",
@@ -166,27 +173,29 @@
     {
       "id": "mattpocock/skills/grill-me",
       "hash": "5a13e157f85835632b132390a162d234822658b6a544f31cc2578280062bd044",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.388Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.702Z",
       "evidence": "deterministic static inspection",
       "dependency": {
         "id": "mattpocock/skills/grilling",
         "hash": "dae226933247301e1947768ca27c09d351348f6e3f6692df72998dd990212eb3"
       },
-      "power": 7620,
+      "power": 7909,
       "inputs": {
         "taskValue": 76,
         "effectiveness": 73,
         "reliability": 70,
         "efficiency": 94,
-        "coverage": 72
+        "coverage": 72,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 9 words; workflow signal present.",
         "effectiveness": "0 actionable list items and 5 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review absent; completion boundary present; failure guidance present.",
         "efficiency": "Estimated activation body is 425 tokens across 4 files with 0 references.",
-        "coverage": "0 sections and 17 substantive statements; examples absent; constraints present."
+        "coverage": "0 sections and 17 substantive statements; examples absent; constraints present.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 72,
@@ -215,6 +224,11 @@
           "label": "Coverage",
           "score": 7,
           "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 9,
+          "word": "Excellent"
         },
         {
           "label": "Guidance",
@@ -315,24 +329,26 @@
     {
       "id": "anthropics/skills/frontend-design",
       "hash": "665c585455decbcb02116bc928adf5148b9cd0f67b7eb4908c8c0d647c00f68a",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.023Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:37.944Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8120,
+      "power": 8315,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 82,
         "reliability": 72,
         "efficiency": 83,
-        "coverage": 90
+        "coverage": 90,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 29 words; workflow signal present.",
         "effectiveness": "0 actionable list items and 18 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,991 tokens across 2 files with 0 references.",
-        "coverage": "5 sections and 76 substantive statements; examples present; constraints present."
+        "coverage": "5 sections and 76 substantive statements; examples present; constraints present.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 91,
@@ -359,6 +375,11 @@
         },
         {
           "label": "Coverage",
+          "score": 9,
+          "word": "Excellent"
+        },
+        {
+          "label": "Generality",
           "score": 9,
           "word": "Excellent"
         },
@@ -451,24 +472,26 @@
     {
       "id": "mattpocock/skills/grill-with-docs",
       "hash": "6b1292031c4f38a11309b9dad9be1141c1921c6edf86d1ae6da8b048fa71a349",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.059Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.088Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 5910,
+      "power": 6524,
       "inputs": {
         "taskValue": 76,
         "effectiveness": 48,
         "reliability": 44,
         "efficiency": 84,
-        "coverage": 43
+        "coverage": 43,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 19 words; workflow signal absent.",
         "effectiveness": "0 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 17 tokens across 2 files with 0 references.",
-        "coverage": "0 sections and 1 substantive statements; examples absent; constraints absent."
+        "coverage": "0 sections and 1 substantive statements; examples absent; constraints absent.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 48,
@@ -497,6 +520,11 @@
           "label": "Coverage",
           "score": 4,
           "word": "Weak"
+        },
+        {
+          "label": "Generality",
+          "score": 9,
+          "word": "Excellent"
         },
         {
           "label": "Guidance",
@@ -555,27 +583,29 @@
     {
       "id": "mattpocock/skills/improve-codebase-architecture",
       "hash": "11adc1a323dfba786ed1af5a4210a0930deebb7ea4a7746c000e35ae587c9485",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.243Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.197Z",
       "evidence": "deterministic static inspection",
       "dependency": {
         "id": "mattpocock/skills/codebase-design",
         "hash": "42f405c9a796a59fbca9e07f43225d42ce1c9f3541463099bc62eda59d6f550f"
       },
-      "power": 7960,
+      "power": 8195,
       "inputs": {
         "taskValue": 81,
         "effectiveness": 84,
         "reliability": 72,
         "efficiency": 73,
-        "coverage": 88
+        "coverage": 88,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 20 words; workflow signal present.",
         "effectiveness": "39 actionable list items and 11 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,890 tokens across 7 files with 0 references.",
-        "coverage": "11 sections and 114 substantive statements; examples absent; constraints present."
+        "coverage": "11 sections and 114 substantive statements; examples absent; constraints present.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 94,
@@ -604,6 +634,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 9,
+          "word": "Excellent"
         },
         {
           "label": "Guidance",
@@ -722,27 +757,29 @@
     {
       "id": "mattpocock/skills/tdd",
       "hash": "9bef7a4ced827acca9f2fbd318d32e8027f0f819c199fd447568786fbfc6cfd6",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.360Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.086Z",
       "evidence": "deterministic static inspection",
       "dependency": {
         "id": "mattpocock/skills/codebase-design",
         "hash": "42f405c9a796a59fbca9e07f43225d42ce1c9f3541463099bc62eda59d6f550f"
       },
-      "power": 8590,
+      "power": 8715,
       "inputs": {
         "taskValue": 81,
         "effectiveness": 90,
         "reliability": 86,
         "efficiency": 79,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 20 words; workflow signal present.",
         "effectiveness": "26 actionable list items and 9 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,284 tokens across 8 files with 0 references.",
-        "coverage": "11 sections and 93 substantive statements; examples present; constraints present."
+        "coverage": "11 sections and 93 substantive statements; examples present; constraints present.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 94,
@@ -770,6 +807,11 @@
         {
           "label": "Coverage",
           "score": 10,
+          "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 9,
           "word": "Excellent"
         },
         {
@@ -889,24 +931,26 @@
     {
       "id": "vercel-labs/agent-browser/agent-browser",
       "hash": "a674b7d81066e3cc471a7512ddb4ae724418cbfefa75cbb050b0dc430e4d57a0",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.066Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:37.918Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7705,
+      "power": 6690,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 72,
         "reliability": 66,
         "efficiency": 94,
-        "coverage": 74
+        "coverage": 74,
+        "generality": 28
       },
       "reasons": {
         "taskValue": "Trigger description contains 134 words; workflow signal present.",
         "effectiveness": "6 actionable list items and 1 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 580 tokens across 1 files with 0 references.",
-        "coverage": "4 sections and 21 substantive statements; examples absent; constraints present."
+        "coverage": "4 sections and 21 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: slack, figma, notion, vercel, aws; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 80,
@@ -935,6 +979,11 @@
           "label": "Coverage",
           "score": 7,
           "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 3,
+          "word": "Weak"
         },
         {
           "label": "Guidance",
@@ -1007,24 +1056,26 @@
     {
       "id": "mattpocock/skills/setup-matt-pocock-skills",
       "hash": "ceba22b05afed7055eabed7525378fbfa67366dbc39993d8726e61d8210efc8a",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:22.963Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:37.913Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7325,
+      "power": 6368,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 70,
         "reliability": 52,
         "efficiency": 86,
-        "coverage": 82
+        "coverage": 82,
+        "generality": 28
       },
       "reasons": {
         "taskValue": "Trigger description contains 30 words; workflow signal present.",
         "effectiveness": "25 actionable list items and 1 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,647 tokens across 7 files with 0 references.",
-        "coverage": "10 sections and 74 substantive statements; examples absent; constraints present."
+        "coverage": "10 sections and 74 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: github, gitlab, jira, linear; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -1053,6 +1104,11 @@
           "label": "Coverage",
           "score": 8,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 3,
+          "word": "Weak"
         },
         {
           "label": "Guidance",
@@ -1153,24 +1209,26 @@
     {
       "id": "vercel-labs/agent-skills/vercel-react-best-practices",
       "hash": "ca7b0c0c6e5f2750043f7f0cd72d16ac4e2abc48f9b5500d047a4b77a2506212",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.206Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.767Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8565,
+      "power": 7734,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 84,
         "reliability": 86,
         "efficiency": 86,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 44
       },
       "reasons": {
         "taskValue": "Trigger description contains 41 words; workflow signal present.",
         "effectiveness": "79 actionable list items and 0 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,702 tokens across 76 files with 0 references.",
-        "coverage": "13 sections and 108 substantive statements; examples present; constraints present."
+        "coverage": "13 sections and 108 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: react, next.js, vercel; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -1199,6 +1257,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 4,
+          "word": "Weak"
         },
         {
           "label": "Guidance",
@@ -1313,24 +1376,26 @@
     {
       "id": "mattpocock/skills/handoff",
       "hash": "e5a44fccc710f5402deee06beaf5178397885765773375f186aefd179565f23f",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.139Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.130Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 6525,
+      "power": 7016,
       "inputs": {
         "taskValue": 73,
         "effectiveness": 54,
         "reliability": 52,
         "efficiency": 94,
-        "coverage": 63
+        "coverage": 63,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 14 words; workflow signal absent.",
         "effectiveness": "0 actionable list items and 2 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 171 tokens across 2 files with 0 references.",
-        "coverage": "0 sections and 7 substantive statements; examples absent; constraints present."
+        "coverage": "0 sections and 7 substantive statements; examples absent; constraints present.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 52,
@@ -1359,6 +1424,11 @@
           "label": "Coverage",
           "score": 6,
           "word": "Capable"
+        },
+        {
+          "label": "Generality",
+          "score": 9,
+          "word": "Excellent"
         },
         {
           "label": "Guidance",
@@ -1431,24 +1501,26 @@
     {
       "id": "mattpocock/skills/triage",
       "hash": "3755360dcb472a501668975290e31b0cc27f4d973247d2e1f9662af756d2c05c",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.187Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.177Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7915,
+      "power": 8139,
       "inputs": {
         "taskValue": 82,
         "effectiveness": 78,
         "reliability": 66,
         "efficiency": 87,
-        "coverage": 90
+        "coverage": 90,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 22 words; workflow signal present.",
         "effectiveness": "33 actionable list items and 3 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,585 tokens across 4 files with 0 references.",
-        "coverage": "9 sections and 78 substantive statements; examples present; constraints present."
+        "coverage": "9 sections and 78 substantive statements; examples present; constraints present.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 94,
@@ -1475,6 +1547,11 @@
         },
         {
           "label": "Coverage",
+          "score": 9,
+          "word": "Excellent"
+        },
+        {
+          "label": "Generality",
           "score": 9,
           "word": "Excellent"
         },
@@ -1591,24 +1668,26 @@
     {
       "id": "mattpocock/skills/prototype",
       "hash": "492e4433fcd9cf88c0854aba063829ee248b208849e5827a45da8424199fd10f",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.535Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.126Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7485,
+      "power": 7798,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 68,
         "reliability": 66,
         "efficiency": 94,
-        "coverage": 64
+        "coverage": 64,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 32 words; workflow signal present.",
         "effectiveness": "8 actionable list items and 2 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 677 tokens across 4 files with 0 references.",
-        "coverage": "2 sections and 25 substantive statements; examples absent; constraints absent."
+        "coverage": "2 sections and 25 substantive statements; examples absent; constraints absent.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 84,
@@ -1637,6 +1716,11 @@
           "label": "Coverage",
           "score": 6,
           "word": "Capable"
+        },
+        {
+          "label": "Generality",
+          "score": 9,
+          "word": "Excellent"
         },
         {
           "label": "Guidance",
@@ -1709,24 +1793,26 @@
     {
       "id": "open.feishu.cn/lark-doc",
       "hash": "1b36c807220d89d1fcb079e7d47dca8fcabac5bdcc7199b5fff982cf3098acda",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.228Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.259Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7225,
+      "power": 7254,
       "inputs": {
         "taskValue": 79,
         "effectiveness": 68,
         "reliability": 58,
         "efficiency": 94,
-        "coverage": 64
+        "coverage": 64,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 16 words; workflow signal present.",
         "effectiveness": "14 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 521 tokens across 1 files with 0 references.",
-        "coverage": "6 sections and 20 substantive statements; examples absent; constraints absent."
+        "coverage": "6 sections and 20 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 92,
@@ -1755,6 +1841,11 @@
           "label": "Coverage",
           "score": 6,
           "word": "Capable"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -1855,24 +1946,26 @@
     {
       "id": "open.feishu.cn/lark-base",
       "hash": "24e84323593f89c0a803ebc0f1fb0bd0ce42372d57880ca0156f6187c8cd6109",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.553Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.322Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 6770,
+      "power": 6875,
       "inputs": {
         "taskValue": 77,
         "effectiveness": 70,
         "reliability": 44,
         "efficiency": 79,
-        "coverage": 68
+        "coverage": 68,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 11 words; workflow signal present.",
         "effectiveness": "25 actionable list items and 3 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 2,326 tokens across 1 files with 0 references.",
-        "coverage": "16 sections and 71 substantive statements; examples absent; constraints absent."
+        "coverage": "16 sections and 71 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -1901,6 +1994,11 @@
           "label": "Coverage",
           "score": 7,
           "word": "Capable"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -2015,24 +2113,26 @@
     {
       "id": "open.feishu.cn/lark-approval",
       "hash": "5cfd448c82e073915b5f363a2df8fbc2a739f823e3858f50d174e1a9794c4ec2",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.344Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.375Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 6900,
+      "power": 6966,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 70,
         "reliability": 44,
         "efficiency": 92,
-        "coverage": 74
+        "coverage": 74,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 2 words; workflow signal present.",
         "effectiveness": "22 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 1,067 tokens across 1 files with 0 references.",
-        "coverage": "9 sections and 52 substantive statements; examples absent; constraints present."
+        "coverage": "9 sections and 52 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -2060,6 +2160,11 @@
         {
           "label": "Coverage",
           "score": 7,
+          "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
           "word": "Good"
         },
         {
@@ -2175,24 +2280,26 @@
     {
       "id": "open.feishu.cn/lark-drive",
       "hash": "027b6f53113a713a771afe15fbeac8fd05f3ee648dc8189f60b60a8b4a06d74e",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.383Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.386Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7285,
+      "power": 6672,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 78,
         "reliability": 52,
         "efficiency": 62,
-        "coverage": 90
+        "coverage": 90,
+        "generality": 44
       },
       "reasons": {
         "taskValue": "Trigger description contains 23 words; workflow signal present.",
         "effectiveness": "60 actionable list items and 1 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 3,945 tokens across 1 files with 0 references.",
-        "coverage": "20 sections and 140 substantive statements; examples present; constraints present."
+        "coverage": "20 sections and 140 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: lark, feishu, react; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -2221,6 +2328,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 4,
+          "word": "Weak"
         },
         {
           "label": "Guidance",
@@ -2335,24 +2447,26 @@
     {
       "id": "open.feishu.cn/lark-shared",
       "hash": "f0845165db5125529d6e1c409141d6d03339815a7713f1c21f943d6192e3d93a",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.429Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.424Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7285,
+      "power": 7290,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 68,
         "reliability": 52,
         "efficiency": 94,
-        "coverage": 72
+        "coverage": 72,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 24 words; workflow signal present.",
         "effectiveness": "9 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 607 tokens across 1 files with 0 references.",
-        "coverage": "3 sections and 19 substantive statements; examples absent; constraints present."
+        "coverage": "3 sections and 19 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 77,
@@ -2380,6 +2494,11 @@
         {
           "label": "Coverage",
           "score": 7,
+          "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
           "word": "Good"
         },
         {
@@ -2439,24 +2558,26 @@
     {
       "id": "open.feishu.cn/lark-calendar",
       "hash": "6fabefa80e953e14ec31430b621acf6445724d2db87a8d046d65f188d5588c1c",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.481Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.565Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7135,
+      "power": 7150,
       "inputs": {
         "taskValue": 73,
         "effectiveness": 76,
         "reliability": 44,
         "efficiency": 90,
-        "coverage": 80
+        "coverage": 80,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 3 words; workflow signal present.",
         "effectiveness": "31 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 1,769 tokens across 11 files with 10 references.",
-        "coverage": "18 sections and 79 substantive statements; examples absent; constraints present."
+        "coverage": "18 sections and 79 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -2485,6 +2606,11 @@
           "label": "Coverage",
           "score": 8,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -2599,24 +2725,26 @@
     {
       "id": "open.feishu.cn/lark-im",
       "hash": "e0cc85f395d6dd54b9c098b9708e0a97948e16be220c8ef3af6c03873883c00c",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.566Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.479Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7165,
+      "power": 7254,
       "inputs": {
         "taskValue": 73,
         "effectiveness": 78,
         "reliability": 66,
         "efficiency": 52,
-        "coverage": 90
+        "coverage": 90,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 4 words; workflow signal present.",
         "effectiveness": "59 actionable list items and 9 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 4,930 tokens across 1 files with 0 references.",
-        "coverage": "28 sections and 190 substantive statements; examples present; constraints present."
+        "coverage": "28 sections and 190 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -2645,6 +2773,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -2759,24 +2892,26 @@
     {
       "id": "open.feishu.cn/lark-contact",
       "hash": "2ad799e96b61d1c73fd04754d0e8998b0503637afe7ecb2041001958a0493cf7",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.534Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.646Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7225,
+      "power": 7220,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 74,
         "reliability": 44,
         "efficiency": 94,
-        "coverage": 64
+        "coverage": 64,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 26 words; workflow signal present.",
         "effectiveness": "8 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 550 tokens across 1 files with 0 references.",
-        "coverage": "6 sections and 23 substantive statements; examples absent; constraints absent."
+        "coverage": "6 sections and 23 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 78,
@@ -2805,6 +2940,11 @@
           "label": "Coverage",
           "score": 6,
           "word": "Capable"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -2905,24 +3045,26 @@
     {
       "id": "open.feishu.cn/lark-sheets",
       "hash": "f79e55e006302c0eadd6865c0d411a4f9687a44bacee4d997ba7768077addc5a",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.839Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.547Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7380,
+      "power": 7427,
       "inputs": {
         "taskValue": 81,
         "effectiveness": 80,
         "reliability": 66,
         "efficiency": 49,
-        "coverage": 90
+        "coverage": 90,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 19 words; workflow signal present.",
         "effectiveness": "32 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 5,173 tokens across 1 files with 0 references.",
-        "coverage": "16 sections and 144 substantive statements; examples present; constraints present."
+        "coverage": "16 sections and 144 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -2951,6 +3093,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -3065,24 +3212,26 @@
     {
       "id": "open.feishu.cn/lark-wiki",
       "hash": "297931df5d90f0662aec5694660b93e7b26f31e38ec609871a0c7435de016c7c",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.849Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.057Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7190,
+      "power": 7224,
       "inputs": {
         "taskValue": 80,
         "effectiveness": 70,
         "reliability": 52,
         "efficiency": 82,
-        "coverage": 82
+        "coverage": 82,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 18 words; workflow signal present.",
         "effectiveness": "46 actionable list items and 3 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,994 tokens across 1 files with 0 references.",
-        "coverage": "10 sections and 73 substantive statements; examples absent; constraints present."
+        "coverage": "10 sections and 73 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -3111,6 +3260,11 @@
           "label": "Coverage",
           "score": 8,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -3225,24 +3379,26 @@
     {
       "id": "open.feishu.cn/lark-event",
       "hash": "cdf4d623065353483e483bb8f7f14d03e7dc0d60e418e0303fd3c8bb0834ddea",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.736Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.809Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8295,
+      "power": 7814,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 86,
         "reliability": 72,
         "efficiency": 80,
-        "coverage": 100
+        "coverage": 100,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 65 words; workflow signal present.",
         "effectiveness": "10 actionable list items and 0 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,692 tokens across 8 files with 7 references.",
-        "coverage": "12 sections and 94 substantive statements; examples present; constraints present."
+        "coverage": "12 sections and 94 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: lark, feishu; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 90,
@@ -3271,6 +3427,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -3385,24 +3546,26 @@
     {
       "id": "open.feishu.cn/lark-minutes",
       "hash": "50a6d1fd9e90e8af98c167391d1293d0870002d7d998a04c085680bbe70a7b23",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.673Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.699Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7165,
+      "power": 6880,
       "inputs": {
         "taskValue": 73,
         "effectiveness": 76,
         "reliability": 52,
         "efficiency": 80,
-        "coverage": 82
+        "coverage": 82,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 4 words; workflow signal present.",
         "effectiveness": "31 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,183 tokens across 1 files with 0 references.",
-        "coverage": "18 sections and 102 substantive statements; examples absent; constraints present."
+        "coverage": "18 sections and 102 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark, feishu; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -3431,6 +3594,11 @@
           "label": "Coverage",
           "score": 8,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -3545,24 +3713,26 @@
     {
       "id": "open.feishu.cn/lark-attendance",
       "hash": "8598636d79a5168da87160c065bcde5729e21cd7e676a35d094a3fa9fc9bf585",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.705Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.908Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 6385,
+      "power": 6564,
       "inputs": {
         "taskValue": 67,
         "effectiveness": 58,
         "reliability": 44,
         "efficiency": 94,
-        "coverage": 68
+        "coverage": 68,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal absent.",
         "effectiveness": "2 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 254 tokens across 1 files with 0 references.",
-        "coverage": "5 sections and 17 substantive statements; examples absent; constraints present."
+        "coverage": "5 sections and 17 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 57,
@@ -3591,6 +3761,11 @@
           "label": "Coverage",
           "score": 7,
           "word": "Capable"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -3677,24 +3852,26 @@
     {
       "id": "open.feishu.cn/lark-whiteboard",
       "hash": "9f24589ed7b7d994a329fbd7a9be77c6b0748e299406c7d9fbe2a084dada12ff",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.744Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.792Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 6480,
+      "power": 6641,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 57,
         "reliability": 44,
         "efficiency": 94,
-        "coverage": 68
+        "coverage": 68,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "3 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 465 tokens across 1 files with 0 references.",
-        "coverage": "5 sections and 25 substantive statements; examples absent; constraints present."
+        "coverage": "5 sections and 25 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 67,
@@ -3723,6 +3900,11 @@
           "label": "Coverage",
           "score": 7,
           "word": "Capable"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -3809,24 +3991,26 @@
     {
       "id": "open.feishu.cn/lark-openapi-explorer",
       "hash": "5de085243fc6742efd2d4d9339aaf9dc850ef64633c9243413abf76a1f397298",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.017Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.859Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7225,
+      "power": 6898,
       "inputs": {
         "taskValue": 79,
         "effectiveness": 76,
         "reliability": 44,
         "efficiency": 94,
-        "coverage": 68
+        "coverage": 68,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 15 words; workflow signal present.",
         "effectiveness": "15 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 732 tokens across 1 files with 0 references.",
-        "coverage": "13 sections and 39 substantive statements; examples absent; constraints absent."
+        "coverage": "13 sections and 39 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: lark, feishu; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -3854,6 +4038,11 @@
         {
           "label": "Coverage",
           "score": 7,
+          "word": "Capable"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
           "word": "Capable"
         },
         {
@@ -3969,24 +4158,26 @@
     {
       "id": "open.feishu.cn/lark-task",
       "hash": "67d7c10f6839fc05c495cb02025887c4671679c467706559b54cb807f2454a0a",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.778Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.861Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7155,
+      "power": 6865,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 78,
         "reliability": 50,
         "efficiency": 81,
-        "coverage": 80
+        "coverage": 80,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "39 actionable list items and 6 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 2,091 tokens across 1 files with 0 references.",
-        "coverage": "12 sections and 129 substantive statements; examples absent; constraints present."
+        "coverage": "12 sections and 129 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark, feishu; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -4015,6 +4206,11 @@
           "label": "Coverage",
           "score": 8,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -4129,24 +4325,26 @@
     {
       "id": "open.feishu.cn/lark-mail",
       "hash": "39e3363827e741f579d692502b1b73d0ca3b13d959c768f8ac0e14f1c4a999a0",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.961Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.984Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7875,
+      "power": 7460,
       "inputs": {
         "taskValue": 81,
         "effectiveness": 90,
         "reliability": 58,
         "efficiency": 66,
-        "coverage": 100
+        "coverage": 100,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 19 words; workflow signal present.",
         "effectiveness": "68 actionable list items and 9 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 4,028 tokens across 34 files with 28 references.",
-        "coverage": "20 sections and 168 substantive statements; examples present; constraints present."
+        "coverage": "20 sections and 168 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: lark, feishu; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -4175,6 +4373,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -4289,24 +4492,26 @@
     {
       "id": "open.feishu.cn/lark-slides",
       "hash": "c84312b87572c8fc28546dda6070598efe3fee37fcd659fcf7ee3bf69c680415",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.884Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.060Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7250,
+      "power": 6642,
       "inputs": {
         "taskValue": 78,
         "effectiveness": 82,
         "reliability": 52,
         "efficiency": 60,
-        "coverage": 90
+        "coverage": 90,
+        "generality": 44
       },
       "reasons": {
         "taskValue": "Trigger description contains 14 words; workflow signal present.",
         "effectiveness": "104 actionable list items and 1 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 4,087 tokens across 1 files with 0 references.",
-        "coverage": "15 sections and 154 substantive statements; examples present; constraints present."
+        "coverage": "15 sections and 154 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: lark, linear, feishu; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -4335,6 +4540,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 4,
+          "word": "Weak"
         },
         {
           "label": "Guidance",
@@ -4449,24 +4659,26 @@
     {
       "id": "open.feishu.cn/lark-skill-maker",
       "hash": "91a7361b24e8e7ab6bb098e393e8981c254e4ecd5ba25e95fd7243a412326e28",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.896Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:38.962Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 6870,
+      "power": 6942,
       "inputs": {
         "taskValue": 76,
         "effectiveness": 68,
         "reliability": 44,
         "efficiency": 94,
-        "coverage": 64
+        "coverage": 64,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 9 words; workflow signal present.",
         "effectiveness": "4 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 394 tokens across 1 files with 0 references.",
-        "coverage": "6 sections and 13 substantive statements; examples absent; constraints absent."
+        "coverage": "6 sections and 13 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 70,
@@ -4495,6 +4707,11 @@
           "label": "Coverage",
           "score": 6,
           "word": "Capable"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -4567,24 +4784,26 @@
     {
       "id": "open.feishu.cn/lark-vc",
       "hash": "f6673ad7564fb19ccc9de64416aa9d32bf30c5c57226c6e98092c254ae1c9881",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.033Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.021Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 6875,
+      "power": 6957,
       "inputs": {
         "taskValue": 74,
         "effectiveness": 76,
         "reliability": 44,
         "efficiency": 75,
-        "coverage": 74
+        "coverage": 74,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 5 words; workflow signal present.",
         "effectiveness": "24 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 2,696 tokens across 1 files with 0 references.",
-        "coverage": "15 sections and 92 substantive statements; examples absent; constraints present."
+        "coverage": "15 sections and 92 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -4612,6 +4831,11 @@
         {
           "label": "Coverage",
           "score": 7,
+          "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
           "word": "Good"
         },
         {
@@ -4727,24 +4951,26 @@
     {
       "id": "open.feishu.cn/lark-workflow-meeting-summary",
       "hash": "8ca13cdeeaf0ec4bc1e83aefdf787a135ef47fdedcddec4050310583596512c5",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.945Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.010Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7110,
+      "power": 7126,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 76,
         "reliability": 44,
         "efficiency": 94,
-        "coverage": 74
+        "coverage": 74,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "19 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 893 tokens across 1 files with 0 references.",
-        "coverage": "9 sections and 37 substantive statements; examples absent; constraints present."
+        "coverage": "9 sections and 37 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -4772,6 +4998,11 @@
         {
           "label": "Coverage",
           "score": 7,
+          "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
           "word": "Good"
         },
         {
@@ -4887,24 +5118,26 @@
     {
       "id": "open.feishu.cn/lark-workflow-standup-report",
       "hash": "6c57515d206e60486c46613a4fd10630808d70aadeebabab763b436d44eeb944",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:23.998Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.173Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7160,
+      "power": 7166,
       "inputs": {
         "taskValue": 74,
         "effectiveness": 76,
         "reliability": 44,
         "efficiency": 94,
-        "coverage": 74
+        "coverage": 74,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 6 words; workflow signal present.",
         "effectiveness": "19 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 700 tokens across 1 files with 0 references.",
-        "coverage": "12 sections and 34 substantive statements; examples absent; constraints present."
+        "coverage": "12 sections and 34 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -4932,6 +5165,11 @@
         {
           "label": "Coverage",
           "score": 7,
+          "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
           "word": "Good"
         },
         {
@@ -5047,24 +5285,26 @@
     {
       "id": "open.feishu.cn/lark-okr",
       "hash": "4646519b63a58baa6aa185d1999420e7a2ebe2822f78745bcb6d8b01660efc1f",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.095Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.337Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7190,
+      "power": 7220,
       "inputs": {
         "taskValue": 74,
         "effectiveness": 72,
         "reliability": 52,
         "efficiency": 84,
-        "coverage": 88
+        "coverage": 88,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 5 words; workflow signal present.",
         "effectiveness": "31 actionable list items and 1 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,324 tokens across 19 files with 18 references.",
-        "coverage": "17 sections and 77 substantive statements; examples absent; constraints present."
+        "coverage": "17 sections and 77 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -5093,6 +5333,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -5207,24 +5452,26 @@
     {
       "id": "open.feishu.cn/lark-markdown",
       "hash": "441b69e7b3aaecd4cee6c2f5e4d55dfa43152a589da3251eb99767228fe0a6d5",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.060Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.202Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7190,
+      "power": 7212,
       "inputs": {
         "taskValue": 76,
         "effectiveness": 70,
         "reliability": 52,
         "efficiency": 94,
-        "coverage": 74
+        "coverage": 74,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 10 words; workflow signal present.",
         "effectiveness": "25 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 766 tokens across 1 files with 0 references.",
-        "coverage": "4 sections and 35 substantive statements; examples absent; constraints present."
+        "coverage": "4 sections and 35 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 84,
@@ -5252,6 +5499,11 @@
         {
           "label": "Coverage",
           "score": 7,
+          "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
           "word": "Good"
         },
         {
@@ -5325,24 +5577,26 @@
     {
       "id": "vercel-labs/agent-skills/web-design-guidelines",
       "hash": "f3bc47f890f42a44db1007ab390709ec368e4b8c089baee6b0007182236ac474",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.150Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.147Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7325,
+      "power": 7332,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 70,
         "reliability": 58,
         "efficiency": 94,
-        "coverage": 58
+        "coverage": 58,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 28 words; workflow signal present.",
         "effectiveness": "8 actionable list items and 2 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 229 tokens across 1 files with 0 references.",
-        "coverage": "3 sections and 17 substantive statements; examples absent; constraints absent."
+        "coverage": "3 sections and 17 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: vercel; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 85,
@@ -5371,6 +5625,11 @@
           "label": "Coverage",
           "score": 6,
           "word": "Limited"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -5429,24 +5688,26 @@
     {
       "id": "microsoft/azure-skills/microsoft-foundry",
       "hash": "82682f02be0ae851d457bc1ee5055e1458ea8ad3240471cee3051c557eaa4c25",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.563Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.627Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8400,
+      "power": 8281,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 96,
         "reliability": 90,
         "efficiency": 43,
-        "coverage": 100
+        "coverage": 100,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 126 words; workflow signal present.",
         "effectiveness": "50 actionable list items and 25 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 6,217 tokens across 187 files with 119 references.",
-        "coverage": "23 sections and 234 substantive statements; examples present; constraints present."
+        "coverage": "23 sections and 234 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: azure; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -5475,6 +5736,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -5589,24 +5855,26 @@
     {
       "id": "open.feishu.cn/lark-vc-agent",
       "hash": "860f8e2b6dc58056707cc98bb9dfeef5a9bf990f83f479c3b2a77ef4d3c6078c",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.196Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.234Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 6895,
+      "power": 6678,
       "inputs": {
         "taskValue": 73,
         "effectiveness": 76,
         "reliability": 52,
         "efficiency": 66,
-        "coverage": 76
+        "coverage": 76,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 4 words; workflow signal present.",
         "effectiveness": "67 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 3,525 tokens across 1 files with 0 references.",
-        "coverage": "15 sections and 111 substantive statements; examples absent; constraints absent."
+        "coverage": "15 sections and 111 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: lark, feishu; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -5635,6 +5903,11 @@
           "label": "Coverage",
           "score": 8,
           "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -5749,24 +6022,26 @@
     {
       "id": "microsoft/azure-skills/azure-diagnostics",
       "hash": "200976151ed40af09763472601cf403e41c8d877fd00d2ea8c829678d37e992e",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.209Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.392Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8925,
+      "power": 8334,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 92,
         "reliability": 90,
         "efficiency": 94,
-        "coverage": 88
+        "coverage": 88,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 106 words; workflow signal present.",
         "effectiveness": "37 actionable list items and 6 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,372 tokens across 49 files with 17 references.",
-        "coverage": "13 sections and 57 substantive statements; examples absent; constraints absent."
+        "coverage": "13 sections and 57 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: azure, kubernetes; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -5795,6 +6070,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -5909,24 +6189,26 @@
     {
       "id": "microsoft/azure-skills/azure-ai",
       "hash": "e97156ba97a3c873fdfcf24ce9c504012a5e1dad502631bb48904ae536aab421",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.303Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.970Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7220,
+      "power": 7217,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 68,
         "reliability": 44,
         "efficiency": 99,
-        "coverage": 74
+        "coverage": 74,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 37 words; workflow signal present.",
         "effectiveness": "14 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 715 tokens across 16 files with 15 references.",
-        "coverage": "8 sections and 42 substantive statements; examples absent; constraints absent."
+        "coverage": "8 sections and 42 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: azure; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -5954,6 +6236,11 @@
         {
           "label": "Coverage",
           "score": 7,
+          "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
           "word": "Good"
         },
         {
@@ -6069,24 +6356,26 @@
     {
       "id": "microsoft/azure-skills/azure-deploy",
       "hash": "7544f9468d8813b67dd8982d25687b1d2d2becc23cb3c5212b474fc7a72a6e6a",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.465Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.074Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8005,
+      "power": 7574,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 76,
         "reliability": 70,
         "efficiency": 94,
-        "coverage": 84
+        "coverage": 84,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 115 words; workflow signal present.",
         "effectiveness": "14 actionable list items and 3 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,406 tokens across 41 files with 40 references.",
-        "coverage": "6 sections and 69 substantive statements; examples absent; constraints present."
+        "coverage": "6 sections and 69 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: azure, terraform; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 92,
@@ -6115,6 +6404,11 @@
           "label": "Coverage",
           "score": 8,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -6201,24 +6495,26 @@
     {
       "id": "microsoft/azure-skills/azure-prepare",
       "hash": "37348d9e4b71b0eeb9ca16986b8e5c50daa3e89c55fae688f17d505f89760ade",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.566Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.524Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8345,
+      "power": 7244,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 82,
         "reliability": 84,
         "efficiency": 78,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 28
       },
       "reasons": {
         "taskValue": "Trigger description contains 99 words; workflow signal present.",
         "effectiveness": "21 actionable list items and 19 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,935 tokens across 164 files with 163 references.",
-        "coverage": "10 sections and 132 substantive statements; examples present; constraints present."
+        "coverage": "10 sections and 132 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: azure, terraform, aws, gcp; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -6247,6 +6543,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 3,
+          "word": "Weak"
         },
         {
           "label": "Guidance",
@@ -6361,24 +6662,26 @@
     {
       "id": "microsoft/azure-skills/azure-validate",
       "hash": "f6b2038e5a20a7c8f821e8ddbf12226af538a379371b3689e7b42a02733aab1d",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.291Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.492Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8440,
+      "power": 7943,
       "inputs": {
         "taskValue": 71,
         "effectiveness": 86,
         "reliability": 88,
         "efficiency": 99,
-        "coverage": 84
+        "coverage": 84,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 0 words; workflow signal present.",
         "effectiveness": "7 actionable list items and 9 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary present; failure guidance present.",
         "efficiency": "Estimated activation body is 894 tokens across 27 files with 26 references.",
-        "coverage": "3 sections and 41 substantive statements; examples absent; constraints present."
+        "coverage": "3 sections and 41 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: azure, terraform; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 95,
@@ -6407,6 +6710,11 @@
           "label": "Coverage",
           "score": 8,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -6465,24 +6773,26 @@
     {
       "id": "microsoft/azure-skills/azure-storage",
       "hash": "51df59e7bbb856f537cbdb14db57f563d08f4a63cddd3637a054e42d47d17f29",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.338Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.672Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8045,
+      "power": 7914,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 76,
         "reliability": 66,
         "efficiency": 98,
-        "coverage": 90
+        "coverage": 90,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 108 words; workflow signal present.",
         "effectiveness": "13 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,010 tokens across 14 files with 13 references.",
-        "coverage": "9 sections and 51 substantive statements; examples present; constraints absent."
+        "coverage": "9 sections and 51 substantive statements; examples present; constraints absent.",
+        "generality": "Named platform dependencies: azure; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -6511,6 +6821,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -6625,24 +6940,26 @@
     {
       "id": "microsoft/azure-skills/entra-app-registration",
       "hash": "95eb2acd2794438baba6578e726478a497ac8caf8f2e06bb43b74b5d08c7b227",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.514Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.552Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7895,
+      "power": 7486,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 74,
         "reliability": 66,
         "efficiency": 88,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 57 words; workflow signal present.",
         "effectiveness": "44 actionable list items and 4 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,920 tokens across 17 files with 16 references.",
-        "coverage": "20 sections and 126 substantive statements; examples present; constraints present."
+        "coverage": "20 sections and 126 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: azure, react; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -6671,6 +6988,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -6785,24 +7107,26 @@
     {
       "id": "microsoft/azure-skills/appinsights-instrumentation",
       "hash": "1c0174a5940ac9f9395037448deaec32a4aeea76eae3e9218620c192295db615",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.556Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.894Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7860,
+      "power": 7723,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 82,
         "reliability": 48,
         "efficiency": 99,
-        "coverage": 88
+        "coverage": 88,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 38 words; workflow signal present.",
         "effectiveness": "18 actionable list items and 4 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 828 tokens across 13 files with 9 references.",
-        "coverage": "9 sections and 48 substantive statements; examples present; constraints present."
+        "coverage": "9 sections and 48 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: azure; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -6831,6 +7155,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -6945,24 +7274,26 @@
     {
       "id": "microsoft/azure-skills/azure-resource-lookup",
       "hash": "2a37d4bf258ba7a75df84686ce310d633a9bccf4a6b5a66226595f74384111f6",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.540Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.992Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7835,
+      "power": 7432,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 72,
         "reliability": 66,
         "efficiency": 96,
-        "coverage": 84
+        "coverage": 84,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 103 words; workflow signal present.",
         "effectiveness": "14 actionable list items and 7 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,150 tokens across 2 files with 1 references.",
-        "coverage": "9 sections and 68 substantive statements; examples absent; constraints present."
+        "coverage": "9 sections and 68 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: azure, kubernetes; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -6991,6 +7322,11 @@
           "label": "Coverage",
           "score": 8,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -7105,24 +7441,26 @@
     {
       "id": "microsoft/azure-skills/azure-compliance",
       "hash": "885429e1b1bfa60e77df05ad8e1a780aa4fcd9fc190d00531800637cc20a1e4c",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.504Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.857Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8130,
+      "power": 7995,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 76,
         "reliability": 72,
         "efficiency": 97,
-        "coverage": 88
+        "coverage": 88,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 50 words; workflow signal present.",
         "effectiveness": "29 actionable list items and 11 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,056 tokens across 16 files with 15 references.",
-        "coverage": "11 sections and 71 substantive statements; examples absent; constraints absent."
+        "coverage": "11 sections and 71 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: azure; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -7151,6 +7489,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -7265,24 +7608,26 @@
     {
       "id": "microsoft/azure-skills/azure-aigateway",
       "hash": "71989ad28fb1d0087f5eed1c1bb67aedb19ac92d879d43770b0124e7d32ea397",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.858Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.993Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8210,
+      "power": 7723,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 80,
         "reliability": 66,
         "efficiency": 97,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 61 words; workflow signal present.",
         "effectiveness": "13 actionable list items and 1 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,114 tokens across 9 files with 8 references.",
-        "coverage": "10 sections and 50 substantive statements; examples present; constraints present."
+        "coverage": "10 sections and 50 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: azure, github; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -7311,6 +7656,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -7425,24 +7775,26 @@
     {
       "id": "microsoft/azure-skills/azure-kusto",
       "hash": "d87bfeff59a2b142b5523246a1061c180cd249d5246c07f1caf95ac316d2645f",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.688Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:39.850Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8405,
+      "power": 8216,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 90,
         "reliability": 72,
         "efficiency": 82,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 39 words; workflow signal present.",
         "effectiveness": "78 actionable list items and 15 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,056 tokens across 1 files with 0 references.",
-        "coverage": "20 sections and 141 substantive statements; examples present; constraints present."
+        "coverage": "20 sections and 141 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: azure; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -7471,6 +7823,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -7585,24 +7942,26 @@
     {
       "id": "microsoft/azure-skills/azure-resource-visualizer",
       "hash": "cc55fd4e1e6be8c680fcd2978ec93db7feaddab267e1f2b00a30b31ef616726b",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.011Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.027Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7840,
+      "power": 7763,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 74,
         "reliability": 66,
         "efficiency": 87,
-        "coverage": 92
+        "coverage": 92,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 42 words; workflow signal present.",
         "effectiveness": "102 actionable list items and 22 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,996 tokens across 4 files with 1 references.",
-        "coverage": "15 sections and 136 substantive statements; examples present; constraints present."
+        "coverage": "15 sections and 136 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: azure; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -7631,6 +7990,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -7745,24 +8109,26 @@
     {
       "id": "microsoft/azure-skills/azure-messaging",
       "hash": "b2cd16a1022b62abc488f07df228bfdae32edf94c3ebd89b74b87e49cdb4c500",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.705Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.053Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7985,
+      "power": 7882,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 76,
         "reliability": 72,
         "efficiency": 94,
-        "coverage": 78
+        "coverage": 78,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 123 words; workflow signal present.",
         "effectiveness": "15 actionable list items and 3 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 561 tokens across 1 files with 0 references.",
-        "coverage": "6 sections and 33 substantive statements; examples absent; constraints absent."
+        "coverage": "6 sections and 33 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: azure; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 92,
@@ -7789,6 +8155,11 @@
         },
         {
           "label": "Coverage",
+          "score": 8,
+          "word": "Good"
+        },
+        {
+          "label": "Generality",
           "score": 8,
           "word": "Good"
         },
@@ -7849,24 +8220,26 @@
     {
       "id": "open.feishu.cn/lark-apps",
       "hash": "378435dd5022572e5e0b13a7ce40455eae84ea8907cdaed66996cb091e3609e9",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.714Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.180Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7365,
+      "power": 7084,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 74,
         "reliability": 66,
         "efficiency": 66,
-        "coverage": 76
+        "coverage": 76,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 48 words; workflow signal present.",
         "effectiveness": "37 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 3,549 tokens across 1 files with 0 references.",
-        "coverage": "10 sections and 89 substantive statements; examples absent; constraints absent."
+        "coverage": "10 sections and 89 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: lark, feishu; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -7895,6 +8268,11 @@
           "label": "Coverage",
           "score": 8,
           "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -8009,24 +8387,26 @@
     {
       "id": "mattpocock/skills/teach",
       "hash": "7e67f13dc27781aad061d1eee61676c39c51d4d7ad6d7dc07ef943653c6e01ff",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.741Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.207Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7710,
+      "power": 7997,
       "inputs": {
         "taskValue": 77,
         "effectiveness": 76,
         "reliability": 72,
         "efficiency": 79,
-        "coverage": 88
+        "coverage": 88,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 11 words; workflow signal present.",
         "effectiveness": "25 actionable list items and 7 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,332 tokens across 6 files with 0 references.",
-        "coverage": "12 sections and 121 substantive statements; examples absent; constraints present."
+        "coverage": "12 sections and 121 substantive statements; examples absent; constraints present.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 94,
@@ -8055,6 +8435,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 9,
+          "word": "Excellent"
         },
         {
           "label": "Guidance",
@@ -8169,24 +8554,26 @@
     {
       "id": "remotion-dev/skills/remotion-best-practices",
       "hash": "740300e2483a62d0483a619ec0fcbfa8870cbb1aa9dedacb02fa83e12cb8435e",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.978Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.355Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 6680,
+      "power": 6482,
       "inputs": {
         "taskValue": 69,
         "effectiveness": 59,
         "reliability": 48,
         "efficiency": 99,
-        "coverage": 74
+        "coverage": 74,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 5 words; workflow signal absent.",
         "effectiveness": "0 actionable list items and 1 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 596 tokens across 124 files with 18 references.",
-        "coverage": "13 sections and 23 substantive statements; examples absent; constraints absent."
+        "coverage": "13 sections and 23 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: react, vercel; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 58,
@@ -8215,6 +8602,11 @@
           "label": "Coverage",
           "score": 7,
           "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -8329,24 +8721,26 @@
     {
       "id": "mattpocock/skills/grilling",
       "hash": "dae226933247301e1947768ca27c09d351348f6e3f6692df72998dd990212eb3",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.848Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.218Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7795,
+      "power": 8049,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 73,
         "reliability": 70,
         "efficiency": 94,
-        "coverage": 72
+        "coverage": 72,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 25 words; workflow signal present.",
         "effectiveness": "0 actionable list items and 5 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review absent; completion boundary present; failure guidance present.",
         "efficiency": "Estimated activation body is 416 tokens across 2 files with 0 references.",
-        "coverage": "0 sections and 16 substantive statements; examples absent; constraints present."
+        "coverage": "0 sections and 16 substantive statements; examples absent; constraints present.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 72,
@@ -8375,6 +8769,11 @@
           "label": "Coverage",
           "score": 7,
           "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 9,
+          "word": "Excellent"
         },
         {
           "label": "Guidance",
@@ -8475,24 +8874,26 @@
     {
       "id": "microsoft/azure-skills/azure-rbac",
       "hash": "4d9a271de2b49ccf48c83184557391fb4124e7f92e557eeb9fd5f61b41535a9a",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:24.934Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.320Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 6705,
+      "power": 6818,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 60,
         "reliability": 44,
         "efficiency": 94,
-        "coverage": 54
+        "coverage": 54,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 77 words; workflow signal present.",
         "effectiveness": "3 actionable list items and 1 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 280 tokens across 1 files with 0 references.",
-        "coverage": "1 sections and 11 substantive statements; examples absent; constraints absent."
+        "coverage": "1 sections and 11 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: azure; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 65,
@@ -8521,6 +8922,11 @@
           "label": "Coverage",
           "score": 5,
           "word": "Limited"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -8579,24 +8985,26 @@
     {
       "id": "microsoft/azure-skills/azure-compute",
       "hash": "37ddc8f23015d381f9a09dfd2b34c4686a96b33146d37020244cdded03a86bda",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.005Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.383Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7440,
+      "power": 7445,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 60,
         "reliability": 66,
         "efficiency": 99,
-        "coverage": 76
+        "coverage": 76,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 75 words; workflow signal present.",
         "effectiveness": "4 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 464 tokens across 41 files with 30 references.",
-        "coverage": "2 sections and 19 substantive statements; examples absent; constraints present."
+        "coverage": "2 sections and 19 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: azure; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 66,
@@ -8623,6 +9031,11 @@
         },
         {
           "label": "Coverage",
+          "score": 8,
+          "word": "Good"
+        },
+        {
+          "label": "Generality",
           "score": 8,
           "word": "Good"
         },
@@ -8697,24 +9110,26 @@
     {
       "id": "microsoft/azure-skills/azure-cloud-migrate",
       "hash": "32f2aa70f3a65df5b8e323363f7680e8ebcd8c1cf5b2433d725acbb381d6ade1",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.351Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:42.455Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8400,
+      "power": 7243,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 82,
         "reliability": 72,
         "efficiency": 99,
-        "coverage": 94
+        "coverage": 94,
+        "generality": 28
       },
       "reasons": {
         "taskValue": "Trigger description contains 53 words; workflow signal present.",
         "effectiveness": "13 actionable list items and 7 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 943 tokens across 31 files with 30 references.",
-        "coverage": "4 sections and 34 substantive statements; examples present; constraints present."
+        "coverage": "4 sections and 34 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: azure, kubernetes, aws, gcp; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 90,
@@ -8743,6 +9158,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 3,
+          "word": "Weak"
         },
         {
           "label": "Guidance",
@@ -8815,24 +9235,26 @@
     {
       "id": "juliusbrussee/caveman/caveman",
       "hash": "784110d6c3dc6d7e8d094ac998ebf811e19462ad40a9f0f2f47cbbae9c7e8753",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.032Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.486Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7965,
+      "power": 7865,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 84,
         "reliability": 72,
         "efficiency": 87,
-        "coverage": 90
+        "coverage": 90,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "16 actionable list items and 3 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,527 tokens across 2 files with 0 references.",
-        "coverage": "5 sections and 107 substantive statements; examples present; constraints present."
+        "coverage": "5 sections and 107 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: react; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 91,
@@ -8861,6 +9283,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -8947,24 +9374,26 @@
     {
       "id": "mattpocock/skills/domain-modeling",
       "hash": "e670c36709c31c0801c0635397d2d9662d74bb777825b16d707f2902dd6fad0e",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.147Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.689Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8045,
+      "power": 8236,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 78,
         "reliability": 66,
         "efficiency": 94,
-        "coverage": 90
+        "coverage": 90,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 23 words; workflow signal present.",
         "effectiveness": "3 actionable list items and 4 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 756 tokens across 4 files with 0 references.",
-        "coverage": "8 sections and 40 substantive statements; examples present; constraints present."
+        "coverage": "8 sections and 40 substantive statements; examples present; constraints present.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 84,
@@ -8991,6 +9420,11 @@
         },
         {
           "label": "Coverage",
+          "score": 9,
+          "word": "Excellent"
+        },
+        {
+          "label": "Generality",
           "score": 9,
           "word": "Excellent"
         },
@@ -9111,24 +9545,26 @@
     {
       "id": "microsoft/azure-skills/azure-hosted-copilot-sdk",
       "hash": "2ffc86e419474b85424303ef45de3bedf1f56c3ca761f8d9ccfbf78f6f019c32",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.133Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.651Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8015,
+      "power": 7254,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 74,
         "reliability": 66,
         "efficiency": 96,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 44
       },
       "reasons": {
         "taskValue": "Trigger description contains 81 words; workflow signal present.",
         "effectiveness": "7 actionable list items and 1 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,139 tokens across 6 files with 5 references.",
-        "coverage": "10 sections and 61 substantive statements; examples present; constraints present."
+        "coverage": "10 sections and 61 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: github, azure, react; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 86,
@@ -9157,6 +9593,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 4,
+          "word": "Weak"
         },
         {
           "label": "Guidance",
@@ -9271,24 +9712,26 @@
     {
       "id": "lllllllama/rigorpilot-skills/paper-context-resolver",
       "hash": "66cfe5cbe0fdeaa0d6df7f83eef91779fa2ff5f744390393621407e2d228faac",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.637Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.685Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7420,
+      "power": 7725,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 68,
         "reliability": 58,
         "efficiency": 99,
-        "coverage": 66
+        "coverage": 66,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 74 words; workflow signal present.",
         "effectiveness": "21 actionable list items and 3 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 372 tokens across 3 files with 1 references.",
-        "coverage": "6 sections and 31 substantive statements; examples absent; constraints absent."
+        "coverage": "6 sections and 31 substantive statements; examples absent; constraints absent.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 92,
@@ -9317,6 +9760,11 @@
           "label": "Coverage",
           "score": 7,
           "word": "Capable"
+        },
+        {
+          "label": "Generality",
+          "score": 9,
+          "word": "Excellent"
         },
         {
           "label": "Guidance",
@@ -9403,24 +9851,26 @@
     {
       "id": "lllllllama/rigorpilot-skills/repo-intake-and-plan",
       "hash": "2fc763f9cf72d561fd78c4593a29ddd452088b58481c1585208441be6daaac74",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.405Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.803Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7520,
+      "power": 7777,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 76,
         "reliability": 48,
         "efficiency": 99,
-        "coverage": 72
+        "coverage": 72,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 63 words; workflow signal present.",
         "effectiveness": "22 actionable list items and 3 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 403 tokens across 5 files with 1 references.",
-        "coverage": "6 sections and 32 substantive statements; examples absent; constraints present."
+        "coverage": "6 sections and 32 substantive statements; examples absent; constraints present.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 86,
@@ -9449,6 +9899,11 @@
           "label": "Coverage",
           "score": 7,
           "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 9,
+          "word": "Excellent"
         },
         {
           "label": "Guidance",
@@ -9535,24 +9990,26 @@
     {
       "id": "lllllllama/rigorpilot-skills/minimal-run-and-audit",
       "hash": "5e167f0fd455e8c5b87c842e84d53711d7cacff83684e5be95dbfa6fe60aeccc",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.440Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.843Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7800,
+      "power": 8029,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 76,
         "reliability": 62,
         "efficiency": 99,
-        "coverage": 72
+        "coverage": 72,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 67 words; workflow signal present.",
         "effectiveness": "25 actionable list items and 3 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 543 tokens across 5 files with 1 references.",
-        "coverage": "6 sections and 39 substantive statements; examples absent; constraints present."
+        "coverage": "6 sections and 39 substantive statements; examples absent; constraints present.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 92,
@@ -9581,6 +10038,11 @@
           "label": "Coverage",
           "score": 7,
           "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 9,
+          "word": "Excellent"
         },
         {
           "label": "Guidance",
@@ -9667,24 +10129,26 @@
     {
       "id": "lllllllama/rigorpilot-skills/env-and-assets-bootstrap",
       "hash": "8729e8f31de677542cf9d3a0c011740d8a1fc894f81046955bcd7fa4361ea2bf",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.227Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:40.903Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7820,
+      "power": 8045,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 76,
         "reliability": 62,
         "efficiency": 99,
-        "coverage": 74
+        "coverage": 74,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 65 words; workflow signal present.",
         "effectiveness": "21 actionable list items and 5 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 459 tokens across 8 files with 2 references.",
-        "coverage": "6 sections and 35 substantive statements; examples absent; constraints present."
+        "coverage": "6 sections and 35 substantive statements; examples absent; constraints present.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 92,
@@ -9713,6 +10177,11 @@
           "label": "Coverage",
           "score": 7,
           "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 9,
+          "word": "Excellent"
         },
         {
           "label": "Guidance",
@@ -9799,24 +10268,26 @@
     {
       "id": "mattpocock/skills/codebase-design",
       "hash": "42f405c9a796a59fbca9e07f43225d42ce1c9f3541463099bc62eda59d6f550f",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.294Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.073Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7795,
+      "power": 8044,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 76,
         "reliability": 66,
         "efficiency": 88,
-        "coverage": 80
+        "coverage": 80,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 40 words; workflow signal present.",
         "effectiveness": "20 actionable list items and 5 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,443 tokens across 4 files with 0 references.",
-        "coverage": "7 sections and 61 substantive statements; examples absent; constraints present."
+        "coverage": "7 sections and 61 substantive statements; examples absent; constraints present.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 93,
@@ -9845,6 +10316,11 @@
           "label": "Coverage",
           "score": 8,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 9,
+          "word": "Excellent"
         },
         {
           "label": "Guidance",
@@ -9959,24 +10435,26 @@
     {
       "id": "mattpocock/skills/diagnosing-bugs",
       "hash": "03653ab32369818ec20095e0867f849a9860a4f3b1ea930e70787eaec1e322ef",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.340Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.013Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8435,
+      "power": 8568,
       "inputs": {
         "taskValue": 81,
         "effectiveness": 90,
         "reliability": 76,
         "efficiency": 82,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 92
       },
       "reasons": {
         "taskValue": "Trigger description contains 19 words; workflow signal present.",
         "effectiveness": "33 actionable list items and 12 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,087 tokens across 3 files with 0 references.",
-        "coverage": "13 sections and 113 substantive statements; examples present; constraints present."
+        "coverage": "13 sections and 113 substantive statements; examples present; constraints present.",
+        "generality": "No named platform dependency detected; cross-platform guidance not required."
       },
       "diagnostics": {
         "guidance": 94,
@@ -10004,6 +10482,11 @@
         {
           "label": "Coverage",
           "score": 10,
+          "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 9,
           "word": "Excellent"
         },
         {
@@ -10119,24 +10602,26 @@
     {
       "id": "larksuite/cli/lark-doc",
       "hash": "cfab51bbb275b7290dd2d42190ed260108515f2b945f367efde7cac70f081c8c",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.852Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.271Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7640,
+      "power": 7609,
       "inputs": {
         "taskValue": 79,
         "effectiveness": 68,
         "reliability": 72,
         "efficiency": 99,
-        "coverage": 70
+        "coverage": 70,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 16 words; workflow signal present.",
         "effectiveness": "14 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 521 tokens across 44 files with 43 references.",
-        "coverage": "6 sections and 20 substantive statements; examples absent; constraints absent."
+        "coverage": "6 sections and 20 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 92,
@@ -10164,6 +10649,11 @@
         {
           "label": "Coverage",
           "score": 7,
+          "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
           "word": "Good"
         },
         {
@@ -10265,24 +10755,26 @@
     {
       "id": "larksuite/cli/lark-base",
       "hash": "0945faf3fd0ba9e495929fb48e4bbb7077a67204e4607d40a83039df3e8f093f",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.715Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.362Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 6905,
+      "power": 6978,
       "inputs": {
         "taskValue": 77,
         "effectiveness": 70,
         "reliability": 44,
         "efficiency": 84,
-        "coverage": 74
+        "coverage": 74,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 11 words; workflow signal present.",
         "effectiveness": "25 actionable list items and 3 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 2,326 tokens across 30 files with 29 references.",
-        "coverage": "16 sections and 71 substantive statements; examples absent; constraints absent."
+        "coverage": "16 sections and 71 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -10310,6 +10802,11 @@
         {
           "label": "Coverage",
           "score": 7,
+          "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
           "word": "Good"
         },
         {
@@ -10425,24 +10922,26 @@
     {
       "id": "larksuite/cli/lark-shared",
       "hash": "0334d3d4607adde95bca546e206ac6557eb5cb76a86ed4d2c84498214c4cf568",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.531Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.193Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7420,
+      "power": 7393,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 68,
         "reliability": 52,
         "efficiency": 99,
-        "coverage": 78
+        "coverage": 78,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 24 words; workflow signal present.",
         "effectiveness": "9 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 608 tokens across 7 files with 6 references.",
-        "coverage": "3 sections and 19 substantive statements; examples absent; constraints present."
+        "coverage": "3 sections and 19 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 77,
@@ -10469,6 +10968,11 @@
         },
         {
           "label": "Coverage",
+          "score": 8,
+          "word": "Good"
+        },
+        {
+          "label": "Generality",
           "score": 8,
           "word": "Good"
         },
@@ -10529,24 +11033,26 @@
     {
       "id": "larksuite/cli/lark-drive",
       "hash": "ddc349c696702328056d95c722a3d73d7f0bf595037ca17d57b936352436b307",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.103Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.502Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7700,
+      "power": 7027,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 78,
         "reliability": 66,
         "efficiency": 67,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 44
       },
       "reasons": {
         "taskValue": "Trigger description contains 23 words; workflow signal present.",
         "effectiveness": "60 actionable list items and 1 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 3,946 tokens across 61 files with 60 references.",
-        "coverage": "20 sections and 140 substantive statements; examples present; constraints present."
+        "coverage": "20 sections and 140 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: lark, feishu, react; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -10575,6 +11081,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 4,
+          "word": "Weak"
         },
         {
           "label": "Guidance",
@@ -10689,24 +11200,26 @@
     {
       "id": "larksuite/cli/lark-im",
       "hash": "b4ba16bc0ec18cbf7dbba7d13e09ee3d10f8a27d95687c80c2f3a20eedefad00",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.884Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.497Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7300,
+      "power": 7357,
       "inputs": {
         "taskValue": 73,
         "effectiveness": 78,
         "reliability": 66,
         "efficiency": 57,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 4 words; workflow signal present.",
         "effectiveness": "59 actionable list items and 9 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 4,930 tokens across 59 files with 58 references.",
-        "coverage": "28 sections and 190 substantive statements; examples present; constraints present."
+        "coverage": "28 sections and 190 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -10735,6 +11248,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -10849,24 +11367,26 @@
     {
       "id": "larksuite/cli/lark-wiki",
       "hash": "74de7f79e5c4d7b79010a68b71eddb4551d4e20aef77cd14d3fdb97efdebc2a2",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.766Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.280Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7325,
+      "power": 7327,
       "inputs": {
         "taskValue": 80,
         "effectiveness": 70,
         "reliability": 52,
         "efficiency": 87,
-        "coverage": 88
+        "coverage": 88,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 18 words; workflow signal present.",
         "effectiveness": "46 actionable list items and 3 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,994 tokens across 14 files with 13 references.",
-        "coverage": "10 sections and 73 substantive statements; examples absent; constraints present."
+        "coverage": "10 sections and 73 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -10895,6 +11415,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -11009,24 +11534,26 @@
     {
       "id": "larksuite/cli/lark-sheets",
       "hash": "7e56c2fdaab09f1aefd18d2baac695f9ae82a4be6eb0ca367a93204a7c6f5688",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.846Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:42.648Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8115,
+      "power": 8038,
       "inputs": {
         "taskValue": 81,
         "effectiveness": 88,
         "reliability": 84,
         "efficiency": 54,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 19 words; workflow signal present.",
         "effectiveness": "32 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 5,173 tokens across 27 files with 20 references.",
-        "coverage": "16 sections and 144 substantive statements; examples present; constraints present."
+        "coverage": "16 sections and 144 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -11055,6 +11582,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -11169,24 +11701,26 @@
     {
       "id": "larksuite/cli/lark-whiteboard",
       "hash": "b3d3f91a13fd161253bb973dd656f81bf8c3c3a1ef3cec0a589139e6351c8bc9",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.876Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.557Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 6615,
+      "power": 6744,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 57,
         "reliability": 44,
         "efficiency": 99,
-        "coverage": 74
+        "coverage": 74,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "3 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 465 tokens across 31 files with 3 references.",
-        "coverage": "5 sections and 25 substantive statements; examples absent; constraints present."
+        "coverage": "5 sections and 25 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 67,
@@ -11214,6 +11748,11 @@
         {
           "label": "Coverage",
           "score": 7,
+          "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
           "word": "Good"
         },
         {
@@ -11301,24 +11840,26 @@
     {
       "id": "larksuite/cli/lark-task",
       "hash": "7ded9e58e243b52c13732b93552703baab5e898f59292c8d95af46a15bdee456",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.825Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.813Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7290,
+      "power": 6968,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 78,
         "reliability": 50,
         "efficiency": 86,
-        "coverage": 86
+        "coverage": 86,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "39 actionable list items and 6 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 2,091 tokens across 18 files with 17 references.",
-        "coverage": "12 sections and 129 substantive statements; examples absent; constraints present."
+        "coverage": "12 sections and 129 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark, feishu; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -11347,6 +11888,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -11461,24 +12007,26 @@
     {
       "id": "larksuite/cli/lark-calendar",
       "hash": "3f6c7bb52481a965268d4937144da05b964b8001df862c2f9df7ffcb710b12ab",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:25.963Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.597Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7135,
+      "power": 7150,
       "inputs": {
         "taskValue": 73,
         "effectiveness": 76,
         "reliability": 44,
         "efficiency": 90,
-        "coverage": 80
+        "coverage": 80,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 3 words; workflow signal present.",
         "effectiveness": "31 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 1,769 tokens across 11 files with 10 references.",
-        "coverage": "18 sections and 79 substantive statements; examples absent; constraints present."
+        "coverage": "18 sections and 79 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -11507,6 +12055,11 @@
           "label": "Coverage",
           "score": 8,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -11621,24 +12174,26 @@
     {
       "id": "larksuite/cli/lark-mail",
       "hash": "e762df49e87d7afcdfe1c3a6a9a6ac1b9508f35aae1530b9dca3a27c05fac3f3",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.117Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.604Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7875,
+      "power": 7460,
       "inputs": {
         "taskValue": 81,
         "effectiveness": 90,
         "reliability": 58,
         "efficiency": 66,
-        "coverage": 100
+        "coverage": 100,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 19 words; workflow signal present.",
         "effectiveness": "68 actionable list items and 9 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 4,028 tokens across 34 files with 28 references.",
-        "coverage": "20 sections and 168 substantive statements; examples present; constraints present."
+        "coverage": "20 sections and 168 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: lark, feishu; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -11667,6 +12222,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -11781,24 +12341,26 @@
     {
       "id": "larksuite/cli/lark-minutes",
       "hash": "031bab711c23668724cbfc97b5fec07015c2a3ded7dab954e067e6e2c0ae519d",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.112Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.893Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7300,
+      "power": 6983,
       "inputs": {
         "taskValue": 73,
         "effectiveness": 76,
         "reliability": 52,
         "efficiency": 85,
-        "coverage": 88
+        "coverage": 88,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 4 words; workflow signal present.",
         "effectiveness": "31 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,183 tokens across 10 files with 9 references.",
-        "coverage": "18 sections and 102 substantive statements; examples absent; constraints present."
+        "coverage": "18 sections and 102 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark, feishu; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -11827,6 +12389,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -11941,24 +12508,26 @@
     {
       "id": "larksuite/cli/lark-vc",
       "hash": "2393af94f7b237532a7860ed18642e3656d814bca097eedf98a0974ad163e5cf",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.087Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.834Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7010,
+      "power": 7060,
       "inputs": {
         "taskValue": 74,
         "effectiveness": 76,
         "reliability": 44,
         "efficiency": 80,
-        "coverage": 80
+        "coverage": 80,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 5 words; workflow signal present.",
         "effectiveness": "24 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 2,696 tokens across 8 files with 7 references.",
-        "coverage": "15 sections and 92 substantive statements; examples absent; constraints present."
+        "coverage": "15 sections and 92 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -11987,6 +12556,11 @@
           "label": "Coverage",
           "score": 8,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -12101,24 +12675,26 @@
     {
       "id": "larksuite/cli/lark-event",
       "hash": "c762c7373661285fd698b9f4ec50c07769560eeb7adb2ad062e6ed6520e620e9",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.017Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:42.035Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8295,
+      "power": 7814,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 86,
         "reliability": 72,
         "efficiency": 80,
-        "coverage": 100
+        "coverage": 100,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 65 words; workflow signal present.",
         "effectiveness": "10 actionable list items and 0 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,692 tokens across 8 files with 7 references.",
-        "coverage": "12 sections and 94 substantive statements; examples present; constraints present."
+        "coverage": "12 sections and 94 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: lark, feishu; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 90,
@@ -12147,6 +12723,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
+          "word": "Capable"
         },
         {
           "label": "Guidance",
@@ -12261,24 +12842,26 @@
     {
       "id": "larksuite/cli/lark-contact",
       "hash": "a3b8de4cf767ecf74a4bae4a1aaeccf724856661719c9354f8dbfd897c686476",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.030Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.978Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7360,
+      "power": 7323,
       "inputs": {
         "taskValue": 83,
         "effectiveness": 74,
         "reliability": 44,
         "efficiency": 99,
-        "coverage": 70
+        "coverage": 70,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 26 words; workflow signal present.",
         "effectiveness": "8 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 551 tokens across 4 files with 3 references.",
-        "coverage": "6 sections and 23 substantive statements; examples absent; constraints absent."
+        "coverage": "6 sections and 23 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 78,
@@ -12306,6 +12889,11 @@
         {
           "label": "Coverage",
           "score": 7,
+          "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
           "word": "Good"
         },
         {
@@ -12407,24 +12995,26 @@
     {
       "id": "larksuite/cli/lark-workflow-meeting-summary",
       "hash": "8ca13cdeeaf0ec4bc1e83aefdf787a135ef47fdedcddec4050310583596512c5",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.295Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:41.849Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7110,
+      "power": 7126,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 76,
         "reliability": 44,
         "efficiency": 94,
-        "coverage": 74
+        "coverage": 74,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "19 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 893 tokens across 1 files with 0 references.",
-        "coverage": "9 sections and 37 substantive statements; examples absent; constraints present."
+        "coverage": "9 sections and 37 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -12452,6 +13042,11 @@
         {
           "label": "Coverage",
           "score": 7,
+          "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
           "word": "Good"
         },
         {
@@ -12567,24 +13162,26 @@
     {
       "id": "larksuite/cli/lark-workflow-standup-report",
       "hash": "6f0c8cfb9e45f8c9ebc89946d4d02f816ced1d53fb0de4a08ecd8efd4f1cdefa",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.154Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:42.637Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7160,
+      "power": 7166,
       "inputs": {
         "taskValue": 74,
         "effectiveness": 76,
         "reliability": 44,
         "efficiency": 94,
-        "coverage": 74
+        "coverage": 74,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 6 words; workflow signal present.",
         "effectiveness": "19 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 700 tokens across 1 files with 0 references.",
-        "coverage": "12 sections and 34 substantive statements; examples absent; constraints present."
+        "coverage": "12 sections and 34 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -12612,6 +13209,11 @@
         {
           "label": "Coverage",
           "score": 7,
+          "word": "Good"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
           "word": "Good"
         },
         {
@@ -12727,24 +13329,26 @@
     {
       "id": "larksuite/cli/lark-openapi-explorer",
       "hash": "7a7e3382f75dd66b9fb0fe443c1dfcf7858d818b2076cab21b1133878cdb34bd",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.269Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:42.034Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7225,
+      "power": 6898,
       "inputs": {
         "taskValue": 79,
         "effectiveness": 76,
         "reliability": 44,
         "efficiency": 94,
-        "coverage": 68
+        "coverage": 68,
+        "generality": 60
       },
       "reasons": {
         "taskValue": "Trigger description contains 15 words; workflow signal present.",
         "effectiveness": "15 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 733 tokens across 1 files with 0 references.",
-        "coverage": "13 sections and 39 substantive statements; examples absent; constraints absent."
+        "coverage": "13 sections and 39 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: lark, feishu; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -12772,6 +13376,11 @@
         {
           "label": "Coverage",
           "score": 7,
+          "word": "Capable"
+        },
+        {
+          "label": "Generality",
+          "score": 6,
           "word": "Capable"
         },
         {
@@ -12887,24 +13496,26 @@
     {
       "id": "larksuite/cli/lark-skill-maker",
       "hash": "472abd5fc153f15dc8f4c31da3d4b38022564f114d9442e3022f7bbfbc0fd470",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.237Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:42.109Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 6870,
+      "power": 6942,
       "inputs": {
         "taskValue": 76,
         "effectiveness": 68,
         "reliability": 44,
         "efficiency": 94,
-        "coverage": 64
+        "coverage": 64,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 9 words; workflow signal present.",
         "effectiveness": "4 actionable list items and 0 imperative prose instructions; iterative guidance absent.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance absent.",
         "efficiency": "Estimated activation body is 395 tokens across 1 files with 0 references.",
-        "coverage": "6 sections and 13 substantive statements; examples absent; constraints absent."
+        "coverage": "6 sections and 13 substantive statements; examples absent; constraints absent.",
+        "generality": "Named platform dependencies: lark; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 70,
@@ -12933,6 +13544,11 @@
           "label": "Coverage",
           "score": 6,
           "word": "Capable"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -13005,24 +13621,26 @@
     {
       "id": "heygen-com/hyperframes/hyperframes-cli",
       "hash": "0ad0d6f4fb40860a493a495eba4d66cf29038e6b6d3b19a573b26a7a5f8147dc",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.304Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:42.257Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8150,
+      "power": 7100,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 90,
         "reliability": 86,
         "efficiency": 62,
-        "coverage": 100
+        "coverage": 100,
+        "generality": 28
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "30 actionable list items and 21 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 4,392 tokens across 11 files with 10 references.",
-        "coverage": "9 sections and 156 substantive statements; examples present; constraints present."
+        "coverage": "9 sections and 156 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: aws, gcp, google cloud, figma; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -13051,6 +13669,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 3,
+          "word": "Weak"
         },
         {
           "label": "Guidance",
@@ -13165,24 +13788,26 @@
     {
       "id": "prime-skills/runcomfy-agent-skills/video-edit",
       "hash": "5d10803cf6b49f1b1a55e832eeb5181c825bdcd10c9d31ec72031d6b6f0f334c",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.484Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:42.165Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7515,
+      "power": 7487,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 84,
         "reliability": 58,
         "efficiency": 77,
-        "coverage": 88
+        "coverage": 88,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "25 actionable list items and 3 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,549 tokens across 1 files with 0 references.",
-        "coverage": "18 sections and 107 substantive statements; examples absent; constraints present."
+        "coverage": "18 sections and 107 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: github; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -13211,6 +13836,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -13325,24 +13955,26 @@
     {
       "id": "prime-skills/runcomfy-agent-skills/image-to-video",
       "hash": "cfb10dff9204f8e631a74ec8414cfcaa60ae8ffe01f83e70850b66f079ee40cc",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.438Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:42.254Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7485,
+      "power": 7465,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 84,
         "reliability": 58,
         "efficiency": 75,
-        "coverage": 88
+        "coverage": 88,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "25 actionable list items and 6 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,685 tokens across 1 files with 0 references.",
-        "coverage": "18 sections and 120 substantive statements; examples absent; constraints present."
+        "coverage": "18 sections and 120 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: github; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -13371,6 +14003,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -13485,24 +14122,26 @@
     {
       "id": "prime-skills/runcomfy-agent-skills/nano-banana-2",
       "hash": "0add237a4dfa0b01faeda401d4e9821f5173d244c1c1c18529c949b476f659f9",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.296Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:42.353Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8115,
+      "power": 7985,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 90,
         "reliability": 72,
         "efficiency": 81,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "17 actionable list items and 2 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,153 tokens across 1 files with 0 references.",
-        "coverage": "12 sections and 97 substantive statements; examples present; constraints present."
+        "coverage": "12 sections and 97 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: github; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -13531,6 +14170,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -13645,24 +14289,26 @@
     {
       "id": "prime-skills/runcomfy-agent-skills/nano-banana-edit",
       "hash": "793a4d448a36528b9b1ee2f7c1d50960280507e5bd7cee1026d34c1250625b98",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.320Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:42.450Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8130,
+      "power": 7996,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 90,
         "reliability": 72,
         "efficiency": 82,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "17 actionable list items and 2 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,064 tokens across 1 files with 0 references.",
-        "coverage": "12 sections and 91 substantive statements; examples present; constraints present."
+        "coverage": "12 sections and 91 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: github; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -13691,6 +14337,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -13805,24 +14456,26 @@
     {
       "id": "prime-skills/runcomfy-agent-skills/image-edit",
       "hash": "835f8b7b17d26304da6e0d5f27b3cca9b24396e9c5a6165eaba7eb643065cde4",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.425Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:42.324Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7425,
+      "power": 7421,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 84,
         "reliability": 58,
         "efficiency": 71,
-        "coverage": 88
+        "coverage": 88,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "26 actionable list items and 1 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 3,043 tokens across 1 files with 0 references.",
-        "coverage": "22 sections and 119 substantive statements; examples absent; constraints present."
+        "coverage": "22 sections and 119 substantive statements; examples absent; constraints present.",
+        "generality": "Named platform dependencies: github; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -13851,6 +14504,11 @@
           "label": "Coverage",
           "score": 9,
           "word": "Strong"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -13965,24 +14623,26 @@
     {
       "id": "prime-skills/runcomfy-agent-skills/flux-kontext",
       "hash": "1e32995629f618e6d5d7b40060eefaf9ba7548976d9122be10ddf8ccb318b7a8",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.483Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:42.614Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8175,
+      "power": 8029,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 90,
         "reliability": 72,
         "efficiency": 85,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "16 actionable list items and 1 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,790 tokens across 1 files with 0 references.",
-        "coverage": "12 sections and 81 substantive statements; examples present; constraints present."
+        "coverage": "12 sections and 81 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: github; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -14011,6 +14671,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -14125,24 +14790,26 @@
     {
       "id": "prime-skills/runcomfy-agent-skills/wan-2-7",
       "hash": "269df68889c3f09de4efc4cbfdc7ee9f364d3ca85f6aaa81722c63fc3508b95f",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.506Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:42.452Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7865,
+      "power": 7755,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 90,
         "reliability": 58,
         "efficiency": 83,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "18 actionable list items and 3 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 1,914 tokens across 1 files with 0 references.",
-        "coverage": "12 sections and 97 substantive statements; examples present; constraints present."
+        "coverage": "12 sections and 97 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: github; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -14171,6 +14838,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -14285,24 +14957,26 @@
     {
       "id": "prime-skills/runcomfy-agent-skills/gpt-image-edit",
       "hash": "4b4491779039c6ea59411060b5d29314f177c12c5517a88c673d0794ec4d9bf7",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.460Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:42.851Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7835,
+      "power": 7733,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 90,
         "reliability": 58,
         "efficiency": 81,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "17 actionable list items and 2 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,138 tokens across 1 files with 0 references.",
-        "coverage": "12 sections and 86 substantive statements; examples present; constraints present."
+        "coverage": "12 sections and 86 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: github; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -14331,6 +15005,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -14445,24 +15124,26 @@
     {
       "id": "prime-skills/runcomfy-agent-skills/seedance-v2",
       "hash": "e958561fa2317845fb1d0471a7ba4530426e341e5724bb193a17dcdcc59857d3",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.534Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:47.712Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8130,
+      "power": 7996,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 90,
         "reliability": 72,
         "efficiency": 82,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "17 actionable list items and 2 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,057 tokens across 1 files with 0 references.",
-        "coverage": "12 sections and 94 substantive statements; examples present; constraints present."
+        "coverage": "12 sections and 94 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: github; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -14491,6 +15172,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -14605,24 +15291,26 @@
     {
       "id": "prime-skills/runcomfy-agent-skills/happyhorse-1-0",
       "hash": "d9ebe48282ceea8a4d54ed22d6b3b1756d458a7a72f8b6d247542f3aa68c629e",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.613Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:42.819Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 8100,
+      "power": 7974,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 90,
         "reliability": 72,
         "efficiency": 80,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "21 actionable list items and 1 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review present; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,191 tokens across 1 files with 0 references.",
-        "coverage": "13 sections and 101 substantive statements; examples present; constraints present."
+        "coverage": "13 sections and 101 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: github; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 94,
@@ -14651,6 +15339,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",
@@ -14765,24 +15458,26 @@
     {
       "id": "prime-skills/runcomfy-agent-skills/flux-2-klein",
       "hash": "33baaf804ad9a55e334f8732d6e67a0c9d03a6dfec2914453124bd1e579743b3",
-      "rubric": "skill-scouter-static-v2",
-      "inspectedAt": "2026-08-19T21:34:26.607Z",
+      "rubric": "skill-scouter-static-v3",
+      "inspectedAt": "2026-08-19T22:03:44.107Z",
       "evidence": "deterministic static inspection",
       "dependency": null,
-      "power": 7760,
+      "power": 7678,
       "inputs": {
         "taskValue": 72,
         "effectiveness": 90,
         "reliability": 58,
         "efficiency": 76,
-        "coverage": 96
+        "coverage": 96,
+        "generality": 76
       },
       "reasons": {
         "taskValue": "Trigger description contains 1 words; workflow signal present.",
         "effectiveness": "25 actionable list items and 3 imperative prose instructions; iterative guidance present.",
         "reliability": "Validation or self-review absent; completion boundary absent; failure guidance present.",
         "efficiency": "Estimated activation body is 2,656 tokens across 1 files with 0 references.",
-        "coverage": "15 sections and 125 substantive statements; examples present; constraints present."
+        "coverage": "15 sections and 125 substantive statements; examples present; constraints present.",
+        "generality": "Named platform dependencies: github; cross-platform guidance absent."
       },
       "diagnostics": {
         "guidance": 88,
@@ -14811,6 +15506,11 @@
           "label": "Coverage",
           "score": 10,
           "word": "Excellent"
+        },
+        {
+          "label": "Generality",
+          "score": 8,
+          "word": "Good"
         },
         {
           "label": "Guidance",

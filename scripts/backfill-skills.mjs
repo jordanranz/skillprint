@@ -151,6 +151,9 @@ function scoreSkill(markdown, files, description) {
   const hasTests = files.some((file) => /test|spec|fixture/i.test(file.path));
   const references = files.filter((file) => /(?:^|\/)references?\//i.test(file.path)).length;
   const descriptionWords = words(description ?? frontmatter(markdown).description ?? "").length;
+  const platformPattern = /\b(?:azure|aws|amazon web services|google cloud|gcp|vercel|github|gitlab|lark|feishu|slack|notion|linear|jira|react|next\.?js|vue|svelte|figma|canva|stripe|shopify|wordpress|kubernetes|terraform)\b/gi;
+  const platformMentions = new Set(`${description}\n${body}`.match(platformPattern)?.map((value) => value.toLowerCase()) ?? []);
+  const hasBroadApplicability = /platform[- ]agnostic|tool[- ]agnostic|framework[- ]agnostic|across (?:tools|platforms|frameworks|projects)|any (?:tool|platform|framework|codebase|project)|regardless of (?:tool|platform|framework)/i.test(`${description}\n${body}`);
   const taskValue = clamp(66 + Math.min(12, descriptionWords / 2) + (hasWorkflow ? 5 : 0));
   const effectiveness = clamp(48 + Math.min(20, (steps + imperativeCount) * 3) + Math.min(8, codeBlocks * 2) + (hasScripts ? 8 : 0) + (hasExamples ? 6 : 0) + (hasIteration ? 8 : 0));
   const reliability = clamp(44 + (hasValidation ? 14 : 0) + (hasFailure ? 8 : 0) + (hasCompletion ? 12 : 0) + (hasIteration ? 6 : 0) + (hasTests ? 14 : 0) + (hasScripts ? 4 : 0));
@@ -158,14 +161,16 @@ function scoreSkill(markdown, files, description) {
   const coverage = clamp(42 + Math.min(16, headings * 2) + Math.min(10, proseSentences.length) + (hasFailure ? 8 : 0) + (hasExamples ? 8 : 0) + (hasConstraints ? 6 : 0) + (hasIteration ? 6 : 0) + Math.min(6, references * 2));
   const guidance = clamp(48 + Math.min(24, (steps + imperativeCount) * 2) + (hasWorkflow ? 8 : 0) + (hasValidation ? 6 : 0) + (hasCompletion ? 6 : 0) + Math.min(8, headings));
   const discoverability = clamp(58 + Math.min(24, descriptionWords));
-  const power = Math.round(100 * (taskValue * .25 + effectiveness * .30 + reliability * .20 + efficiency * .15 + coverage * .10));
-  const inputs = { taskValue, effectiveness, reliability, efficiency, coverage };
+  const generality = clamp(92 - Math.min(64, platformMentions.size * 16) + (hasBroadApplicability ? 8 : 0));
+  const power = Math.round(100 * (taskValue * .20 + effectiveness * .23 + reliability * .18 + efficiency * .11 + coverage * .08 + generality * .20));
+  const inputs = { taskValue, effectiveness, reliability, efficiency, coverage, generality };
   const reasons = {
     taskValue: `Trigger description contains ${descriptionWords} words; workflow signal ${hasWorkflow ? "present" : "absent"}.`,
     effectiveness: `${steps} actionable list items and ${imperativeCount} imperative prose instructions; iterative guidance ${hasIteration ? "present" : "absent"}.`,
     reliability: `Validation or self-review ${hasValidation ? "present" : "absent"}; completion boundary ${hasCompletion ? "present" : "absent"}; failure guidance ${hasFailure ? "present" : "absent"}.`,
     efficiency: `Estimated activation body is ${bodyTokens.toLocaleString()} tokens across ${files.length} files with ${references} references.`,
     coverage: `${headings} sections and ${proseSentences.length} substantive statements; examples ${hasExamples ? "present" : "absent"}; constraints ${hasConstraints ? "present" : "absent"}.`,
+    generality: platformMentions.size ? `Named platform dependencies: ${[...platformMentions].join(", ")}; cross-platform guidance ${hasBroadApplicability ? "present" : "absent"}.` : `No named platform dependency detected; cross-platform guidance ${hasBroadApplicability ? "present" : "not required"}.`,
   };
   return { power, bodyTokens, inputs, reasons, diagnostics: { guidance, discoverability } };
 }
@@ -200,7 +205,7 @@ const audits = await mapLimit(snapshot.skills, 8, async (entry) => {
   return {
     id: entry.id,
     hash: detail.hash,
-    rubric: "skill-scouter-static-v2",
+    rubric: "skill-scouter-static-v3",
     inspectedAt: new Date().toISOString(),
     evidence: "deterministic static inspection",
     dependency: detail.dependency ?? null,
@@ -216,6 +221,7 @@ const audits = await mapLimit(snapshot.skills, 8, async (entry) => {
       ["Reliability", score.inputs.reliability],
       ["Efficiency", score.inputs.efficiency],
       ["Coverage", score.inputs.coverage],
+      ["Generality", score.inputs.generality],
       ["Guidance", score.diagnostics.guidance],
       ["Discoverability", score.diagnostics.discoverability],
     ].map(([label, value]) => ({ label, score: Math.max(1, Math.min(10, Math.round(value / 10))), word: wordLabel(value) })),
@@ -223,6 +229,6 @@ const audits = await mapLimit(snapshot.skills, 8, async (entry) => {
   };
 });
 
-const output = { version: 3, rubric: "skill-scouter-static-v2", generatedAt: new Date().toISOString(), audits };
+const output = { version: 4, rubric: "skill-scouter-static-v3", generatedAt: new Date().toISOString(), audits };
 await writeFile(AUDITS_PATH, `${JSON.stringify(output, null, 2)}\n`);
 console.log(`Wrote ${audits.length} source-hashed Scouter reports and Skillprints.`);

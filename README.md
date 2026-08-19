@@ -74,9 +74,12 @@ Run `npm run refresh:ecosystem` with an authenticated GitHub CLI to update
 `data/skills/ecosystem-top10.json`. These repository-level adoption and
 maintenance signals are displayed separately and never alter Scouter Score.
 
-Static rubric v2 treats structured lists and well-formed prose equally. It
+Static rubric v3 treats structured lists and well-formed prose equally. It
 recognizes imperative guidance, adaptive loops, stopping conditions,
-constraints, self-critique, examples, validation, and executable evidence.
+constraints, self-critique, examples, validation, executable evidence, and
+generality across tools and platforms. Generality contributes 20%: named
+platform dependencies reduce transferable value without making a focused
+skill inherently low quality.
 Popularity never contributes to the score, and missing observed-run evidence
 still limits effectiveness and reliability claims.
 
