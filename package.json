@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "refresh:skills": "node --env-file=.env.local scripts/refresh-skills.mjs"
   },
   "dependencies": {
     "next": "latest",

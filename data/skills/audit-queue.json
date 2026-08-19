@@ -1,0 +1,806 @@
+{
+  "generatedAt": "2026-08-19T05:48:21.342Z",
+  "count": 100,
+  "skills": [
+    {
+      "id": "vercel-labs/skills/find-skills",
+      "rank": 1,
+      "hash": "b146008599c31057cef1c145774cea5d5afb30e8f43fa802e47a4b461419aaaf",
+      "reason": "unassessed",
+      "sourceBytes": 5456,
+      "bundleSignal": false
+    },
+    {
+      "id": "mattpocock/skills/grill-me",
+      "rank": 2,
+      "hash": "5a13e157f85835632b132390a162d234822658b6a544f31cc2578280062bd044",
+      "reason": "unassessed",
+      "sourceBytes": 294,
+      "bundleSignal": true
+    },
+    {
+      "id": "anthropics/skills/frontend-design",
+      "rank": 3,
+      "hash": "665c585455decbcb02116bc928adf5148b9cd0f67b7eb4908c8c0d647c00f68a",
+      "reason": "unassessed",
+      "sourceBytes": 18424,
+      "bundleSignal": false
+    },
+    {
+      "id": "mattpocock/skills/grill-with-docs",
+      "rank": 4,
+      "hash": "6b1292031c4f38a11309b9dad9be1141c1921c6edf86d1ae6da8b048fa71a349",
+      "reason": "unassessed",
+      "sourceBytes": 392,
+      "bundleSignal": true
+    },
+    {
+      "id": "mattpocock/skills/improve-codebase-architecture",
+      "rank": 5,
+      "hash": "11adc1a323dfba786ed1af5a4210a0930deebb7ea4a7746c000e35ae587c9485",
+      "reason": "unassessed",
+      "sourceBytes": 12807,
+      "bundleSignal": true
+    },
+    {
+      "id": "mattpocock/skills/tdd",
+      "rank": 6,
+      "hash": "9bef7a4ced827acca9f2fbd318d32e8027f0f819c199fd447568786fbfc6cfd6",
+      "reason": "unassessed",
+      "sourceBytes": 7328,
+      "bundleSignal": true
+    },
+    {
+      "id": "vercel-labs/agent-browser/agent-browser",
+      "rank": 7,
+      "hash": "a674b7d81066e3cc471a7512ddb4ae724418cbfefa75cbb050b0dc430e4d57a0",
+      "reason": "unassessed",
+      "sourceBytes": 3362,
+      "bundleSignal": false
+    },
+    {
+      "id": "mattpocock/skills/setup-matt-pocock-skills",
+      "rank": 8,
+      "hash": "ceba22b05afed7055eabed7525378fbfa67366dbc39993d8726e61d8210efc8a",
+      "reason": "unassessed",
+      "sourceBytes": 19352,
+      "bundleSignal": true
+    },
+    {
+      "id": "vercel-labs/agent-skills/vercel-react-best-practices",
+      "rank": 9,
+      "hash": "ca7b0c0c6e5f2750043f7f0cd72d16ac4e2abc48f9b5500d047a4b77a2506212",
+      "reason": "unassessed",
+      "sourceBytes": 230301,
+      "bundleSignal": true
+    },
+    {
+      "id": "mattpocock/skills/handoff",
+      "rank": 10,
+      "hash": "e5a44fccc710f5402deee06beaf5178397885765773375f186aefd179565f23f",
+      "reason": "unassessed",
+      "sourceBytes": 1035,
+      "bundleSignal": true
+    },
+    {
+      "id": "mattpocock/skills/triage",
+      "rank": 11,
+      "hash": "3755360dcb472a501668975290e31b0cc27f4d973247d2e1f9662af756d2c05c",
+      "reason": "unassessed",
+      "sourceBytes": 19295,
+      "bundleSignal": true
+    },
+    {
+      "id": "mattpocock/skills/prototype",
+      "rank": 12,
+      "hash": "2744ef8e3dd23c2f286527100a2778e446639806b21a2a4f413b76d136a8ff7d",
+      "reason": "unassessed",
+      "sourceBytes": 15978,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-doc",
+      "rank": 13,
+      "hash": "19c3c04a8c88faef790775fee300b71db1942f898e672cad4cfbe9f11c6f8df1",
+      "reason": "unassessed",
+      "sourceBytes": 95665,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-base",
+      "rank": 14,
+      "hash": "24e84323593f89c0a803ebc0f1fb0bd0ce42372d57880ca0156f6187c8cd6109",
+      "reason": "unassessed",
+      "sourceBytes": 9658,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-approval",
+      "rank": 15,
+      "hash": "6e0fa1e5f213134ad73ba181f7fe929ed8b92a4c6b22c9bb1b1de142da847ef0",
+      "reason": "unassessed",
+      "sourceBytes": 73139,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-drive",
+      "rank": 16,
+      "hash": "027b6f53113a713a771afe15fbeac8fd05f3ee648dc8189f60b60a8b4a06d74e",
+      "reason": "unassessed",
+      "sourceBytes": 16336,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-shared",
+      "rank": 17,
+      "hash": "baf547ed0a644a7af5afd84da82e9de8f3d2a958600215481ea40d7c77b2469a",
+      "reason": "unassessed",
+      "sourceBytes": 10579,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-calendar",
+      "rank": 18,
+      "hash": "536c7574c0099e27696f7701db98253193f4974f8d1e14a28b24422ce151b26c",
+      "reason": "unassessed",
+      "sourceBytes": 7349,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-im",
+      "rank": 19,
+      "hash": "e0cc85f395d6dd54b9c098b9708e0a97948e16be220c8ef3af6c03873883c00c",
+      "reason": "unassessed",
+      "sourceBytes": 20073,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-contact",
+      "rank": 20,
+      "hash": "2ad799e96b61d1c73fd04754d0e8998b0503637afe7ecb2041001958a0493cf7",
+      "reason": "unassessed",
+      "sourceBytes": 2535,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-sheets",
+      "rank": 21,
+      "hash": "f79e55e006302c0eadd6865c0d411a4f9687a44bacee4d997ba7768077addc5a",
+      "reason": "unassessed",
+      "sourceBytes": 21261,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-wiki",
+      "rank": 22,
+      "hash": "297931df5d90f0662aec5694660b93e7b26f31e38ec609871a0c7435de016c7c",
+      "reason": "unassessed",
+      "sourceBytes": 8413,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-event",
+      "rank": 23,
+      "hash": "0e4f818b28dd465b3452236240ac4f197b57f7abbdd4259633952fe6b1c1f681",
+      "reason": "unassessed",
+      "sourceBytes": 11436,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-minutes",
+      "rank": 24,
+      "hash": "50a6d1fd9e90e8af98c167391d1293d0870002d7d998a04c085680bbe70a7b23",
+      "reason": "unassessed",
+      "sourceBytes": 9064,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-attendance",
+      "rank": 25,
+      "hash": "8598636d79a5168da87160c065bcde5729e21cd7e676a35d094a3fa9fc9bf585",
+      "reason": "unassessed",
+      "sourceBytes": 1180,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-whiteboard",
+      "rank": 26,
+      "hash": "9f24589ed7b7d994a329fbd7a9be77c6b0748e299406c7d9fbe2a084dada12ff",
+      "reason": "unassessed",
+      "sourceBytes": 2161,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-openapi-explorer",
+      "rank": 27,
+      "hash": "5de085243fc6742efd2d4d9339aaf9dc850ef64633c9243413abf76a1f397298",
+      "reason": "unassessed",
+      "sourceBytes": 3164,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-task",
+      "rank": 28,
+      "hash": "ce0014056baaff39162be4ecc9046c7226a9cb5573a21b6d0c1a44a77525c5ad",
+      "reason": "unassessed",
+      "sourceBytes": 39352,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-mail",
+      "rank": 29,
+      "hash": "3b16dba2daf49825d01d7906d0a77cc3333edfd3e7357c37e1294f41811daad2",
+      "reason": "unassessed",
+      "sourceBytes": 16454,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-slides",
+      "rank": 30,
+      "hash": "c84312b87572c8fc28546dda6070598efe3fee37fcd659fcf7ee3bf69c680415",
+      "reason": "unassessed",
+      "sourceBytes": 16751,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-skill-maker",
+      "rank": 31,
+      "hash": "91a7361b24e8e7ab6bb098e393e8981c254e4ecd5ba25e95fd7243a412326e28",
+      "reason": "unassessed",
+      "sourceBytes": 1757,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-vc",
+      "rank": 32,
+      "hash": "f6673ad7564fb19ccc9de64416aa9d32bf30c5c57226c6e98092c254ae1c9881",
+      "reason": "unassessed",
+      "sourceBytes": 11054,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-workflow-meeting-summary",
+      "rank": 33,
+      "hash": "8ca13cdeeaf0ec4bc1e83aefdf787a135ef47fdedcddec4050310583596512c5",
+      "reason": "unassessed",
+      "sourceBytes": 3758,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-workflow-standup-report",
+      "rank": 34,
+      "hash": "6c57515d206e60486c46613a4fd10630808d70aadeebabab763b436d44eeb944",
+      "reason": "unassessed",
+      "sourceBytes": 3001,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-okr",
+      "rank": 35,
+      "hash": "594b0bfb0b7c3324a445bed02e5b6eb73eebbcb7159098a032d89eb503164c60",
+      "reason": "unassessed",
+      "sourceBytes": 9567,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-markdown",
+      "rank": 36,
+      "hash": "6b6d593c3ad082f204993ff0cbb1cd84930b8daaacd6139335c929911c7c4d1b",
+      "reason": "unassessed",
+      "sourceBytes": 17655,
+      "bundleSignal": true
+    },
+    {
+      "id": "vercel-labs/agent-skills/web-design-guidelines",
+      "rank": 37,
+      "hash": "f3bc47f890f42a44db1007ab390709ec368e4b8c089baee6b0007182236ac474",
+      "reason": "unassessed",
+      "sourceBytes": 1231,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/microsoft-foundry",
+      "rank": 38,
+      "hash": "82682f02be0ae851d457bc1ee5055e1458ea8ad3240471cee3051c557eaa4c25",
+      "reason": "unassessed",
+      "sourceBytes": 1135556,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-vc-agent",
+      "rank": 39,
+      "hash": "860f8e2b6dc58056707cc98bb9dfeef5a9bf990f83f479c3b2a77ef4d3c6078c",
+      "reason": "unassessed",
+      "sourceBytes": 14392,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/azure-diagnostics",
+      "rank": 40,
+      "hash": "200976151ed40af09763472601cf403e41c8d877fd00d2ea8c829678d37e992e",
+      "reason": "unassessed",
+      "sourceBytes": 185769,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/azure-ai",
+      "rank": 41,
+      "hash": "e97156ba97a3c873fdfcf24ce9c504012a5e1dad502631bb48904ae536aab421",
+      "reason": "unassessed",
+      "sourceBytes": 28662,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/azure-deploy",
+      "rank": 42,
+      "hash": "7544f9468d8813b67dd8982d25687b1d2d2becc23cb3c5212b474fc7a72a6e6a",
+      "reason": "unassessed",
+      "sourceBytes": 132164,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/azure-prepare",
+      "rank": 43,
+      "hash": "37348d9e4b71b0eeb9ca16986b8e5c50daa3e89c55fae688f17d505f89760ade",
+      "reason": "unassessed",
+      "sourceBytes": 552963,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/azure-validate",
+      "rank": 44,
+      "hash": "f6b2038e5a20a7c8f821e8ddbf12226af538a379371b3689e7b42a02733aab1d",
+      "reason": "unassessed",
+      "sourceBytes": 92681,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/azure-storage",
+      "rank": 45,
+      "hash": "51df59e7bbb856f537cbdb14db57f563d08f4a63cddd3637a054e42d47d17f29",
+      "reason": "unassessed",
+      "sourceBytes": 28591,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/entra-app-registration",
+      "rank": 46,
+      "hash": "95eb2acd2794438baba6578e726478a497ac8caf8f2e06bb43b74b5d08c7b227",
+      "reason": "unassessed",
+      "sourceBytes": 83109,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/appinsights-instrumentation",
+      "rank": 47,
+      "hash": "1c0174a5940ac9f9395037448deaec32a4aeea76eae3e9218620c192295db615",
+      "reason": "unassessed",
+      "sourceBytes": 24320,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/azure-resource-lookup",
+      "rank": 48,
+      "hash": "2a37d4bf258ba7a75df84686ce310d633a9bccf4a6b5a66226595f74384111f6",
+      "reason": "unassessed",
+      "sourceBytes": 10684,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/azure-compliance",
+      "rank": 49,
+      "hash": "885429e1b1bfa60e77df05ad8e1a780aa4fcd9fc190d00531800637cc20a1e4c",
+      "reason": "unassessed",
+      "sourceBytes": 48434,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/azure-aigateway",
+      "rank": 50,
+      "hash": "71989ad28fb1d0087f5eed1c1bb67aedb19ac92d879d43770b0124e7d32ea397",
+      "reason": "unassessed",
+      "sourceBytes": 40316,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/azure-kusto",
+      "rank": 51,
+      "hash": "d87bfeff59a2b142b5523246a1061c180cd249d5246c07f1caf95ac316d2645f",
+      "reason": "unassessed",
+      "sourceBytes": 8596,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/azure-resource-visualizer",
+      "rank": 52,
+      "hash": "cc55fd4e1e6be8c680fcd2978ec93db7feaddab267e1f2b00a30b31ef616726b",
+      "reason": "unassessed",
+      "sourceBytes": 13696,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/azure-messaging",
+      "rank": 53,
+      "hash": "b2cd16a1022b62abc488f07df228bfdae32edf94c3ebd89b74b87e49cdb4c500",
+      "reason": "unassessed",
+      "sourceBytes": 3270,
+      "bundleSignal": true
+    },
+    {
+      "id": "open.feishu.cn/lark-apps",
+      "rank": 54,
+      "hash": "91db02f78548303fd9264bf9a1fea64c3e6068af71f83f7ba0036246a441d69d",
+      "reason": "unassessed",
+      "sourceBytes": 449944,
+      "bundleSignal": true
+    },
+    {
+      "id": "remotion-dev/skills/remotion-best-practices",
+      "rank": 55,
+      "hash": "740300e2483a62d0483a619ec0fcbfa8870cbb1aa9dedacb02fa83e12cb8435e",
+      "reason": "unassessed",
+      "sourceBytes": 1113632,
+      "bundleSignal": false
+    },
+    {
+      "id": "microsoft/azure-skills/azure-rbac",
+      "rank": 56,
+      "hash": "4d9a271de2b49ccf48c83184557391fb4124e7f92e557eeb9fd5f61b41535a9a",
+      "reason": "unassessed",
+      "sourceBytes": 1686,
+      "bundleSignal": true
+    },
+    {
+      "id": "mattpocock/skills/teach",
+      "rank": 57,
+      "hash": "a44fbaa67b0bfe0e4ae8007ee255a6e5e63d86309eb4077bec950f5087782297",
+      "reason": "unassessed",
+      "sourceBytes": 17979,
+      "bundleSignal": true
+    },
+    {
+      "id": "mattpocock/skills/grilling",
+      "rank": 58,
+      "hash": "dae226933247301e1947768ca27c09d351348f6e3f6692df72998dd990212eb3",
+      "reason": "unassessed",
+      "sourceBytes": 1964,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/azure-compute",
+      "rank": 59,
+      "hash": "37ddc8f23015d381f9a09dfd2b34c4686a96b33146d37020244cdded03a86bda",
+      "reason": "unassessed",
+      "sourceBytes": 133895,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/azure-cloud-migrate",
+      "rank": 60,
+      "hash": "32f2aa70f3a65df5b8e323363f7680e8ebcd8c1cf5b2433d725acbb381d6ade1",
+      "reason": "unassessed",
+      "sourceBytes": 181171,
+      "bundleSignal": true
+    },
+    {
+      "id": "juliusbrussee/caveman/caveman",
+      "rank": 61,
+      "hash": "784110d6c3dc6d7e8d094ac998ebf811e19462ad40a9f0f2f47cbbae9c7e8753",
+      "reason": "unassessed",
+      "sourceBytes": 8452,
+      "bundleSignal": false
+    },
+    {
+      "id": "mattpocock/skills/domain-modeling",
+      "rank": 62,
+      "hash": "e670c36709c31c0801c0635397d2d9662d74bb777825b16d707f2902dd6fad0e",
+      "reason": "unassessed",
+      "sourceBytes": 8349,
+      "bundleSignal": true
+    },
+    {
+      "id": "microsoft/azure-skills/azure-hosted-copilot-sdk",
+      "rank": 63,
+      "hash": "2ffc86e419474b85424303ef45de3bedf1f56c3ca761f8d9ccfbf78f6f019c32",
+      "reason": "unassessed",
+      "sourceBytes": 25525,
+      "bundleSignal": true
+    },
+    {
+      "id": "lllllllama/rigorpilot-skills/paper-context-resolver",
+      "rank": 64,
+      "hash": "66cfe5cbe0fdeaa0d6df7f83eef91779fa2ff5f744390393621407e2d228faac",
+      "reason": "unassessed",
+      "sourceBytes": 3761,
+      "bundleSignal": true
+    },
+    {
+      "id": "lllllllama/rigorpilot-skills/repo-intake-and-plan",
+      "rank": 65,
+      "hash": "2fc763f9cf72d561fd78c4593a29ddd452088b58481c1585208441be6daaac74",
+      "reason": "unassessed",
+      "sourceBytes": 17026,
+      "bundleSignal": true
+    },
+    {
+      "id": "lllllllama/rigorpilot-skills/minimal-run-and-audit",
+      "rank": 66,
+      "hash": "5e167f0fd455e8c5b87c842e84d53711d7cacff83684e5be95dbfa6fe60aeccc",
+      "reason": "unassessed",
+      "sourceBytes": 14786,
+      "bundleSignal": true
+    },
+    {
+      "id": "lllllllama/rigorpilot-skills/env-and-assets-bootstrap",
+      "rank": 67,
+      "hash": "8729e8f31de677542cf9d3a0c011740d8a1fc894f81046955bcd7fa4361ea2bf",
+      "reason": "unassessed",
+      "sourceBytes": 19373,
+      "bundleSignal": true
+    },
+    {
+      "id": "mattpocock/skills/codebase-design",
+      "rank": 68,
+      "hash": "42f405c9a796a59fbca9e07f43225d42ce1c9f3541463099bc62eda59d6f550f",
+      "reason": "unassessed",
+      "sourceBytes": 11404,
+      "bundleSignal": true
+    },
+    {
+      "id": "mattpocock/skills/diagnosing-bugs",
+      "rank": 69,
+      "hash": "03653ab32369818ec20095e0867f849a9860a4f3b1ea930e70787eaec1e322ef",
+      "reason": "unassessed",
+      "sourceBytes": 9965,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-doc",
+      "rank": 70,
+      "hash": "cfab51bbb275b7290dd2d42190ed260108515f2b945f367efde7cac70f081c8c",
+      "reason": "unassessed",
+      "sourceBytes": 95666,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-base",
+      "rank": 71,
+      "hash": "41948526d80b4f707b69f2ff9d5dc454b186097fc0417cb359d6bacd0779e7a1",
+      "reason": "unassessed",
+      "sourceBytes": 288772,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-shared",
+      "rank": 72,
+      "hash": "0334d3d4607adde95bca546e206ac6557eb5cb76a86ed4d2c84498214c4cf568",
+      "reason": "unassessed",
+      "sourceBytes": 10580,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-drive",
+      "rank": 73,
+      "hash": "ddc349c696702328056d95c722a3d73d7f0bf595037ca17d57b936352436b307",
+      "reason": "unassessed",
+      "sourceBytes": 344991,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-im",
+      "rank": 74,
+      "hash": "b4ba16bc0ec18cbf7dbba7d13e09ee3d10f8a27d95687c80c2f3a20eedefad00",
+      "reason": "unassessed",
+      "sourceBytes": 267854,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-wiki",
+      "rank": 75,
+      "hash": "74de7f79e5c4d7b79010a68b71eddb4551d4e20aef77cd14d3fdb97efdebc2a2",
+      "reason": "unassessed",
+      "sourceBytes": 55389,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-sheets",
+      "rank": 76,
+      "hash": "7e56c2fdaab09f1aefd18d2baac695f9ae82a4be6eb0ca367a93204a7c6f5688",
+      "reason": "unassessed",
+      "sourceBytes": 283207,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-whiteboard",
+      "rank": 77,
+      "hash": "b3d3f91a13fd161253bb973dd656f81bf8c3c3a1ef3cec0a589139e6351c8bc9",
+      "reason": "unassessed",
+      "sourceBytes": 169582,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-task",
+      "rank": 78,
+      "hash": "7ded9e58e243b52c13732b93552703baab5e898f59292c8d95af46a15bdee456",
+      "reason": "unassessed",
+      "sourceBytes": 39353,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-calendar",
+      "rank": 79,
+      "hash": "3f6c7bb52481a965268d4937144da05b964b8001df862c2f9df7ffcb710b12ab",
+      "reason": "unassessed",
+      "sourceBytes": 36244,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-mail",
+      "rank": 80,
+      "hash": "e762df49e87d7afcdfe1c3a6a9a6ac1b9508f35aae1530b9dca3a27c05fac3f3",
+      "reason": "unassessed",
+      "sourceBytes": 221106,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-minutes",
+      "rank": 81,
+      "hash": "031bab711c23668724cbfc97b5fec07015c2a3ded7dab954e067e6e2c0ae519d",
+      "reason": "unassessed",
+      "sourceBytes": 39135,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-vc",
+      "rank": 82,
+      "hash": "2393af94f7b237532a7860ed18642e3656d814bca097eedf98a0974ad163e5cf",
+      "reason": "unassessed",
+      "sourceBytes": 55315,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-event",
+      "rank": 83,
+      "hash": "c762c7373661285fd698b9f4ec50c07769560eeb7adb2ad062e6ed6520e620e9",
+      "reason": "unassessed",
+      "sourceBytes": 40067,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-contact",
+      "rank": 84,
+      "hash": "a3b8de4cf767ecf74a4bae4a1aaeccf724856661719c9354f8dbfd897c686476",
+      "reason": "unassessed",
+      "sourceBytes": 8205,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-workflow-meeting-summary",
+      "rank": 85,
+      "hash": "8ca13cdeeaf0ec4bc1e83aefdf787a135ef47fdedcddec4050310583596512c5",
+      "reason": "unassessed",
+      "sourceBytes": 3758,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-workflow-standup-report",
+      "rank": 86,
+      "hash": "6f0c8cfb9e45f8c9ebc89946d4d02f816ced1d53fb0de4a08ecd8efd4f1cdefa",
+      "reason": "unassessed",
+      "sourceBytes": 3002,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-openapi-explorer",
+      "rank": 87,
+      "hash": "7a7e3382f75dd66b9fb0fe443c1dfcf7858d818b2076cab21b1133878cdb34bd",
+      "reason": "unassessed",
+      "sourceBytes": 3165,
+      "bundleSignal": true
+    },
+    {
+      "id": "larksuite/cli/lark-skill-maker",
+      "rank": 88,
+      "hash": "472abd5fc153f15dc8f4c31da3d4b38022564f114d9442e3022f7bbfbc0fd470",
+      "reason": "unassessed",
+      "sourceBytes": 1758,
+      "bundleSignal": true
+    },
+    {
+      "id": "prime-skills/runcomfy-agent-skills/video-edit",
+      "rank": 89,
+      "hash": "5d10803cf6b49f1b1a55e832eeb5181c825bdcd10c9d31ec72031d6b6f0f334c",
+      "reason": "unassessed",
+      "sourceBytes": 11159,
+      "bundleSignal": true
+    },
+    {
+      "id": "prime-skills/runcomfy-agent-skills/image-to-video",
+      "rank": 90,
+      "hash": "cfb10dff9204f8e631a74ec8414cfcaa60ae8ffe01f83e70850b66f079ee40cc",
+      "reason": "unassessed",
+      "sourceBytes": 11679,
+      "bundleSignal": true
+    },
+    {
+      "id": "prime-skills/runcomfy-agent-skills/nano-banana-2",
+      "rank": 91,
+      "hash": "0add237a4dfa0b01faeda401d4e9821f5173d244c1c1c18529c949b476f659f9",
+      "reason": "unassessed",
+      "sourceBytes": 9515,
+      "bundleSignal": true
+    },
+    {
+      "id": "prime-skills/runcomfy-agent-skills/nano-banana-edit",
+      "rank": 92,
+      "hash": "793a4d448a36528b9b1ee2f7c1d50960280507e5bd7cee1026d34c1250625b98",
+      "reason": "unassessed",
+      "sourceBytes": 8966,
+      "bundleSignal": true
+    },
+    {
+      "id": "prime-skills/runcomfy-agent-skills/image-edit",
+      "rank": 93,
+      "hash": "835f8b7b17d26304da6e0d5f27b3cca9b24396e9c5a6165eaba7eb643065cde4",
+      "reason": "unassessed",
+      "sourceBytes": 13140,
+      "bundleSignal": true
+    },
+    {
+      "id": "prime-skills/runcomfy-agent-skills/flux-kontext",
+      "rank": 94,
+      "hash": "1e32995629f618e6d5d7b40060eefaf9ba7548976d9122be10ddf8ccb318b7a8",
+      "reason": "unassessed",
+      "sourceBytes": 8037,
+      "bundleSignal": true
+    },
+    {
+      "id": "prime-skills/runcomfy-agent-skills/wan-2-7",
+      "rank": 95,
+      "hash": "269df68889c3f09de4efc4cbfdc7ee9f364d3ca85f6aaa81722c63fc3508b95f",
+      "reason": "unassessed",
+      "sourceBytes": 8342,
+      "bundleSignal": true
+    },
+    {
+      "id": "heygen-com/hyperframes/hyperframes-cli",
+      "rank": 96,
+      "hash": "0bc09279973ecff86472a81b74d217df5cc11da0848e9a26bc912ab18130c493",
+      "reason": "unassessed",
+      "sourceBytes": 104010,
+      "bundleSignal": false
+    },
+    {
+      "id": "prime-skills/runcomfy-agent-skills/gpt-image-edit",
+      "rank": 97,
+      "hash": "4b4491779039c6ea59411060b5d29314f177c12c5517a88c673d0794ec4d9bf7",
+      "reason": "unassessed",
+      "sourceBytes": 9419,
+      "bundleSignal": true
+    },
+    {
+      "id": "prime-skills/runcomfy-agent-skills/seedance-v2",
+      "rank": 98,
+      "hash": "e958561fa2317845fb1d0471a7ba4530426e341e5724bb193a17dcdcc59857d3",
+      "reason": "unassessed",
+      "sourceBytes": 8965,
+      "bundleSignal": true
+    },
+    {
+      "id": "prime-skills/runcomfy-agent-skills/happyhorse-1-0",
+      "rank": 99,
+      "hash": "d9ebe48282ceea8a4d54ed22d6b3b1756d458a7a72f8b6d247542f3aa68c629e",
+      "reason": "unassessed",
+      "sourceBytes": 9501,
+      "bundleSignal": true
+    },
+    {
+      "id": "prime-skills/runcomfy-agent-skills/flux-2-klein",
+      "rank": 100,
+      "hash": "33baaf804ad9a55e334f8732d6e67a0c9d03a6dfec2914453124bd1e579743b3",
+      "reason": "unassessed",
+      "sourceBytes": 11544,
+      "bundleSignal": true
+    }
+  ]
+}

@@ -54,6 +54,18 @@ Live prototype: https://skillprint-vercel-delta.vercel.app
 - Run a token-budgeted audit of the Top 100 weekly.
 - Reuse cached Skillprints when neither the source nor the scouting rubric changed.
 
+Run `npm run refresh:skills` after `vercel env pull` to rebuild the official
+skills.sh all-time Top 100 snapshot. The refresh fetches stable IDs, current
+rank and installs, content hashes, source size, and bundle signals. It writes:
+
+- `data/skills/top100.json` — the reproducible leaderboard manifest;
+- `data/skills/audit-queue.json` — skills whose current hash has not been assessed;
+- `data/skills/power-audits.json` — cached Power assessments keyed by skill ID and hash.
+
+Pass `-- --security` to include partner security-audit results. A normal refresh
+uses no LLM and only queues a new Power audit when a skill is unassessed or its
+source hash changed.
+
 ## First visualization concepts
 
 ### grill-me
